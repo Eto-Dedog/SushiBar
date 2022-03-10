@@ -1,0 +1,83 @@
+/* общие настройки */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+body{
+    background: rgba(49,48,54, 0.8);
+    font-family: 'Regular', sans-serif;
+}
+.link{
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Шрифт Plainot */
+@font-face {
+    font-family: 'Regular';
+    src: url(../fonts/Plainot.ttf);
+}
+/* Шрифт Stanberry */
+@font-face {
+    font-family: 'Medium';
+    src: url(../fonts/Stanberry.ttf);
+}
+/* Шрифт Stanberry */
+@font-face {
+    font-family: 'Bold';
+    src: url(../fonts/Banff.ttf);
+}
+/* Шрифт Banff */
+@font-face {
+    font-family: 'Large';
+    src: url(../fonts/Banff.ttf);
+}
+/* Шрифт OpenSans */
+/* @font-face {
+    font-family: 'OpenSans-Light';
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(../fonts/OpenSans-Bold.ttf);
+} */
+/* Шрифт Roboto */
+/* @font-face {
+    font-family: 'Roboto-Thin';
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+} */
+/* Голова сайта */
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.section__header a {
+    color: #ffffff;
+}
+.header__auth__box__link{
+    padding: 10px;
+    padding-left: 15px;
+}
