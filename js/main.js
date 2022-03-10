@@ -8,6 +8,7 @@ function hide () {
         headerNav.style.background = '#fbf4eb'
         for (let headerNavLink of headerNavLinks) {
             headerNavLink.style.color = "#000000"
+            headerNavLink.transition = '0.8s'
             headerNavLink.style.padding = "5px"
             headerNavLink.style.margin = "15px"
             headerNav.style.marginLeft = "-750px"
@@ -21,6 +22,7 @@ function hide () {
         headerNav.style.transition = '0.5s'
         for (let headerNavLink of headerNavLinks) {
             headerNavLink.style.color = "#ffffff"
+            headerNavLink.transition = '0.8s'
             headerNav.style.marginLeft = "250px"
             headerNav.style.paddingLeft = "0px"
             headerNav.style.paddingRight = "0px"
