@@ -27,46 +27,16 @@ body{
     font-family: 'Medium';
     src: url(../fonts/Stanberry.ttf);
 }
-/* Шрифт Stanberry */
+/* Шрифт FloraC */
 @font-face {
     font-family: 'Bold';
-    src: url(../fonts/Banff.ttf);
+    src: url(../fonts/FloraC.ttf);
 }
 /* Шрифт Banff */
 @font-face {
     font-family: 'Large';
     src: url(../fonts/Banff.ttf);
 }
-/* Шрифт OpenSans */
-/* @font-face {
-    font-family: 'OpenSans-Light';
-    src: url(../fonts/OpenSans-Light.ttf);
-}
-@font-face {
-    font-family: 'OpenSans-Regular';
-    src: url(../fonts/OpenSans-Regular.ttf);
-}
-@font-face {
-    font-family: 'OpenSans-Bold';
-    src: url(../fonts/OpenSans-Bold.ttf);
-} */
-/* Шрифт Roboto */
-/* @font-face {
-    font-family: 'Roboto-Thin';
-    src: url(../fonts/Roboto-Thin.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url(../fonts/Roboto-Regular.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Medium';
-    src: url(../fonts/Roboto-Medium.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url(../fonts/Roboto-Bold.ttf);
-} */
 /* Голова сайта */
 .header__block{
     padding-top: 25px;
@@ -81,7 +51,10 @@ body{
 .section__header a {
     color: #ffffff;
 }
-.section__header a:hover {
+.header__auth{
+    margin-bottom: 15px;
+}
+.header__auth a:hover {
     opacity: 0.8;
 }
 .header__auth__box{
@@ -96,4 +69,26 @@ body{
 .auth__icon{
     fill:#fff;
     margin-right: 5px;
+}
+.header__nav{
+    display: flex;
+    position: fixed;
+    margin-left: 250px;
+}
+.header__nav__link{
+    font-family: 'Bold', sans-serif;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 15px;
+    border: 2px solid transparent;
+    transition: all .4s ease-out;
+}
+.header__nav__link:hover{
+    color:#e00614;
+    border-bottom: 2px solid #e00614;
+    transition: all .4s ease-out;
+}
+.active{
+    color:#e00614;
+    border-bottom: 2px solid #e00614;
 }
