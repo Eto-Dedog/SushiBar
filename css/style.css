@@ -24,11 +24,27 @@ body{
     font-family: 'Medium', sans-serif;
     font-weight: bold;
     color: #fff;
+    padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
 }
 .btn:hover{
     background: #fff;
     color: #000000;
     transition: all .2s ease-out;
+}
+.title{
+    font-family: 'Medium', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 34px;
+}
+.text{
+    font-size: 18px;
+}
+.attention{
+    color: #e00614;
 }
 /* Шрифт Plainot */
 @font-face {
@@ -109,11 +125,11 @@ body{
 }
 /* Промо */
 .section__promo{
-    background: url(../img/home/sl-bg-1.jpg) no-repeat center / cover;
+    background: url(../img/home/sl-bg-1.jpg) no-repeat center / cover fixed;
 }
 .promo__block{
     margin-top: -140px;
-    padding-top: 450px;
+    padding-top: 350px;
     padding-bottom: 350px;
     align-items: center;
     text-align: center;
@@ -138,7 +154,7 @@ body{
     position: absolute;
     display: flex;
 }
-.promo__sub__title{
+.promo__info__text{
     margin-top: 15px;
     margin-bottom: 15px;
     color: #ffffff;
@@ -146,8 +162,52 @@ body{
 }
 .promo__btn{
     margin-top: 25px;
+}
+/* Спец предложения */
+.section__special{
+    background: #ffffff;
+}
+.special__block{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.special__text{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.special__info__box .btn:hover{
+    background: rgba(255, 0, 0, 0.1);
+    color: #000000;
+    transition: all .2s ease-out;
+}
+.special__card__attention{
+    align-items: center;
+    text-align: center;
     text-transform: uppercase;
-    padding: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+}
+.special__cards{
+    display: flex;
+    justify-content: space-around;
+}
+.special__card{
+    display: flex;
+    align-items: center;
+    border: 2px solid #f3f3f3;
+    padding-top: 45px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 45px;
+    margin: 25px;
+    max-width: 712px;
+    max-height: 157px;
+    width: 100%;
+    justify-content: space-between;
+    background: url(../img/home/banner-bg.jpg) right no-repeat;
+}
+.special__card__title{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
