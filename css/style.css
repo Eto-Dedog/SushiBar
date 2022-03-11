@@ -39,6 +39,7 @@ body{
     font-weight: normal;
     text-align: center;
     font-size: 34px;
+    text-transform: uppercase;
 }
 .text{
     font-size: 18px;
@@ -211,4 +212,47 @@ body{
     text-transform: uppercase;
     font-size: 18px;
     margin-bottom: 10px;
+}
+/* Популярные */
+.section__popular{
+    background: #ffffff;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.popular__block{
+    text-align: center;
+}
+.pupular__title{
+    margin-bottom: 15px;
+}
+.popular__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.popular__card{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+.popular__card__title{
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    border-bottom: 0.5px dashed;
+}
+.popular__card__price{
+    position: absolute;
+    top: 0;
+    color: #e00614;
+}
+.popular__card__box{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.popular__card__info{
+    width: 100%;
 }
