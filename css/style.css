@@ -52,6 +52,9 @@ body{
     font-family: 'Regular';
 
 }
+.section{
+    background: #ffffff;
+}
 /* Шрифт Plainot */
 @font-face {
     font-family: 'Regular';
@@ -130,15 +133,31 @@ body{
     border-bottom: 2px solid #e00614;
 }
 /* Промо */
-.section__promo{
+.section__promo-one{
     background: url(../img/home/sl-bg-1.jpg) no-repeat center / cover fixed;
+}
+.section__promo-two{
+    background: url(../img/home/sl-bg-2.jpg) no-repeat center / cover fixed;
+}
+.section__promo-three{
+    background: url(../img/home/sl-bg-3.jpg) no-repeat center / cover fixed;
+}
+.sl-1-block{
+    align-items: center;
+    text-align: center;
+}
+.sl-2-block{
+    align-items: flex-start;
+    text-align: left;
+}
+.sl-3-block{
+    align-items: flex-end;
+    text-align: right;
 }
 .promo__block{
     margin-top: -140px;
     padding-top: 350px;
     padding-bottom: 350px;
-    align-items: center;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -169,10 +188,8 @@ body{
 .promo__btn{
     margin-top: 25px;
 }
+
 /* Спец предложения */
-.section__special{
-    background: #ffffff;
-}
 .special__block{
     display: flex;
     align-items: center;
@@ -220,7 +237,6 @@ body{
 }
 /* Популярные */
 .section__popular{
-    background: #ffffff;
     padding-top: 45px;
     padding-bottom: 45px;
 }
@@ -304,9 +320,6 @@ body{
     opacity: 0.7;
 }
 /* Популярные категории (Категории) */
-.section__categories{
-    background: #ffffff;
-}
 .categories__block{
     text-align: center;
     padding-top: 100px;
@@ -337,4 +350,141 @@ body{
 .categories__card__img:hover{
     opacity: 0.7;
     transition: all 0.2s linear;
+}
+/* сеты */
+.section__sets{
+    background: #ffffff url(../img/home/hide-bg-2.png) no-repeat left bottom;
+}
+.sets__block{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sets__nav__btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sets__title{
+    margin-bottom: 15px;
+}
+.sets__nav__btn{
+    font-size: 24px;
+    opacity: 0.6;
+    margin: 25px;
+}
+.sets__nav__btn:hover{
+    font-size: 24px;
+    opacity: 0.9;
+    margin: 25px;
+    cursor: pointer;
+}
+.sets__active{
+    color:#e00614;
+    opacity: 1;
+}
+.sets__slide{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+.sets__slide__box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.sets__slide__box .product__cards{
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.sets__price{
+    display: flex;
+    margin-top: 15px;
+}
+.sets__price__old{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.sets__price__new{
+    margin-left: 15px;
+    font-size: 34px;
+    color:#e00614;
+}
+.sets__btn{
+    margin-top: 15px;
+}
+.sets__slide__img{
+    max-width: 700px;
+    margin-right: 15px;
+}
+/* новости */
+.news__block{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.news__title{
+    margin-bottom: 15px;
+}
+.news__text{
+    margin-bottom: 25px;
+}
+.news__cards{
+    display: flex;
+    justify-content: space-between;
+}
+.news__card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.news__card__title{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.news__card__date{
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+.news__card__icon{
+    width: 15px;
+    height: 15px;
+}
+.news__card__text{
+    max-width: 240px;
+    max-height: 240px;
+}
+.news__card__btn{
+    margin-top: 15px;
+    color:#e00614;
+    cursor: pointer;
+    position: relative;
+}
+.news__card__btn:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    transform: scale(0, 1);
+    transition: transform 0.4s;
+    background: #e00614;
+    transform-origin: right top;
+}
+.news__card__btn:hover:after {
+      transform: scale(1, 1);
+      transform-origin: left top;
+}
+
+/* / общие / */
+.d-none{
+    display: none;
 }
