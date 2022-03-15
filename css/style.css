@@ -79,6 +79,9 @@ body{
 .header__block{
     padding-top: 25px;
     padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .nav{
     display: flex;
@@ -91,6 +94,7 @@ body{
 }
 .header__auth{
     margin-bottom: 15px;
+    justify-content: space-around
 }
 .header__auth a:hover {
     opacity: 0.6;
@@ -98,6 +102,11 @@ body{
 }
 .header__auth__box{
     display: flex;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 .header__auth__box__link{
     margin: 10px;
@@ -112,7 +121,7 @@ body{
 .header__nav{
     display: flex;
     position: fixed;
-    margin-left: 250px;
+    top: 110px;
     z-index: 100;
 }
 .header__nav__link{
