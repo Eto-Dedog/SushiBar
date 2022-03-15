@@ -55,6 +55,20 @@ body{
 .section{
     background: #ffffff;
 }
+.modal__close{
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding-top: 3px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+}
 /* Шрифт Plainot */
 @font-face {
     font-family: 'Regular';
@@ -123,6 +137,7 @@ body{
     position: fixed;
     top: 110px;
     z-index: 100;
+    left: 50%;
 }
 .header__nav__link{
     font-family: 'Bold', sans-serif;
@@ -593,6 +608,64 @@ body{
     transition: 0.5s;
     font-size: 20px;
     font-family: 'Large';
+}
+/* модал рассылка */
+.modal__newsletters__overlay{
+    top: 0;
+    left: 0;
+    position: fixed;
+    background:rgba(85, 85, 85, 0.3);
+    z-index: 499;
+    width: 100%;
+    height: 100%;
+}
+.modal__newsletters__body{
+    display: flex;
+    align-items: center;
+    background: #fbf4eb;
+    z-index: 500;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -370px;
+    padding: 25px;
+}
+.modal__newsletters__box{
+    display: flex;
+    flex-direction: column;
+}
+.modal__newsletters__box:first-child{
+    margin-right: 50px;
+}
+.modal__newsletters__box:last-child{
+    align-items: end;
+    text-align: right;
+    justify-content: end;
+}
+.modal__newsletters__img{
+    transform: scale(-1, 1);
+    width: 280px;
+}
+.newsletters__form-modal{
+    max-width: 520px;
+    width: 100%;
+}
+.newsletters__form-modal .newsletters__input{
+    padding: 10px;
+    font-size: 15px;    
+}
+.modal__spam{
+    font-size: 10px;
+    margin-top: 15px;
+}
+.modal__newsletters__title{
+    margin-bottom: 35px;
+}
+.modal__newsletters__close{
+    position: absolute;
+    top: 0;
+    right: -35px;
 }
 /* / общие / */
 .d-none{
