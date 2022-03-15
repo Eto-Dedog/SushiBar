@@ -575,6 +575,25 @@ body{
     font-size: 24px;
     font-family: 'Large', sans-serif;
 }
+/* Кнопка наверх */
+.up{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000000;
+    background: #ffffff;
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+    font-family: 'Large';
+}
 /* / общие / */
 .d-none{
     display: none;
