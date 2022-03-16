@@ -1,7 +1,7 @@
+// навигация
 let headerAuth = document.querySelector('.header__auth')
 let headerNav = document.querySelector('.header__nav')
 let headerNavLinks = document.querySelectorAll('.header__nav__link')
-
 function hide () {
     if (pageYOffset > 89) {
         headerNav.style.marginTop = '-120px'
@@ -30,11 +30,9 @@ function hide () {
     }
 }
 setInterval(hide)
-
+// прокрутка вверх
 document.addEventListener('DOMContentLoaded', () => {
-
     let toTopBtn = document.querySelector('.up');
-
     window.onscroll = function () {
         if (window.pageYOffset > 580) {
             toTopBtn.style.display = 'flex'
@@ -42,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             toTopBtn.style.display = 'none'
         }
     }
-
-    // плавный скролл наверх 
     toTopBtn.addEventListener('click', function () {
         window.scrollBy({
             top: -document.documentElement.scrollHeight,
