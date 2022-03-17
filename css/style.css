@@ -763,6 +763,44 @@ body{
     top: 10px;
     left: -40px;
 }
+/* Модалки информации политика и правила  */
+.modal__info__body{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-top: -250px;
+    margin-left: -320px;
+    width: 680px;
+    height: 500px;
+    background: #fbf4eb;
+    overflow: auto;
+    z-index: 504;
+    padding: 15px;
+}
+.modal__info__overlay{
+    top: 0;
+    left: 0;
+    position: fixed;
+    background:rgba(85, 85, 85, 0.3);
+    z-index: 503;
+    width: 100%;
+    height: 100%;
+}
+.modal__info__text{
+    font-size: 14px;
+}
+.modal__info__title{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.modal__info__close{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-right: -400px;
+    margin-top: -250px;
+}
+
 /* missing */
 .form__modal__user__box-check{
     display: flex;
