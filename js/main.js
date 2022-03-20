@@ -30,6 +30,7 @@ function hide () {
     }
 }
 setInterval(hide)
+
 // прокрутка вверх
 document.addEventListener('DOMContentLoaded', () => {
     let toTopBtn = document.querySelector('.up');
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             toTopBtn.style.display = 'none'
         }
-    }
+    }   
     toTopBtn.addEventListener('click', function () {
         window.scrollBy({
             top: -document.documentElement.scrollHeight,

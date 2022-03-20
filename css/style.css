@@ -600,14 +600,15 @@ body{
     text-align: left;
     align-items: start;
 }
-.footer__title{
+.info__title{
+    text-align: left;
     font-size: 28px;
     padding-bottom: 10px;
     margin-bottom: 15px;
     position: relative;
     color: rgb(85, 85, 85);
 }
-.footer__title::before{
+.info__title::before{
     content: '';
     position: absolute;
     height: 3px;
@@ -878,12 +879,12 @@ body{
 .promo__sub-block{
     margin-top: -140px;
     padding-top: 200px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
 }
 .section__promo-sub-one {
-    background: url(../img/home/sl-bg-1.jpg) no-repeat top -200px right / cover fixed;
+    background: url(../img/home/sl-bg-1.jpg) no-repeat top -280px right / cover fixed;
 }
 .promo__link{
     opacity: 0.8;
@@ -912,6 +913,80 @@ body{
 }
 .product__nav{
     border-bottom: 1px solid #ede6dc;
+}
+/* |information| */
+/* информация */
+.section__information{
+    background: #ffffff url(../img/home/hide-bg-2.png) no-repeat left bottom;
+}
+.information__block{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.information__video__block{
+    display: flex;
+    align-items: center;
+}
+.information__video__box{
+    margin: 25px;
+}
+.info__text{
+    color: rgb(85, 85, 85);
+}
+/* этапы */
+.steps__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.steps__card{
+    padding: 40px;
+    margin: 20px;
+    border: 1px solid #ede6dc;
+}
+.steps__card:first-child{
+    margin-left: 0px;
+}
+.steps__card:last-child{
+    margin-right: 0px;
+}
+.steps__card__title{
+    margin-bottom: 15px;
+}
+/* продукты для рицепта */
+.information__recipe__block{
+    border: 1px solid #ede6dc;
+    padding: 40px;
+}
+.recipe__cards{
+    display: flex;
+}
+.recipe__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin: 15px;
+    padding-bottom: 20px;
+}
+.recipe__card__title{
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 15px;
+}
+.recipe__card__text{
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+.recipe__card:hover > .recipe__card__text{
+    display: flex;
+}
+.sub-info{
+    font-size: 14px;
+    opacity: 0.7;
 }
 /* / общие / */
 .d-none{
