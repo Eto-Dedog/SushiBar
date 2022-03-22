@@ -1028,6 +1028,122 @@ body{
     text-align: left;
     line-height: 25px;
 }
+/* |post| */
+/* пост */
+.post__block{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.post__block .news__cards{
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.post__block .news__card__box{
+    width: 100%;
+    text-align: left;
+}
+.post__block .news__card{
+    width: 100%;
+}
+.post__block .news__card__img{
+    width: 100%;
+}
+.post__block .news__card__title{
+    margin-bottom: 15px;
+}
+.post__block .news__card__date{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.post__block .news__card__text{
+    max-width: 1200px;
+    max-height: 1200px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.social__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #ede6dc;
+    border-bottom: 1px solid #ede6dc;
+}
+.social__link__img{
+    width: 25px;
+    height: 25px;
+    margin: 15px;
+    transition: 0.5s;
+    border: 1px solid transparent;
+}
+.social__link__img:hover{
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+/* другие посты */
+.other__post__title{
+    text-align: left;
+    text-transform: none;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.other__post__block .news__cards{
+    justify-content: start;
+}
+.other__post__block .news__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+    align-items: baseline;
+    margin-right: 15px;
+}
+.other__post__block .news__card__title{
+    margin-bottom: 15px;
+}
+.other__post__block .news__card__text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* комментарии */
+.comments__post__block{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.comments__post{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.comment__post{
+    display: flex;
+    flex-direction: row;
+}
+.comment__box{
+    display: flex;
+    flex-direction: column;
+}
+.comment__box:first-child{
+    margin-right: 15px;
+}
+.comment__title{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.section__comments__post{
+    margin-bottom: 85px;
+}
+.comment__date{
+    margin-bottom: 5px;
+}
+.form__coment__post__textarea{
+    font-size: 18px;
+    padding: 5px;
+}
 /* / общие / */
 .d-none{
     display: none;
