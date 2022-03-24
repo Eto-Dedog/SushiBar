@@ -1225,6 +1225,72 @@ body{
     top: 0;
     border-radius: 2px;
 }
+/* |contacts| */
+.contacts__block{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contacts__link{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 220px;
+    width: 100%;
+}
+.contacts__link__text{
+    padding-top: 25px;
+    font-size: 24px;
+}
+.contacts__link:hover{
+    opacity: 0.7;
+}
+.contacts__link__img{
+    width: 70px;
+    height: 70px;
+}
+/* контакты */
+.form__contacts__box{
+    display: flex;
+}
+.input__contacts{
+    max-width: 1200px;
+    width: 100%;
+    margin: 10px;
+}
+.form__contacts .input{
+    padding: 10px;
+    font-size: 20px;
+}
+.textarea__contacts{
+    margin: 10px;
+}
+.map__block{
+    display: flex;
+    justify-content: center;
+}
+.submit__contacts{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    transition: 0.2s;
+    border: none;
+    padding: 15px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.submit__contacts:hover{
+    opacity: 0.7;
+}
+.section__special-contacts{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
 /* / общие / */
 .d-none{
     display: none;
