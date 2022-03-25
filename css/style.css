@@ -1290,7 +1290,132 @@ body{
     margin-top: 30px;
     margin-bottom: 50px;
 }
-
+/* |account| */
+/* аккаунт */
+.account__block{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.account__control{
+    border-right: 1px solid #ede6dc;
+    padding-right: 80px;
+}
+.account__control__box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+.account__control__box-img{
+    width: 80px;
+    height: 80px;
+    border-radius:50%;
+}
+.account__control__box-name{
+    margin-top: 15px;
+}
+.account__control__box-email{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn__account{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btn__account:not(:last-child){
+    margin-bottom: 25px;
+}
+.btn__account:hover{
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.btn__account-img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.btn__account-active{
+    color:#e00614;
+}
+/* account__userful */
+.account__useful{
+    margin-left: 25px;
+}
+.account__dashboard-title{
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.account__dashboard-test{
+    margin-bottom: 15px;
+}
+.account__dashboard-btns{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.account__dashboard-btn{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background:rgb(255, 255, 255);
+    border: 1px solid #e6dfd4;
+    cursor: pointer;
+    text-transform: uppercase;
+    max-width: 230px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.account__dashboard-btn:hover{
+    background:#e6dfd4;
+    transition: 0.5s;
+}
+.account__dashboard-cards-title{
+    text-align: center;
+    font-weight: normal;
+}
+.account__dashboard-cards{
+    display: flex;
+    justify-content: space-between;
+}
+.account__dashboard-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 25px;
+    padding: 5px;
+}
+.account__dashboard-card:hover{
+    background:rgb(85, 85, 85, 0.1);
+    transition: 0.5s;
+    border-radius: 25%;
+}
+.account__dashboard-card-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.account__dashboard-card-category{
+    color:#888;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.account__dashboard-card-title{
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.account__dashboard-card-price{
+    color:#e00614;
+    font-size: 18px;
+}
 /* / общие / */
 .d-none{
     display: none;
