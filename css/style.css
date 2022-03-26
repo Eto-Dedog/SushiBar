@@ -1416,6 +1416,93 @@ body{
     color:#e00614;
     font-size: 18px;
 }
+.account__reviews .comments__post{
+    display: flex;
+    flex-wrap: wrap;
+}
+.account__reviews .comment__post{
+    margin-bottom: 15px;
+}
+.account__reviews .comment__link{
+    margin-top: 15px;
+    color:#e00614;
+}
+.account__reviews .comment__link:hover{
+    color:rgba(224, 6, 20,0.5);
+    transition: 0.5s;
+}
+.form__account__upload{
+    display: flex;
+    flex-direction: column;
+}
+.input__account__upload{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.label__account__upload{
+    opacity: 0.7;
+}
+.account__details{
+    width: 100%;
+}
+.from__account__details__reset-pass{
+    margin-top: 15px;
+}
+.from__account__details__reset-pass-title{
+    color:rgb(85, 85, 85);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.from__account__details__reset-pass{
+    border: 1px solid rgb(85, 85, 85);
+    padding: 15px;
+}
+.form__account__details__box{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+}
+.form__account__details-label{
+    font-size: 20px;
+    color:rgb(85, 85, 85);
+    margin-bottom: 10px;
+}
+.form__account__details-input{
+    padding: 5px;
+    font-size: 20px;
+}
+.form__account__details-btn{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    transition: 0.2s;
+    padding: 15px;
+    border: none;
+    max-width: 280px;
+    font-size: 15px;
+}
+.form__account__details-btn:hover{
+    opacity: 0.7;
+}
+.form__account__logount-btn{
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    transition: 0.2s;
+    padding: 15px;
+    border: none;
+    max-width: 280px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+.form__account__logount-btn:hover{
+    opacity: 0.7;
+}
 /* / общие / */
 .d-none{
     display: none;
