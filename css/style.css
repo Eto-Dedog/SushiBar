@@ -1378,41 +1378,37 @@ body{
     text-align: center;
     font-weight: normal;
 }
-.account__dashboard-cards{
+.account__sort-cards{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
-.account__dashboard-card{
+.account__sort-card{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin: 25px;
+    margin: 20px;
     padding: 5px;
 }
-.account__dashboard-card:hover{
-    background:rgb(85, 85, 85, 0.1);
-    transition: 0.5s;
-    border-radius: 25%;
-}
-.account__dashboard-card-img{
+.account__sort-card-img{
     width: 250px;
     height: 250px;
     border-radius: 50%;
 }
-.account__dashboard-card-category{
+.account__sort-card-category{
     color:#888;
     font-size: 18px;
     margin-bottom: 5px;
 }
-.account__dashboard-card-title{
+.account__sort-card-title{
     font-weight: normal;
     font-size: 18px;
     margin-bottom: 10px;
     color: #000;
 }
-.account__dashboard-card-price{
+.account__sort-card-price{
     color:#e00614;
     font-size: 18px;
 }
@@ -1502,6 +1498,42 @@ body{
 }
 .form__account__logount-btn:hover{
     opacity: 0.7;
+}
+/* |product| */
+/* sort */
+.sort__block{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.sort__category{
+    max-width: 262px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+.sort__category-title{
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ede6dc;
+}
+.sort__category-btn{
+    color: #888;
+    margin: 5px;
+    margin-left: 0px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.sort__category-btn:hover{
+    color: #000;
+    transition: 0.5s;
+}
+.sort__category-btn-active{
+    color: #000;
 }
 /* / общие / */
 .d-none{
