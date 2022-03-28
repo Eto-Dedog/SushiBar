@@ -1378,12 +1378,12 @@ body{
     text-align: center;
     font-weight: normal;
 }
-.account__sort-cards{
+.account__sorts-cards{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.account__sort-card{
+.account__sorts-card{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1392,23 +1392,23 @@ body{
     margin: 20px;
     padding: 5px;
 }
-.account__sort-card-img{
+.account__sorts-card-img{
     width: 250px;
     height: 250px;
     border-radius: 50%;
 }
-.account__sort-card-category{
+.account__sorts-card-category{
     color:#888;
     font-size: 18px;
     margin-bottom: 5px;
 }
-.account__sort-card-title{
+.account__sorts-card-title{
     font-weight: normal;
     font-size: 18px;
     margin-bottom: 10px;
     color: #000;
 }
-.account__sort-card-price{
+.account__sorts-card-price{
     color:#e00614;
     font-size: 18px;
 }
@@ -1499,41 +1499,90 @@ body{
 .form__account__logount-btn:hover{
     opacity: 0.7;
 }
-/* |product| */
-/* sort */
-.sort__block{
+/* |products| */
+/* sorts */
+.sorts__block{
     display: flex;
     justify-content: center;
     margin-top: 25px;
     margin-bottom: 25px;
 }
-.sort__category{
+.sorts__category{
     max-width: 262px;
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
 }
-.sort__category-title{
+.sorts__category-title{
     font-weight: normal;
     text-transform: uppercase;
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #ede6dc;
 }
-.sort__category-btn{
+.sorts__category-btn{
     color: #888;
     margin: 5px;
     margin-left: 0px;
     cursor: pointer;
     font-size: 18px;
 }
-.sort__category-btn:hover{
+.sorts__category-btn:hover{
     color: #000;
     transition: 0.5s;
 }
-.sort__category-btn-active{
+.sorts__category-btn-active{
     color: #000;
+}
+/* |product| */
+/* sort */
+.sort__block{
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.sort__block__info-box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.sort__block__info-box-img{
+    width: 100%;
+}
+.sort__block__info-box-title{
+    font-weight: normal;
+    font-size: 24px;
+}
+.sort__block__info-box-price{
+    margin-top: 10px;
+    font-size: 20px;
+    color:rgba(224, 6, 20,1);
+}
+.sort__block__info-box-description{
+    display: flex;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.sort__block__info-box-description-text{
+    color: #888;
+}
+.sort__block__info-box-link {
+    color:#888;
+}
+.sort__block__info-box-link:hover {
+    color:#000;
+    transition: 0.5s;
+}
+.sort__block__info-box-link-img{
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+    margin-left: 10px;
+}
+.sort__block__info-box-link-img:hover{
+    opacity: 1;
+    transition: 0.5s;
 }
 /* / общие / */
 .d-none{
