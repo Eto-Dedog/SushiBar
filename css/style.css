@@ -1386,10 +1386,48 @@ body{
     background:#e6dfd4;
     transition: 0.5s;
 }
+.account__dashboard-btn-ad:hover{
+    background:rgba(224, 6, 20,0.3);
+}
 .account__dashboard-cards-title{
     text-align: center;
     font-weight: normal;
 }
+.account__sort-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.account__sort-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    padding: 5px;
+}
+.account__sort-card-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.account__sort-card-category{
+    color:#888;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.account__sort-card-title{
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+}
+.account__sort-card-price{
+    color:#e00614;
+    font-size: 18px;
+}
+
 .account__sorts-cards{
     display: flex;
     justify-content: space-between;
@@ -1673,6 +1711,16 @@ body{
 .reviews__form-textarea{
     border: 1px solid #ede6dc;
     margin-top: 15px;
+}
+.comment__tool{
+    margin-top: 15px;
+}
+.comment__link{
+    cursor: pointer;
+}
+.comment__link:hover{
+    color:rgba(224, 6, 20,1);
+    transition: 0.2s;
 }
 /* / общие / */
 .d-none{
