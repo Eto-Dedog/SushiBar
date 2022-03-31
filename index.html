@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/home/favicon.png" type="image/x-icon">
     <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
     <title>SushiBar</title>
 </head>
 <body>
@@ -50,38 +51,43 @@
         <!-- /.container -->
     </header>
     <!-- /.section__header section -->
-    <section class="section__promo-one section">
-        <div class="container">
-            <div class="promo__block sl-1-block">
-                <h1 class="promo__title">Cохраняй<br>спокойствие &<br> ешь суши</h1>
-                <span class="promo__info__text text">Вы не можете купить счастье, но вы можете купить суши, и это достаточно близко.</span>
-                <button class="promo__btn btn">Узнайте больше</button>
+    <section class="slider">
+        <section class="item section__promo-one section">
+            <div class="container">
+                <div class="promo__block sl-1-block">
+                    <h1 class="promo__title">Cохраняй<br>спокойствие &<br> ешь суши</h1>
+                    <span class="promo__info__text text">Вы не можете купить счастье, но вы можете купить суши, и это достаточно близко.</span>
+                    <button class="promo__btn btn">Узнайте больше</button>
+                </div>
+                <!-- /.promo__block -->
             </div>
-            <!-- /.promo__block -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <section class="section__promo-two section d-none">
-        <div class="container">
-            <div class="promo__block sl-2-block">
-                <h1 class="promo__title">Традиционные<br> рецепты <br>из японии</h1>
-                <span class="promo__info__text text">Так-же как и сами повара!</span>
-                <button class="promo__btn btn">Узнайте больше</button>
+            <!-- /.container -->
+        </section>
+        <section class="item section__promo-two section d-none">
+            <div class="container">
+                <div class="promo__block sl-2-block">
+                    <h1 class="promo__title">Традиционные<br> рецепты <br>из японии</h1>
+                    <span class="promo__info__text text">Так-же как и сами повара!</span>
+                    <button class="promo__btn btn">Узнайте больше</button>
+                </div>
+                <!-- /.promo__block -->
             </div>
-            <!-- /.promo__block -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <section class="section__promo-three section d-none">
-        <div class="container">
-            <div class="promo__block sl-3-block">
-                <h1 class="promo__title">Традиционные<br> рецепты <br>из японии</h1>
-                <span class="promo__info__text text">Так-же как и сами повара!</span>
-                <button class="promo__btn btn">Узнайте больше</button>
+            <!-- /.container -->
+        </section>
+        <section class="item section__promo-three section d-none">
+            <div class="container">
+                <div class="promo__block sl-3-block">
+                    <h1 class="promo__title">Традиционные<br> рецепты <br>из японии</h1>
+                    <span class="promo__info__text text">Так-же как и сами повара!</span>
+                    <button class="promo__btn btn">Узнайте больше</button>
+                </div>
+                <!-- /.promo__block -->
             </div>
-            <!-- /.promo__block -->
-        </div>
-        <!-- /.container -->
+            <!-- /.container -->
+        </section>
+        <!-- /.slider -->
+        <a href="#" class="prev" onclick="minusSlide()">&#10094;</a>
+        <a href="#" class="next" onclick="plusSlide()">&#10095;</a>
     </section>
     <!-- /.slider -->
     <section class="section__special section">
