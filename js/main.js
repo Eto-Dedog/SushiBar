@@ -48,3 +48,87 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// mailing
+const modalBtnsMail = document.querySelectorAll('.mailing')
+const modalMail = document.querySelector('.modal__newsletters')
+const overlayMail = modalMail.querySelector('.modal__newsletters__overlay')
+const modalCloseMail = modalMail.querySelector('.modal__close')
+
+modalBtnsMail.forEach(elem =>  {
+  elem.addEventListener('click', () => {
+    modalMail.classList.remove('d-none')
+  })
+});
+overlayMail.addEventListener('click', () => {
+    modalMail.classList.add('d-none')
+})
+modalCloseMail.addEventListener('click', () => {
+    modalMail.classList.add('d-none')
+})
+// reg and log
+const modalBtnsAuth = document.querySelectorAll('.authorization')
+const modalAuth = document.querySelector('.modal__user')
+const overlayAuth = modalAuth.querySelector('.modal__user__overlay')
+const modalCloseAuth = modalAuth.querySelector('.modal__close')
+
+modalBtnsAuth.forEach(elem =>  {
+  elem.addEventListener('click', () => {
+    modalAuth.classList.remove('d-none')
+  })
+});
+overlayAuth.addEventListener('click', () => {
+    modalAuth.classList.add('d-none')
+})
+modalCloseAuth.addEventListener('click', () => {
+    modalAuth.classList.add('d-none')
+})
+
+const userBtns = document.querySelectorAll('.modal__user__btn')
+const userFormAuth = document.querySelectorAll('.form-user')
+userBtns[0].addEventListener('click', () => {
+    userBtns[0].classList.add('modal__user__btn-active')
+    userBtns[1].classList.remove('modal__user__btn-active')
+    userFormAuth[0].classList.remove('d-none')
+    userFormAuth[1].classList.add('d-none')
+});
+userBtns[1].addEventListener('click', () => {
+    userBtns[0].classList.remove('modal__user__btn-active')
+    userBtns[1].classList.add('modal__user__btn-active')
+    userFormAuth[0].classList.add('d-none')
+    userFormAuth[1].classList.remove('d-none')
+});
+
+// info-one
+const modalBtnsInfoOne = document.querySelectorAll('.info-one')
+const modalInfoOne = document.querySelector('.modal__info-one')
+const overlayInfoOne = modalInfoOne.querySelector('.modal__info__overlay-one')
+const modalCloseInfoOne = modalInfoOne.querySelector('.modal__close')
+
+modalBtnsInfoOne.forEach(elem =>  {
+    elem.addEventListener('click', () => {
+    modalInfoOne.classList.remove('d-none')
+  })
+});
+overlayInfoOne.addEventListener('click', () => {
+    modalInfoOne.classList.add('d-none')
+})
+modalCloseInfoOne.addEventListener('click', () => {
+    modalInfoOne.classList.add('d-none')
+})
+// info-two
+const modalBtnsInfoTwo = document.querySelectorAll('.info-two')
+const modalInfoTwo = document.querySelector('.modal__info-two')
+const overlayInfoTwo = modalInfoTwo.querySelector('.modal__info__overlay-two')
+const modalCloseInfoTwo = modalInfoTwo.querySelector('.modal__close')
+
+modalBtnsInfoTwo.forEach(elem =>  {
+    elem.addEventListener('click', () => {
+    modalInfoTwo.classList.remove('d-none')
+  })
+});
+overlayInfoTwo.addEventListener('click', () => {
+    modalInfoTwo.classList.add('d-none')
+})
+modalCloseInfoTwo.addEventListener('click', () => {
+    modalInfoTwo.classList.add('d-none')
+})
