@@ -82,7 +82,6 @@ overlayAuth.addEventListener('click', () => {
 modalCloseAuth.addEventListener('click', () => {
     modalAuth.classList.add('d-none')
 })
-
 const userBtns = document.querySelectorAll('.modal__user__btn')
 const userFormAuth = document.querySelectorAll('.form-user')
 userBtns[0].addEventListener('click', () => {
@@ -97,7 +96,27 @@ userBtns[1].addEventListener('click', () => {
     userFormAuth[0].classList.add('d-none')
     userFormAuth[1].classList.remove('d-none')
 });
+// burger
+const modalBtnsBurger = document.querySelectorAll('.burger')
+const modalBurger = document.querySelector('.modal__burger')
+const overlayBurger = modalBurger.querySelector('.modal__burger__overlay')
+const modalCloseBurger = modalBurger.querySelector('.modal__close')
+const dopBtnClose = modalBurger.querySelector('.auth-burger')
 
+modalBtnsBurger.forEach(elem =>  {
+  elem.addEventListener('click', () => {
+    modalBurger.classList.remove('d-none')
+  })
+});
+overlayBurger.addEventListener('click', () => {
+    modalBurger.classList.add('d-none')
+})
+modalCloseBurger.addEventListener('click', () => {
+    modalBurger.classList.add('d-none')
+})
+dopBtnClose.addEventListener('click', () => {
+    modalBurger.classList.add('d-none')
+})
 // info-one
 const modalBtnsInfoOne = document.querySelectorAll('.info-one')
 const modalInfoOne = document.querySelector('.modal__info-one')
