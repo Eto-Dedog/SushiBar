@@ -1930,6 +1930,27 @@ body{
     .title{
         font-size: 28px;
     }
+    .modal__newsletters__close{
+        right: 5px;
+        top: 5px;
+    }
+    .modal__newsletters__body{
+        flex-direction: column;
+        margin-left: -209px;
+    }
+    .modal__newsletters__box:first-child{
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    .modal__info__close{
+        margin-top: -290px;
+        margin-right: -357px;
+    }
+    .modal__info__body{
+        max-width: 600px;
+        max-height: 500px;
+        width: 100%;
+    }
 
 }
 @media (max-width:768px) {
@@ -1976,8 +1997,15 @@ body{
         flex-wrap: wrap;
         margin: 15px;
     }
-    .footer__box:not(:first-child){
+    .footer__box:first-child{
         margin-top: 15px;
+    }
+    .modal__info__body{
+        max-width: 390px;
+        margin-left: -202px;
+    }
+    .modal__info__close{
+        margin-right: -184px;
     }
 }
 @media (max-width:576px) {
@@ -2004,5 +2032,28 @@ body{
     }
     .sets__slide__img{
         max-width: 220px;
+    }
+    .modal__newsletters__body{
+        padding: 5px;
+        margin-left: -139px;
+        max-width: 270px;
+    }
+    .modal__newsletters__box:first-child{
+        margin-right: 0px;
+        display: none;
+    }
+    .newsletters__input{
+        max-width: 220px;
+    }
+    .modal__info__body{
+        max-width: 270px;
+        margin-left: -128px;
+    }
+    .modal__info__close{
+        margin-right: -140px;
+    }
+    .modal__newsletters__close{
+        top: -35px;
+        right: 0;
     }
 }
