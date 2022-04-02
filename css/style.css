@@ -1023,6 +1023,7 @@ body{
 }
 .recipe__cards{
     display: flex;
+    flex-wrap: wrap;
 }
 .recipe__card{
     display: flex;
@@ -1031,7 +1032,7 @@ body{
     text-align: center;
     justify-content: center;
     position: relative;
-    margin: 15px;
+    margin: 13px;
     padding-bottom: 20px;
 }
 .recipe__card__title{
@@ -1847,8 +1848,12 @@ body{
 .btn-auth:hover{
     opacity: 0.7;
 }
+.form__coment__post__textarea{
+    max-width: 1200px;
+    width: 100%;
+}
 @media (max-width:1200px) {
-    .special__block,.newsletters__block{
+    .special__block,.newsletters__block, .comments__post__block, .about__block{
         padding-left: 3%;
         padding-right: 3%;
     }
@@ -1918,6 +1923,13 @@ body{
     .special__card:last-child{
         display: none;
     }
+    .blog__block .news__card__box{
+       width: auto;
+    }
+    .social__links{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 @media (max-width:992px) {
     .header__auth__box__link{
@@ -1951,7 +1963,22 @@ body{
         max-height: 500px;
         width: 100%;
     }
-
+    .steps__cards{
+        flex-wrap: wrap;
+    }
+    .steps__card:first-child{
+        margin-left: 20px;
+    }
+    .steps__card:last-child{
+        margin-right: 20px;
+    }
+    .about__block{
+        flex-direction: column-reverse;
+    }
+    .about__box:first-child{
+        margin-right: 0px;
+        margin-top: 25px;
+    }
 }
 @media (max-width:768px) {
     .header__nav , .header-auth, .header-tell, .header-mailing{
@@ -2007,6 +2034,19 @@ body{
     .modal__info__close{
         margin-right: -184px;
     }
+    .information__video__block{
+        flex-direction: column-reverse;
+    }
+    .blog__block .news__cards .news__card{
+        flex-direction: column;
+    }
+    .blog__block .news__card__box:first-child{
+        margin-right: 0px;
+        width: 100%;
+    }
+    .about__box__history__cards{
+        flex-wrap: wrap;
+    }
 }
 @media (max-width:576px) {
     .special__cards{
@@ -2055,5 +2095,31 @@ body{
     .modal__newsletters__close{
         top: -35px;
         right: 0;
+    }
+    .information__video__box:first-child{
+        display: none;
+    }
+    .recipe__cards{
+        justify-content: center;
+    }
+    .promo__sub-title{
+        font-size: 52px;
+    }
+    .promo__title{
+        font-size: 52px;
+    }
+    .post__block .news__card__text {
+        margin-bottom: 78px;
+    }
+    .about__box__history__cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contacts__block{
+        flex-wrap: wrap;
+    }
+    .contacts__link{
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 }
