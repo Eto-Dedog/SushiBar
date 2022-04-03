@@ -1853,7 +1853,7 @@ body{
     width: 100%;
 }
 @media (max-width:1200px) {
-    .special__block,.newsletters__block, .comments__post__block, .about__block{
+    .special__block,.newsletters__block, .comments__post__block, .about__block, .account__block, .sorts__block{
         padding-left: 3%;
         padding-right: 3%;
     }
@@ -1930,6 +1930,15 @@ body{
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    .account__dashboard-btns{
+        flex-wrap: wrap;
+    }
+    .account__dashboard-btn{
+        margin: 5px;
+    }
+    .reviews__form-textarea{
+        width: 100%;
+    }
 }
 @media (max-width:992px) {
     .header__auth__box__link{
@@ -1978,6 +1987,12 @@ body{
     .about__box:first-child{
         margin-right: 0px;
         margin-top: 25px;
+    }
+    .account__sort-cards{
+        justify-content: center;
+    }
+    .account__sorts-cards{
+        justify-content: center;
     }
 }
 @media (max-width:768px) {
@@ -2046,6 +2061,22 @@ body{
     }
     .about__box__history__cards{
         flex-wrap: wrap;
+    }
+    .reviews__block{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .sort__block{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rewiews__box{
+        width: 100%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
 }
 @media (max-width:576px) {
@@ -2121,5 +2152,39 @@ body{
     .contacts__link{
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+    .account__block{
+        flex-direction: column;
+    }
+    .account__control__box{
+        align-items: center;
+    }
+    .account__control{
+        padding-right: 0px;
+        border-right: 0px;
+        margin-bottom: 15px;
+    }
+    .btn__account{
+        flex-direction: column;
+    }
+    .account__details{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .form__account__details{
+        max-width: 220px;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    .account__useful{
+        margin-left: 0px;
+    }
+    .sorts__block{
+        flex-direction: column;
+    }
+    .sort__block__info-box-description{
+        flex-wrap: wrap;
     }
 }
