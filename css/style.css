@@ -1541,7 +1541,7 @@ body{
     opacity: 0.7;
 }
 .account__details{
-    width: 100%;
+    width: 70%;
 }
 .from__account__details__reset-pass{
     margin-top: 15px;
@@ -2171,6 +2171,7 @@ body{
         text-align: center;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
     .form__account__details{
         max-width: 220px;

@@ -82,20 +82,24 @@ overlayAuth.addEventListener('click', () => {
 modalCloseAuth.addEventListener('click', () => {
     modalAuth.classList.add('d-none')
 })
-const userBtns = document.querySelectorAll('.modal__user__btn')
-const userFormAuth = document.querySelectorAll('.form-user')
-userBtns[0].addEventListener('click', () => {
-    userBtns[0].classList.add('modal__user__btn-active')
-    userBtns[1].classList.remove('modal__user__btn-active')
-    userFormAuth[0].classList.remove('d-none')
-    userFormAuth[1].classList.add('d-none')
-});
-userBtns[1].addEventListener('click', () => {
-    userBtns[0].classList.remove('modal__user__btn-active')
-    userBtns[1].classList.add('modal__user__btn-active')
-    userFormAuth[0].classList.add('d-none')
-    userFormAuth[1].classList.remove('d-none')
-});
+const userBtns = document.querySelectorAll('.modal__user__btn');
+const userFormAuth = document.querySelectorAll('.form-user');
+for (let i = 0; i < userBtns.length; i++) {
+    userBtns[i].addEventListener('click', function() {
+    for (let i = 0; i < userFormAuth.length; i++) {
+    userFormAuth[i].classList.add('d-none');
+    }
+    userFormAuth[i].classList.remove('d-none');
+  });
+}
+for (let i = 0; i < userBtns.length; i++) {
+    userBtns[i].addEventListener('click', function() {
+    for (let i = 0; i < userFormAuth.length; i++) {
+    userBtns[i].classList.remove('modal__user__btn-active');
+    }
+    userBtns[i].classList.add('modal__user__btn-active');
+  });
+}
 // burger
 const modalBtnsBurger = document.querySelectorAll('.burger')
 const modalBurger = document.querySelector('.modal__burger')

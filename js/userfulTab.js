@@ -1,62 +1,19 @@
 const btnsAccount = document.querySelectorAll('.btn__account')
 const userfulBox = document.querySelectorAll('.account__useful')
-btnsAccount[0].addEventListener('click', () => {
-  btnsAccount[0].classList.add('btn__account-active')
-  btnsAccount[1].classList.remove('sets__active')
-  btnsAccount[2].classList.remove('sets__active')
-  btnsAccount[3].classList.remove('sets__active')
-  btnsAccount[4].classList.remove('sets__active')
-  userfulBox[0].classList.remove('d-none')
-  userfulBox[1].classList.add('d-none')
-  userfulBox[2].classList.add('d-none')
-  userfulBox[3].classList.add('d-none')
-  userfulBox[4].classList.add('d-none')
-});
-btnsAccount[1].addEventListener('click', () => {
-  btnsAccount[0].classList.remove('btn__account-active')
-  btnsAccount[1].classList.add('sets__active')
-  btnsAccount[2].classList.remove('sets__active')
-  btnsAccount[3].classList.remove('sets__active')
-  btnsAccount[4].classList.remove('sets__active')
-  userfulBox[0].classList.add('d-none')
-  userfulBox[1].classList.remove('d-none')
-  userfulBox[2].classList.add('d-none')
-  userfulBox[3].classList.add('d-none')
-  userfulBox[4].classList.add('d-none')
-});
-btnsAccount[2].addEventListener('click', () => {
-  btnsAccount[0].classList.remove('btn__account-active')
-  btnsAccount[1].classList.remove('sets__active')
-  btnsAccount[2].classList.add('sets__active')
-  btnsAccount[3].classList.remove('sets__active')
-  btnsAccount[4].classList.remove('sets__active')
-  userfulBox[0].classList.add('d-none')
-  userfulBox[1].classList.add('d-none')
-  userfulBox[2].classList.remove('d-none')
-  userfulBox[3].classList.add('d-none')
-  userfulBox[4].classList.add('d-none')
-});
-btnsAccount[3].addEventListener('click', () => {
-  btnsAccount[0].classList.remove('btn__account-active')
-  btnsAccount[1].classList.remove('sets__active')
-  btnsAccount[2].classList.remove('sets__active')
-  btnsAccount[3].classList.add('sets__active')
-  btnsAccount[4].classList.remove('sets__active')
-  userfulBox[0].classList.add('d-none')
-  userfulBox[1].classList.add('d-none')
-  userfulBox[2].classList.add('d-none')
-  userfulBox[3].classList.remove('d-none')
-  userfulBox[4].classList.add('d-none')
-});
-btnsAccount[4].addEventListener('click', () => {
-  btnsAccount[0].classList.remove('btn__account-active')
-  btnsAccount[1].classList.remove('sets__active')
-  btnsAccount[2].classList.remove('sets__active')
-  btnsAccount[3].classList.remove('sets__active')
-  btnsAccount[4].classList.add('sets__active')
-  userfulBox[0].classList.add('d-none')
-  userfulBox[1].classList.add('d-none')
-  userfulBox[2].classList.add('d-none')
-  userfulBox[3].classList.add('d-none')
-  userfulBox[4].classList.remove('d-none')
-});
+
+for (let i = 0; i < btnsAccount.length; i++) {
+  btnsAccount[i].addEventListener('click', function() {
+    for (let i = 0; i < userfulBox.length; i++) {
+      userfulBox[i].classList.add('d-none');
+    }
+    userfulBox[i].classList.remove('d-none');
+  });
+}
+for (let i = 0; i < btnsAccount.length; i++) {
+  btnsAccount[i].addEventListener('click', function() {
+    for (let i = 0; i < userfulBox.length; i++) {
+      btnsAccount[i].classList.remove('btn__account-active');
+    }
+    btnsAccount[i].classList.add('btn__account-active');
+  });
+}
