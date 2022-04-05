@@ -92,9 +92,10 @@
             </div>
             <!-- /.account__useful-btns -->
             <div class="account__dashboard-btns d-none">
-                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="pen" class="btn__account-img">% Категории %</div>
-                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> % Продукты %</div>
-                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img">% Отзывы %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img">% Категории %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> % Продукты %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img">% Отзывы %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img">% Комментарии %</div>
             </div>
             <!-- /.account__useful-btns -->
             <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
@@ -165,8 +166,9 @@
           <div class="account__useful account__upload d-none">
             <form action="#" method="post" class="form__account__upload">
                 <h3>Загрузите новою аватарку</h3>
-                <input type="file" class="input__account__upload" id="input__account__upload">
+                <input type="file" class="input__account__upload" id="input__account__upload" required>
                 <label class="label__account__upload" for="input__account__upload">Только файлы jpg/jpeg/png весом мение 200мб *</label>
+                <input type="submit" class="form__account__upload-btn btn-two">
             </form>
           </div>
           <!-- /.account__useful profile__upload -->
@@ -174,39 +176,39 @@
             <form action="#" method="post" class="form__account__details">
                 <div class="form__account__details__box">
                     <label class="form__account__details-label" for="first-name-details">Имя</label>
-                    <input class="form__account__details-input" type="text" id="first-name-details">
+                    <input class="form__account__details-input" type="text" id="first-name-details" required>
                 </div>
                 <!-- /.form__account__details__box -->
                 <div class="form__account__details__box">
                     <label class="form__account__details-label" for="last-name-details">Фамилия</label>
-                    <input class="form__account__details-input" type="text" id="last-name-details">
+                    <input class="form__account__details-input" type="text" id="last-name-details" required>
                 </div>
                 <!-- /.form__account__details__box -->
                 <div class="form__account__details__box">
                     <label class="form__account__details-label" for="user-details">Имя пользователя</label>
-                    <input class="form__account__details-input" type="text" id="user-details">
+                    <input class="form__account__details-input" type="text" id="user-details" required>
                 </div>
                 <!-- /.form__account__details__box -->
                 <div class="form__account__details__box">
                     <label class="form__account__details-label" for="email-details">E-mail</label>
-                    <input class="form__account__details-input" type="email" id="email-details">
+                    <input class="form__account__details-input" type="email" id="email-details" required>
                 </div>
                 <!-- /.form__account__details__box -->
                 <div class="from__account__details__reset-pass">
                     <h3 class="from__account__details__reset-pass-title">Смена пораля</h3>
                     <div class="form__account__details__box">
                         <label class="form__account__details-label" for="old-pass">Старый пароль</label>
-                        <input class="form__account__details-input" type="password" id="old-pass">
+                        <input class="form__account__details-input" type="password" id="old-pass" required>
                     </div>
                     <!-- /.form__account__details__box -->
                     <div class="form__account__details__box">
                         <label class="form__account__details-label" for="new-pass">Новый пароль</label>
-                        <input class="form__account__details-input" type="password" id="new-pass">
+                        <input class="form__account__details-input" type="password" id="new-pass" required>
                     </div>
                     <!-- /.form__account__details__box -->
                     <div class="form__account__details__box">
                         <label class="form__account__details-label" for="repeat-new-pass">Повторите новый пароль</label>
-                        <input class="form__account__details-input" type="password" id="repeat-new-pass">
+                        <input class="form__account__details-input" type="password" id="repeat-new-pass" required>
                     </div>
                     <!-- /.form__account__details__box -->
                 </div>
@@ -317,7 +319,7 @@
                 <h2 class="modal__newsletters__title">Присоединяйтесь к рассылке новостей 
                     <br> и <span class="attention">будьте в курсе событий!</span> </h2>
                     <form action="#" method="post" class="newsletters__form newsletters__form-modal"> 
-                        <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input">
+                        <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" required>
                         <input type="submit" class="newsletters__btn btn" value="+">
                     </form>
                     <span class="modal__spam">*Не волнуйтесь, мы не будем рассылать спам по почтовым ящикам наших клиентов</span>
@@ -347,12 +349,12 @@
                 <form action="#" method="get" class="form-user form__modal__user-login">
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="log-email">Ведите ваш e-mail *</label>
-                        <input class="form__modal__user__input input" type="email" id="log-email">
+                        <input class="form__modal__user__input input" type="email" id="log-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="log-pass">Ведите ваш пароль *</label>
-                        <input class="form__modal__user__input input" type="password" id="log-pass">
+                        <input class="form__modal__user__input input" type="password" id="log-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box-check d-none">
@@ -369,12 +371,12 @@
                 <form action="#" method="post" class="form-user form__modal__user-reg d-none">
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="reg-email">Ведите ваш e-mail *</label>
-                        <input class="form__modal__user__input input" type="email" id="reg-email">
+                        <input class="form__modal__user__input input" type="email" id="reg-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="reg-pass">Ведите ваш пароль *</label>
-                        <input class="form__modal__user__input input" type="password" id="reg-pass">
+                        <input class="form__modal__user__input input" type="password" id="reg-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">

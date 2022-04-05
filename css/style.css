@@ -384,6 +384,10 @@ body{
     top: 0;
     color: #e00614;
 }
+.product__card__price::after{
+    content:'₽'
+}
+
 .product__card__box{
     padding-left: 10px;
     padding-right: 10px;
@@ -1534,6 +1538,10 @@ body{
     flex-direction: column;
 }
 .input__account__upload{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form__account__upload-btn{
     margin-top: 15px;
     margin-bottom: 15px;
 }

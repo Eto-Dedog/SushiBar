@@ -78,8 +78,8 @@
             <h3 class="sort__block__info-box-title">Информация о продукте</h3>
             <span class="sort__block__info-box-price">1499 ₽</span>
             <p class="sort__block__info-box-description sort__block__info-box-description-text">Пивной Лефф Блондин</p>
-            <span class="sort__block__info-box-description">Категория: <a href="#" class="link sort__block__info-box-link">Напиток</a></span>
-            <span class="sort__block__info-box-description">Ярлык: <a href="#" class="link sort__block__info-box-link">Алкоголь</a></span>
+            <span class="sort__block__info-box-description">Категория: <a href="#" class="link sort__block__info-box-link">Алкогольные напитки</a></span>
+            <span class="sort__block__info-box-description d-none">Ярлык: <a href="#" class="link sort__block__info-box-link">Алкоголь</a></span>
             <span class="sort__block__info-box-description">Делитесь: 
               <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/twitter.svg" alt="social__link"></a>
               <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/facebook.svg" alt="social__link"></a>
@@ -200,7 +200,7 @@
                             </div>
                             <!-- /.stars__box -->
                             <h4 class="reviews__form-text">Ваш отзыв *</h4>
-                            <textarea cols="80" rows="10" class="reviews__form-textarea"></textarea>
+                            <textarea cols="80" rows="10" class="reviews__form-textarea" required></textarea>
                             <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
                         </div>
                         <!-- /.reviews__form__box -->
@@ -300,7 +300,7 @@
                 <h2 class="modal__newsletters__title">Присоединяйтесь к рассылке новостей 
                     <br> и <span class="attention">будьте в курсе событий!</span> </h2>
                     <form action="#" method="post" class="newsletters__form newsletters__form-modal"> 
-                        <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input">
+                        <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" required>
                         <input type="submit" class="newsletters__btn btn" value="+">
                     </form>
                     <span class="modal__spam">*Не волнуйтесь, мы не будем рассылать спам по почтовым ящикам наших клиентов</span>
@@ -330,12 +330,12 @@
                 <form action="#" method="get" class="form-user form__modal__user-login">
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="log-email">Ведите ваш e-mail *</label>
-                        <input class="form__modal__user__input input" type="email" id="log-email">
+                        <input class="form__modal__user__input input" type="email" id="log-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="log-pass">Ведите ваш пароль *</label>
-                        <input class="form__modal__user__input input" type="password" id="log-pass">
+                        <input class="form__modal__user__input input" type="password" id="log-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box-check d-none">
@@ -352,12 +352,12 @@
                 <form action="#" method="post" class="form-user form__modal__user-reg d-none">
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="reg-email">Ведите ваш e-mail *</label>
-                        <input class="form__modal__user__input input" type="email" id="reg-email">
+                        <input class="form__modal__user__input input" type="email" id="reg-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="reg-pass">Ведите ваш пароль *</label>
-                        <input class="form__modal__user__input input" type="password" id="reg-pass">
+                        <input class="form__modal__user__input input" type="password" id="reg-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">

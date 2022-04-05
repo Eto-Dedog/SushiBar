@@ -96,21 +96,26 @@
     <!-- /.section__contacts section -->
     <form action="#" method="post" class="form__contacts">
       <div class="container">
+          <h2 class="title">Хотите что-то Спросить? заказать столик? не стесняйтесь!</h2>
         <div class="form__contacts__box">
-          <input type="text" class="input input__contacts" placeholder="Ваше Имя">
-          <input type="text" class="input input__contacts" placeholder="Ваше Фамилия">
+          <input type="text" class="input input__contacts" placeholder="Ваше Имя" required>
+          <input type="text" class="input input__contacts" placeholder="Ваше Фамилия" required>
         </div>
         <!-- /.form__contacts__box -->
         <div class="form__contacts__box">
-          <input type="email" class="input input__contacts" placeholder="Ваш E-mail">
+          <input type="email" class="input input__contacts" placeholder="Ваш E-mail" required>
         </div>
         <!-- /.form__contacts__box -->
         <div class="form__contacts__box">
-          <textarea cols="128" rows="10" placeholder="Ваше сообщение" class="input textarea__contacts"></textarea>
+            <input type="date" class="input input__contacts">
+          </div>
+          <!-- /.form__contacts__box -->
+        <div class="form__contacts__box">
+          <textarea cols="128" rows="10" placeholder="Ваше сообщение" class="input textarea__contacts" required></textarea>
         </div>
         <!-- /.form__contacts__box -->
         <div class="form__contacts__box">
-          <input type="submit" placeholder="Отправить сообщение" class="submit__contacts">
+          <input type="submit" value="Отправить" class="submit__contacts">
         </div>
         <!-- /.form__contacts__box -->
       </div>
@@ -211,7 +216,7 @@
                 <h2 class="modal__newsletters__title">Присоединяйтесь к рассылке новостей 
                     <br> и <span class="attention">будьте в курсе событий!</span> </h2>
                     <form action="#" method="post" class="newsletters__form newsletters__form-modal"> 
-                        <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input">
+                        <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" required>
                         <input type="submit" class="newsletters__btn btn" value="+">
                     </form>
                     <span class="modal__spam">*Не волнуйтесь, мы не будем рассылать спам по почтовым ящикам наших клиентов</span>
@@ -241,12 +246,12 @@
                 <form action="#" method="get" class="form-user form__modal__user-login">
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="log-email">Ведите ваш e-mail *</label>
-                        <input class="form__modal__user__input input" type="email" id="log-email">
+                        <input class="form__modal__user__input input" type="email" id="log-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="log-pass">Ведите ваш пароль *</label>
-                        <input class="form__modal__user__input input" type="password" id="log-pass">
+                        <input class="form__modal__user__input input" type="password" id="log-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box-check d-none">
@@ -263,12 +268,12 @@
                 <form action="#" method="post" class="form-user form__modal__user-reg d-none">
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="reg-email">Ведите ваш e-mail *</label>
-                        <input class="form__modal__user__input input" type="email" id="reg-email">
+                        <input class="form__modal__user__input input" type="email" id="reg-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
                         <label class="form__modal__user__label label" for="reg-pass">Ведите ваш пароль *</label>
-                        <input class="form__modal__user__input input" type="password" id="reg-pass">
+                        <input class="form__modal__user__input input" type="password" id="reg-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
