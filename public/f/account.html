@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/home/favicon.png" type="image/x-icon">
     <script src="js/main.js" defer></script>
-    <title>SushiBar - О нас</title>
+    <script src="js/userfulTab.js" defer></script>
+    <title>SushiBar - Мой аккаунт</title>
 </head>
 <body>
     <header class="section__header section">
@@ -32,17 +33,17 @@
                 </div>
                 <!-- /.header__auth -->
                 <nav class="header__nav nav">
-                    <a href="index.php" class="header__nav__link nav__link link">Главная</a>
+                    <a href="index.html" class="header__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.php" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.php" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.php" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.php" class="header__nav__link nav__link link active">О&nbsp;нас</a>
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.php" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 </nav>
                 <!-- /.header__nav nav -->
@@ -55,61 +56,183 @@
     <section class="section__promo-sub-one section">
         <div class="container">
             <div class="promo__sub-block sl-1-block">
-              <h1 class="promo__sub-title">О нас</h1>
-              <a href="index.php" class="promo__info__text text link promo__link">Главаная > </a>
+              <h1 class="promo__sub-title">Мой аккаунт</h1>
+              <a href="index.html" class="promo__info__text text link promo__link">Главаная > </a>
             </div>
             <!-- /.promo__block -->
         </div>
         <!-- /.container -->
     </section>
     <!-- /.section__promo-sub-one section -->
-    <section class="section__about section">
+    <section class="section__profile">
       <div class="container">
-        <div class="about__block">
-          <div class="about__box">
-            <div class="about__box__work-hours">
-              <h4 class="about__box__work-hours__title about__small__title">Рабочие часы</h4>
-              <p class="about__box__work-hours__text text"><strong>Понедельник - пятница:</strong> С 8 утра до 10 вечера</p>
-              <p class="about__box__work-hours__text text"><strong>Суббота:</strong> C 10 утра - 12 вечера</p>
-              <p class="about__box__work-hours__text text"><strong>Воскресенье: </strong> Закрыто</p>
+        <div class="account__block">
+          <div class="account__control">
+            <div class="account__control__box">
+              <img src="img/account/avatar.png" alt="avatar" class="account__control__box-img">
+              <h3 class="account__control__box-name">user-name</h3>
+              <span class="account__control__box-email">user-email@em.ru</span>
             </div>
-            <!-- /.about__box__work-hours -->
-            <div class="about__box__events">
-              <h4 class="about__box__events__title about__small__title">Специальные мероприятия</h4>
-              <p class="about__box__events__text text">Последнию субботу каждого месяца!</p>
-            </div>
-            <!-- /.about__box__events -->
-            <a href="contacts.php" class="about__box__contacts btn link">КОНТАКТЫ</a>
-            <!-- /.about__box__contacts -->
+            <!-- /.profile__control__box -->
+            <div class="btn__account btn__account-active"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> <span>Панель управления</span></div>
+            <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Отзывы</span></div>
+            <div class="btn__account"><img src="img/account/upload.svg" alt="upload" class="btn__account-img"> <span>Аватарка</span></div>
+            <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>
+            <div class="btn__account"><img src="img/account/logout.svg" alt="logout" class="btn__account-img"> <span>Выход</span></div>
+            <!-- /.btn__profile -->
           </div>
-          <!-- /.about__box -->
-          <div class="about__box">
-            <div class="about__box__history">
-              <h2 class="about__box__history__title title">МЫ СЕМЬЯ КОБАЯСИ И ЭТО НАШ <br> РЕСТОРАН!</h2>
-              <p class="about__box__history__text text">С давних пор мы занимаемся рестаранным бизнесом, и в этом нам нет равных! Мы знаем как удивить клиента лучшим сервисом от ностоящих японцев</p>
+          <!-- /.profile__control -->
+          <div class="account__useful account__dashboard">
+            <h2 class="account__useful-title account__dashboard-title">Добро пожаловать на страницу вашей учетной записи</h2>
+            <p class="account__useful-text account__dashboard-test">Привет, <strong>user-name</strong>, сегодня отличный день, чтобы проверить страницу своей учетной записи. Вы также можете проверить:</p>
+            <div class="account__dashboard-btns">
+                <div class="account__dashboard-btn"><img src="img/account/calendar.svg" alt="pen" class="btn__account-img"> Продукты</div>
+                <div class="account__dashboard-btn"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> Отзывы</div>
+                <div class="account__dashboard-btn"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> Подробней об акаунте</div>
             </div>
-            <!-- /.about__box__history -->
-            <div class="about__box__history__cards">
-              <div class="about__box__history__card">
-                <h3 class="about__box__history__card__title">РЕЦЕПТЫ ИЗ ЯПОНИИ</h3>
-                <p class="about__box__history__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus at eius ea quibusdam tempora maiores quos provident perferendis veritatis, eos iste animi? Natus neque autem eum sint alias eaque.</p>
-              </div>
-              <!-- /.about__box__history__card -->
-              <div class="about__box__history__card">
-                <h3 class="about__box__history__card__title">2000 ЛЕТ ТРАДИЦИИ</h3>
-                <p class="about__box__history__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus at eius ea quibusdam tempora maiores quos provident perferendis veritatis, eos iste animi? Natus neque autem eum sint alias eaque.</p>
-              </div>
-              <!-- /.about__box__history__card -->
+            <!-- /.account__useful-btns -->
+            <div class="account__dashboard-btns d-none">
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img">% Категории %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> % Продукты %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img">% Отзывы %</div>
+                <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img">% Комментарии %</div>
             </div>
-            <!-- /.about__box__history__cards -->
+            <!-- /.account__useful-btns -->
+            <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
+            <div class="account__sort-cards">
+                <a href="#" class="account__sort-card link">
+                    <img src="img/menu/ct-1-1.jpg" alt="product" class="account__sort-card-img">
+                    <span class="account__sort-card-category">Супы</span>
+                    <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>
+                    <span class="account__sort-card-price">999₽</span>
+                </a>
+                <!-- /.account__dashboard-card -->
+                <a href="#" class="account__sort-card link">
+                    <img src="img/menu/ct-1-2.jpg" alt="product" class="account__sort-card-img">
+                    <span class="account__sort-card-category">Супы</span>
+                    <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>
+                    <span class="account__sort-card-price">999₽</span>
+                </a>
+                <!-- /.account__dashboard-card -->
+                <a href="#" class="account__sort-card link">
+                    <img src="img/menu/ct-1-3.jpg" alt="product" class="account__sort-card-img">
+                    <span class="account__sort-card-category">Супы</span>
+                    <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>
+                    <span class="account__sort-card-price">999₽</span>
+                </a>
+                <!-- /.account__dashboard-card -->
+            </div>
+            <!-- /.account__sort-cards -->
           </div>
-          <!-- /.about__box -->
+          <!-- /.account__useful profile__dashboard -->
+          <div class="account__useful account__reviews d-none">
+            <div class="comments__post__block">
+                <h3>Всего отзывов 2</h3>
+                <div class="comments__post">
+                    <div class="comment__post">
+                        <div class="comment__box">
+                            <img src="img/account/avatar.png" alt="avatar">
+                        </div>
+                        <!-- /.comment__box -->
+                        <div class="comment__box">
+                            <a href="#" class="comment__title link">Admin</a>
+                            <strong class="comment__date">March 22, 2022 - 11:41 am</strong>
+                            <p class="comment__text">test</p>
+                            <a href="#" class="comment__link link">Посмотреть пост</a>
+                        </div>
+                        <!-- /.comment__box -->
+                    </div>
+                    <!-- /.comment__post -->
+                    <div class="comment__post">
+                        <div class="comment__box">
+                            <img src="img/account/avatar.png" alt="avatar">
+                        </div>
+                        <!-- /.comment__box -->
+                        <div class="comment__box">
+                            <a href="#" class="comment__title link">Admin</a>
+                            <strong class="comment__date">March 22, 2022 - 11:41 am</strong>
+                            <p class="comment__text">test</p>
+                            <a href="#" class="comment__link link">Посмотреть пост</a>
+                        </div>
+                        <!-- /.comment__box -->
+                    </div>
+                    <!-- /.comment__post -->
+                </div>
+                <!-- /.comments__post -->
+            </div>
+            <!-- /.comments__post__block -->
+          </div>
+          <!-- /.account__useful profile__reviews -->
+          <div class="account__useful account__upload d-none">
+            <form action="#" method="post" class="form__account__upload">
+                <h3>Загрузите новою аватарку</h3>
+                <input type="file" class="input__account__upload" id="input__account__upload" required>
+                <label class="label__account__upload" for="input__account__upload">Только файлы jpg/jpeg/png весом мение 200мб *</label>
+                <input type="submit" class="form__account__upload-btn btn-two">
+            </form>
+          </div>
+          <!-- /.account__useful profile__upload -->
+          <div class="account__useful account__details  d-none">
+            <form action="#" method="post" class="form__account__details">
+                <div class="form__account__details__box">
+                    <label class="form__account__details-label" for="first-name-details">Имя</label>
+                    <input class="form__account__details-input" type="text" id="first-name-details" required>
+                </div>
+                <!-- /.form__account__details__box -->
+                <div class="form__account__details__box">
+                    <label class="form__account__details-label" for="last-name-details">Фамилия</label>
+                    <input class="form__account__details-input" type="text" id="last-name-details" required>
+                </div>
+                <!-- /.form__account__details__box -->
+                <div class="form__account__details__box">
+                    <label class="form__account__details-label" for="user-details">Имя пользователя</label>
+                    <input class="form__account__details-input" type="text" id="user-details" required>
+                </div>
+                <!-- /.form__account__details__box -->
+                <div class="form__account__details__box">
+                    <label class="form__account__details-label" for="email-details">E-mail</label>
+                    <input class="form__account__details-input" type="email" id="email-details" required>
+                </div>
+                <!-- /.form__account__details__box -->
+                <div class="from__account__details__reset-pass">
+                    <h3 class="from__account__details__reset-pass-title">Смена пораля</h3>
+                    <div class="form__account__details__box">
+                        <label class="form__account__details-label" for="old-pass">Старый пароль</label>
+                        <input class="form__account__details-input" type="password" id="old-pass" required>
+                    </div>
+                    <!-- /.form__account__details__box -->
+                    <div class="form__account__details__box">
+                        <label class="form__account__details-label" for="new-pass">Новый пароль</label>
+                        <input class="form__account__details-input" type="password" id="new-pass" required>
+                    </div>
+                    <!-- /.form__account__details__box -->
+                    <div class="form__account__details__box">
+                        <label class="form__account__details-label" for="repeat-new-pass">Повторите новый пароль</label>
+                        <input class="form__account__details-input" type="password" id="repeat-new-pass" required>
+                    </div>
+                    <!-- /.form__account__details__box -->
+                </div>
+                <!-- /.from__account__details__reset-pass -->
+                <div class="form__account__details__box">
+                    <input class="form__account__details-input form__account__details-btn" type="submit" id="email-details" value="Сохранить изменения">
+                </div>
+                <!-- /.form__account__details__box -->
+            </form>
+          </div>
+          <!-- /.account__useful profile__upload -->
+          <div class="account__useful account__logount d-none">
+            <form action="#" method="post" class="form__account__logount">
+                <h3>Вы хотите выйти из аккаунта?</h3>
+                <input type="submit" value="Выйти" class="form__account__logount-btn">
+            </form>
+          </div>
+          <!-- /.account__useful profile__upload -->
         </div>
-        <!-- /.about__block -->
+        <!-- /.profile__block -->
       </div>
       <!-- /.container -->
     </section>
-    <!-- /.section__about section -->
+    <!-- /.section__profile -->
     <section class="section__support section">
         <div class="container">
             <div class="support__block">
@@ -156,7 +279,7 @@
                 <!-- /.footer__box -->
                 <div class="footer__box">
                     <h3 class="footer__title info__title title">Информация</h3>
-                    <a href="about.php" class="text link footer__link">История ресторана</a>
+                    <a href="about.html" class="text link footer__link">История ресторана</a>
                     <span class="text link footer__link info-one">Политика конфиденциальности</span>
                     <span class="text link footer__link info-two">Правила и условия</span>
                 </div>
@@ -193,9 +316,9 @@
             </div>
             <!-- /.modal__newsletters__box -->
             <div class="modal__newsletters__box">
-                <h2 class="modal__newsletters__title">Присоединяйтесь к рассылке новостей
+                <h2 class="modal__newsletters__title">Присоединяйтесь к рассылке новостей 
                     <br> и <span class="attention">будьте в курсе событий!</span> </h2>
-                    <form action="#" method="post" class="newsletters__form newsletters__form-modal">
+                    <form action="#" method="post" class="newsletters__form newsletters__form-modal"> 
                         <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" required>
                         <input type="submit" class="newsletters__btn btn" value="+">
                     </form>
@@ -217,7 +340,7 @@
             <a href="#" class="link modal__user__link">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="modal__svg__img"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>
             <br>Мой Аккаунт</a></h2>
-            <div class="modal__user__no-auth">
+            <div class="modal__user__no-auth d-none">
                 <div class="modal__user__btns">
                     <div class="modal__user__btn modal__user__btn-active">Вход</div>
                     <div class="modal__user__btn ">Регистрация</div>
@@ -225,12 +348,12 @@
                 <!-- /.modal__user__btns -->
                 <form action="#" method="get" class="form-user form__modal__user-login">
                     <div class="form__modal__user__box">
-                        <label class="form__modal__user__label label" for="log-email">Ведите ваш e-mail *</label>
+                        <label class="form__modal__user__label label" for="log-email">Введите ваш e-mail *</label>
                         <input class="form__modal__user__input input" type="email" id="log-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
-                        <label class="form__modal__user__label label" for="log-pass">Ведите ваш пароль *</label>
+                        <label class="form__modal__user__label label" for="log-pass">Введите ваш пароль *</label>
                         <input class="form__modal__user__input input" type="password" id="log-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
@@ -247,12 +370,17 @@
                 </form>
                 <form action="#" method="post" class="form-user form__modal__user-reg d-none">
                     <div class="form__modal__user__box">
-                        <label class="form__modal__user__label label" for="reg-email">Ведите ваш e-mail *</label>
+                        <label class="form__modal__user__label label" for="reg-email">Введите ваш e-mail *</label>
                         <input class="form__modal__user__input input" type="email" id="reg-email" required>
                     </div>
                     <!-- /.form__modal__user__box -->
                     <div class="form__modal__user__box">
-                        <label class="form__modal__user__label label" for="reg-pass">Ведите ваш пароль *</label>
+                        <label class="form__modal__user__label label" for="reg-name">Введите имя вашего пользователя *</label>
+                        <input class="form__modal__user__input input" type="text" id="reg-name" required>
+                    </div>
+                    <!-- /.form__modal__user__box -->
+                    <div class="form__modal__user__box">
+                        <label class="form__modal__user__label label" for="reg-pass">Введите ваш пароль *</label>
                         <input class="form__modal__user__input input" type="password" id="reg-pass" required>
                     </div>
                     <!-- /.form__modal__user__box -->
@@ -263,12 +391,12 @@
                 </form>
             </div>
             <!-- /.modal__user__no-auth -->
-            <div class="modal__user__auth d-none">
-                <a href="#" class="link modal__user__auth-link">Панель управления</a>
+            <div class="modal__user__auth">
+                <a href="account.html" class="link modal__user__auth-link">Панель управления</a>
+                <a href="products.html" class="link modal__user__auth-link">Продукты</a>
                 <a href="#" class="link modal__user__auth-link">Отзывы</a>
-                <a href="#" class="link modal__user__auth-link d-none">Адресс</a>
-                <a href="#" class="link modal__user__auth-link ">Подробней об акаунте</a>
-                <a href="#" class="link modal__user__auth-link">Выход</a>
+                <a href="account.html" class="link modal__user__auth-link ">Подробней об акаунте</a>
+                <a href="index.html" class="link modal__user__auth-link">Выход</a>
             </div>
             <!-- /.modal__user__auth -->
             <div class="modal__user__close modal__close">
@@ -286,17 +414,17 @@
             <div class="header__block block">
                 <nav class="burger__nav nav">
                     <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
-                    <a href="index.php" class="burger__nav__link nav__link link">Главная</a>
+                    <a href="index.html" class="burger__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.php" class="burger__nav__link nav__link link">Меню</a>
+                    <a href="menu.html" class="burger__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.php" class="burger__nav__link nav__link link">Информация</a>
+                    <a href="information.html" class="burger__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.php" class="burger__nav__link nav__link link">Блог</a>
+                    <a href="blog.html" class="burger__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.php" class="burger__nav__link nav__link link active">О&nbsp;нас</a>
+                    <a href="about.html" class="burger__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.php" class="burger__nav__link nav__link link">Контакты</a>
+                    <a href="contacts.html" class="burger__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                     <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
                     <!-- /.header__nav__link nav__link link -->
@@ -447,7 +575,7 @@
         <div class="modal__info__body modal__info__body-two">
             <h2 class="modal__info__title modal__info__title-two">Пользовательское Соглашение<br></h2>
             <p class="modal__info__text modal__info__text-two">
-Пользовательское Соглашение<br>
+Пользовательское Соглашение<br> 
 Настоящее Пользовательское Соглашение (Далее Соглашение) регулирует отношения между владельцем (далее или Администрация) с одной стороны и пользователем сайта с другой.<br>
 Сайт не является средством массовой информации.<br>
 <br>
