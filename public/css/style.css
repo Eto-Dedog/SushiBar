@@ -1422,6 +1422,15 @@ body{
     justify-content: space-around;
     margin-bottom: 50px;
 }
+.admin-bar{
+    position: relative;
+}
+.admin-bar:before{
+    content: 'Админ панель';
+    position: absolute;
+    top: -25px;
+    text-transform: uppercase;
+}
 .account__dashboard-btn{
     display: flex;
     align-items: center;

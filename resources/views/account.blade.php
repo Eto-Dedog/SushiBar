@@ -39,11 +39,13 @@
                         <div class="account__dashboard-btn"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> Подробней об акаунте</div>
                     </div>
                     <!-- /.account__useful-btns -->
-                    <div class="account__dashboard-btns d-none">
-                        <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img">% Категории %</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> % Продукты %</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img">% Отзывы %</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad"><img src="img/account/pen.svg" alt="pen" class="btn__account-img">% Комментарии %</div>
+                    <div class="account__dashboard-btns admin-bar">
+                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Категории%</div>
+                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Продукты%</div>
+                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</div>
+                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</div>
+                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</div>
+                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</div>
                     </div>
                     <!-- /.account__useful-btns -->
                     <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
