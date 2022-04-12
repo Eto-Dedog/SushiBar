@@ -19,7 +19,15 @@
     @else
     @endif
 
+    @if($title == 'SushiBar - Меню')
+        <script src="{{ asset('js/menu.js') }}" defer></script>
+    @else
+    @endif
 
+    @if($title == 'SushiBar - Продукты')
+        <script src="{{ asset('js/products.js') }}" defer></script>
+    @else
+    @endif
 
 </head>
 <body>
@@ -45,18 +53,99 @@
             </div>
             <!-- /.header__auth -->
             <nav class="header__nav nav">
-                <a href="/" class="header__nav__link nav__link link active">Главная</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="information.html" class="header__nav__link nav__link link">Информация</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
-                <!-- /.header__nav__link nav__link link -->
+                @if($title == 'SushiBar')
+                    <a href="/" class="header__nav__link nav__link link active">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Меню')
+                    <a href="/" class="header__nav__link nav__link link">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link active">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Информация')
+                    <a href="/" class="header__nav__link nav__link link">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link active">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Блог')
+                    <a href="/" class="header__nav__link nav__link link ">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link active">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - О нас')
+                    <a href="/" class="header__nav__link nav__link link">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link active">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Контакты')
+                    <a href="/" class="header__nav__link nav__link link">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link active">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title !== 'SushiBar')
+                    <a href="/" class="header__nav__link nav__link link">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                @endif
+
             </nav>
             <!-- /.header__nav nav -->
         </div>
