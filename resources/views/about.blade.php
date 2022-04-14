@@ -28,7 +28,7 @@
                         <p class="about__box__events__text text">Последнию субботу каждого месяца!</p>
                     </div>
                     <!-- /.about__box__events -->
-                    <a href="contacts.html" class="about__box__contacts btn link">КОНТАКТЫ</a>
+                    <a href="contacts" class="about__box__contacts btn link">КОНТАКТЫ</a>
                     <!-- /.about__box__contacts -->
                 </div>
                 <!-- /.about__box -->

@@ -56,93 +56,93 @@
                 @if($title == 'SushiBar')
                     <a href="/" class="header__nav__link nav__link link active">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @elseif($title == 'SushiBar - Меню')
                     <a href="/" class="header__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link active">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link active">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @elseif($title == 'SushiBar - Информация')
                     <a href="/" class="header__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link active">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link active">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @elseif($title == 'SushiBar - Блог')
                     <a href="/" class="header__nav__link nav__link link ">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link active">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link active">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @elseif($title == 'SushiBar - О нас')
                     <a href="/" class="header__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link active">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link active">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @elseif($title == 'SushiBar - Контакты')
                     <a href="/" class="header__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link active">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link active">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @elseif($title !== 'SushiBar')
                     <a href="/" class="header__nav__link nav__link link">Главная</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="menu.html" class="header__nav__link nav__link link">Меню</a>
+                    <a href="menu" class="header__nav__link nav__link link">Меню</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="information.html" class="header__nav__link nav__link link">Информация</a>
+                    <a href="information" class="header__nav__link nav__link link">Информация</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="blog.html" class="header__nav__link nav__link link">Блог</a>
+                    <a href="blog" class="header__nav__link nav__link link">Блог</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="about.html" class="header__nav__link nav__link link">О&nbsp;нас</a>
+                    <a href="about" class="header__nav__link nav__link link">О&nbsp;нас</a>
                     <!-- /.header__nav__link nav__link link -->
-                    <a href="contacts.html" class="header__nav__link nav__link link">Контакты</a>
+                    <a href="contacts" class="header__nav__link nav__link link">Контакты</a>
                     <!-- /.header__nav__link nav__link link -->
                 @endif
 
@@ -167,7 +167,7 @@
             <!-- /.footer__box -->
             <div class="footer__box">
                 <h3 class="footer__title info__title title">Информация</h3>
-                <a href="about.html" class="text link footer__link">История ресторана</a>
+                <a href="about" class="text link footer__link">История ресторана</a>
                 <span class="text link footer__link info-one">Политика конфиденциальности</span>
                 <span class="text link footer__link info-two">Правила и условия</span>
             </div>
@@ -303,21 +303,119 @@
     <div class="modal__burger__body">
         <div class="header__block block">
             <nav class="burger__nav nav">
-                <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
-                <a href="index.html" class="burger__nav__link nav__link link active">Главная</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="menu.html" class="burger__nav__link nav__link link">Меню</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="information.html" class="burger__nav__link nav__link link">Информация</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="blog.html" class="burger__nav__link nav__link link">Блог</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="about.html" class="burger__nav__link nav__link link">О&nbsp;нас</a>
-                <!-- /.header__nav__link nav__link link -->
-                <a href="contacts.html" class="burger__nav__link nav__link link">Контакты</a>
-                <!-- /.header__nav__link nav__link link -->
-                <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
-                <!-- /.header__nav__link nav__link link -->
+                @if($title == 'SushiBar')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link active">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Меню')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link ">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link active">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Информация')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link ">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link active">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Блог')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link ">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link active">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - О нас')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link ">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link active">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title == 'SushiBar - Контакты')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link ">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link active">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @elseif($title !== 'SushiBar')
+                    <a href="/" class="header__auth__link link"><img src="img/home/logo.png" alt="logo" class="header__logo logo"></a>
+                    <a href="index" class="burger__nav__link nav__link link">Главная</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="menu" class="burger__nav__link nav__link link">Меню</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="information" class="burger__nav__link nav__link link">Информация</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="blog" class="burger__nav__link nav__link link">Блог</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="about" class="burger__nav__link nav__link link">О&nbsp;нас</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <a href="contacts" class="burger__nav__link nav__link link">Контакты</a>
+                    <!-- /.header__nav__link nav__link link -->
+                    <span class="burger__nav__link nav__link link authorization auth-burger"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</span>
+                    <!-- /.header__nav__link nav__link link -->
+                @endif
             </nav>
             <!-- /.header__nav nav -->
         </div>

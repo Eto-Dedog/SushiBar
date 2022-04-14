@@ -66,7 +66,7 @@
                             <h2 class="news__card__title text">Японская выставка в честь 8 марта</h2>
                             <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Март 8, 2022 / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
                             <p class="news__card__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sint placeat similique sequi reiciendis harum? Quibusdam facere placeat pariatur necessitatibus officiis voluptatibus, quod, sapiente nobis, odit eveniet illo repellendus error? ...</p>
-                            <a href="post.html" class="news__card__btn text link">Продолжить чтение</a>
+                            <a href="post" class="news__card__btn text link">Продолжить чтение</a>
                         </div>
                         <!-- /.news__card__box -->
                     </div>
@@ -80,7 +80,7 @@
                             <h2 class="news__card__title text">Ребята из Google earth</h2>
                             <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Февраль 23, 2022 / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
                             <p class="news__card__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sint placeat similique sequi reiciendis harum? Quibusdam facere placeat pariatur necessitatibus officiis voluptatibus, quod, sapiente nobis, odit eveniet illo repellendus error? ...</p>
-                            <a href="post.html" class="news__card__btn text link">Продолжить чтение</a>
+                            <a href="post" class="news__card__btn text link">Продолжить чтение</a>
                         </div>
                         <!-- /.news__card__box -->
                     </div>
