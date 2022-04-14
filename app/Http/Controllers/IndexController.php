@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Categories;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class IndexController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Categories::all();
+
+        return view('index', compact( 'categories'));
     }
 
     /**

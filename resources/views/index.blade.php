@@ -118,7 +118,8 @@
 <section class="section__popular section">
     <div class="container">
         <div class="popular__block">
-            <h2 class="pupular__title title">Популярные роллы</h2>
+            <h2 class="pupular__title title">Популярные продукты</h2>
+                {{-- Сделать вывод 8 случайных продуктов  --}}
             <span class="popular__text text">Много вкусного! Много разного!</span>
             <div class="product__cards">
                 <div class="product__card">
@@ -287,47 +288,50 @@
             <h2 class="categories__title title">Популярные категории</h2>
             <span class="categories__text text">Каждый найдёт любимую!</span>
             <div class="categories__cards">
-                <div class="categories__card">
-                    <img src="img/menu/category-1.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Супы</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-2.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Роллы</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-3.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Горячие Роллы</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-4.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Салаты</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-5.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Сашими</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-6.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Напитки</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-7.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Алкогольные <br> напитки</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <div class="categories__card">
-                    <img src="img/menu/category-8.jpg" alt="category" class="categories__card__img">
-                    <h3 class="categories__card__titel">Сладкие Роллы</h3>
-                    <!-- <p class="categories__card__text text"></p> -->
-                </div>
-                <!-- /.categories__card -->
+                @foreach($categories as $categorie)
+                    <a href="menu" class="categories__card">
+                        <img src="{{$categorie->categories_img}}" alt="category" class="categories__card__img">
+                        <h3 class="categories__card__titel">{{$categorie->categories_name}}</h3>
+                        <!-- <p class="categories__card__text text"></p> -->
+                    </a>
+                @endforeach
+
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-2.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Роллы</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-3.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Горячие Роллы</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-4.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Салаты</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-5.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Сашими</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-6.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Напитки</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-7.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Алкогольные <br> напитки</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <a href="menu" class="categories__card">--}}
+{{--                    <img src="img/menu/category-8.jpg" alt="category" class="categories__card__img">--}}
+{{--                    <h3 class="categories__card__titel">Сладкие Роллы</h3>--}}
+{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
+{{--                </a>--}}
+{{--                <!-- /.categories__card -->--}}
             </div>
             <!-- /.categories__cards -->
         </div>
@@ -430,7 +434,7 @@
                             <span class="sets__price__new">7298₽</span>
                         </div>
                         <!-- /.sets__price -->
-                        <a href="contacts.html" class="sets__btn btn link">
+                        <a href="contacts" class="sets__btn btn link">
                             Забранировать столик
                         </a>
                         <!-- /.sets__btn -->
@@ -618,25 +622,25 @@
                 <div class="news__card">
                     <img src="img/home/news-1.jpg" alt="news" class="news__card__img">
                     <h3 class="news__card__title text">Сообщение с цитатой</h3>
-                    <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Март 13, 2022 <img src="../../../public/img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
+                    <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Март 13, 2022 <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
                     <p class="news__card__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sint placeat similique sequi reiciendis harum? Quibusdam facere placeat pariatur necessitatibus officiis voluptatibus, quod, sapiente nobis, odit eveniet illo repellendus error? ...</p>
-                    <a href="post.html" class="news__card__btn text link">Продолжить чтение</a>
+                    <a href="post" class="news__card__btn text link">Продолжить чтение</a>
                 </div>
                 <!-- /.news__card -->
                 <div class="news__card">
                     <img src="img/home/news-2.jpg" alt="news" class="news__card__img">
                     <h3 class="news__card__title text">Японская выставка в честь 8 марта</h3>
-                    <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Март 8, 2022 <img src="../../../public/img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
+                    <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Март 8, 2022 <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
                     <p class="news__card__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sint placeat similique sequi reiciendis harum? Quibusdam facere placeat pariatur necessitatibus officiis voluptatibus, quod, sapiente nobis, odit eveniet illo repellendus error? ...</p>
-                    <a href="post.html" class="news__card__btn text link">Продолжить чтение</a>
+                    <a href="post" class="news__card__btn text link">Продолжить чтение</a>
                 </div>
                 <!-- /.news__card -->
                 <div class="news__card">
                     <img src="img/home/news-3.jpg" alt="news" class="news__card__img">
                     <h3 class="news__card__title text">Ребята из Google earth</h3>
-                    <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Февраль 23, 2022 <img src="../../../public/img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
+                    <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> Февраль 23, 2022 <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0 </span>
                     <p class="news__card__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sint placeat similique sequi reiciendis harum? Quibusdam facere placeat pariatur necessitatibus officiis voluptatibus, quod, sapiente nobis, odit eveniet illo repellendus error? ...</p>
-                    <a href="post.html" class="news__card__btn text link">Продолжить чтение</a>
+                    <a href="post" class="news__card__btn text link">Продолжить чтение</a>
                 </div>
                 <!-- /.news__card -->
             </div>

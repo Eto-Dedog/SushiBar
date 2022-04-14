@@ -459,6 +459,8 @@ body{
     cursor: pointer;
     width: 100%;
     border: 1px solid transparent;
+    text-decoration: none;
+    color: #000000;
 }
 .categories__card__img{
     max-width: 280px;

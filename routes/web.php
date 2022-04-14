@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', 'IndexController@index')->name('index.index');
+
+//Route::get('/', function () {
+//    return view('index');
+//});
 
 Route::get('/about', function () {
     return view('about');
@@ -55,9 +59,11 @@ Route::get('/information', function () {
     return view('information');
 });
 
-Route::get('/menu', function () {
-    return view('menu');
-});
+Route::get('/menu', 'ProductsController@index')->name('product.index');
+
+//Route::get('/menu', function () {
+//    return view('menu');
+//});
 
 Route::get('/post', function () {
     return view('post');
