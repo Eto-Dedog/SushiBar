@@ -292,46 +292,8 @@
                     <a href="menu" class="categories__card">
                         <img src="{{$categorie->categories_img}}" alt="category" class="categories__card__img">
                         <h3 class="categories__card__titel">{{$categorie->categories_name}}</h3>
-                        <!-- <p class="categories__card__text text"></p> -->
                     </a>
                 @endforeach
-
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-2.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Роллы</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-3.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Горячие Роллы</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-4.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Салаты</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-5.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Сашими</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-6.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Напитки</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-7.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Алкогольные <br> напитки</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <a href="menu" class="categories__card">--}}
-{{--                    <img src="img/menu/category-8.jpg" alt="category" class="categories__card__img">--}}
-{{--                    <h3 class="categories__card__titel">Сладкие Роллы</h3>--}}
-{{--                    <!-- <p class="categories__card__text text"></p> -->--}}
-{{--                </a>--}}
-{{--                <!-- /.categories__card -->--}}
             </div>
             <!-- /.categories__cards -->
         </div>
@@ -353,85 +315,38 @@
             <!-- /.nav__sets__slide -->
             <div class="sets__slides">
                 <div class="sets__slide">
-                    <div class="sets__slide__box">
+                    <div class="sets__slide__box d-none">
                         <img src="img/home/set-1.jpg" alt="set" class="sets__slide__img">
                     </div>
                     <!-- /.img__sets__slide -->
-                    <div class="sets__slide__box">
+                    <div class="sets__slide__box sets__sliede__box-one">
                         <div class="product__cards">
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-1.jpg" alt="roll" class="product__card__img">
+                            @foreach($products as $product)
+                                @if($product->productSet_id == 1)
+                                <div class="product__card">
+                                    <div class="product__card__box">
+                                        <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                                    </div>
+                                    <!-- /.product__card__box -->
+                                    <div class="product__card__box product__card__info">
+                                        <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                        <!-- /.product__card__title -->
+                                        <p class="product__card__text text">{{$product->products_desc}}</p>
+                                    </div>
+                                    <!-- /.product__card__box -->
+                                    <div class="product__card__box">
+                                        <span class="product__card__price text">{{$product->products_price}}</span>
+                                    </div>
+                                    <!-- /.product__card__box -->
                                 </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Сет Саке Норимаки</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Темпура из креветок, крабовое мясо, огурец и авокадо с острым майонезом и угрем</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">999₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-4.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Роллы Дракона 6шт.</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">1499₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-1-6.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Вермишель</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Паста Паоло (вермишель), лук, лавровый лист, черный перец</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">5499₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-1-7.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Кенчиндзиру</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Комбу, сушеные грибы шиитаке, конняку</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">7499₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
+                                <!-- /.product__card -->
+                                @endif
+                            @endforeach
                         </div>
                         <!-- /.product__cards -->
                         <div class="sets__price">
-                            <span class="sets__price__old">Всего: <strike>14596₽</strike></span>
-                            <span class="sets__price__new">7298₽</span>
+                            <span class="sets__price__old">0</span>
+                            <span class="sets__price__new">0</span>
                         </div>
                         <!-- /.sets__price -->
                         <a href="contacts" class="sets__btn btn link">
@@ -443,68 +358,38 @@
                 </div>
                 <!-- /.sets__slide -->
                 <div class="sets__slide d-none">
-                    <div class="sets__slide__box">
+                    <div class="sets__slide__box d-none">
                         <img src="img/home/set-2.jpg" alt="set" class="sets__slide__img">
                     </div>
                     <!-- /.img__sets__slide -->
-                    <div class="sets__slide__box">
+                    <div class="sets__slide__box sets__sliede__box-two">
                         <div class="product__cards">
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-2.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Калифорния Темаки 3шт.</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">999</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-3.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Магуро Темаки 5шт.</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Нори, лосось 250 г, горки, укроп, авокадо, васаби</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">1999₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-5.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Драконий Ролл</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Фаршированный унаги и крабовой палочкой, завернутый тонкими слоями авокадо и покрытый сверху</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">1499₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
+                            @foreach($products as $product)
+                                @if($product->productSet_id == 2)
+                                    <div class="product__card">
+                                        <div class="product__card__box">
+                                            <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                                        </div>
+                                        <!-- /.product__card__box -->
+                                        <div class="product__card__box product__card__info">
+                                            <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                            <!-- /.product__card__title -->
+                                            <p class="product__card__text text">{{$product->products_desc}}</p>
+                                        </div>
+                                        <!-- /.product__card__box -->
+                                        <div class="product__card__box">
+                                            <span class="product__card__price text">{{$product->products_price}}</span>
+                                        </div>
+                                        <!-- /.product__card__box -->
+                                    </div>
+                                    <!-- /.product__card -->
+                                @endif
+                            @endforeach
                         </div>
                         <!-- /.product__cards -->
                         <div class="sets__price">
-                            <span class="sets__price__old">Всего: <strike>4497₽</strike></span>
-                            <span class="sets__price__new">2248₽</span>
+                            <span class="sets__price__old">0</span>
+                            <span class="sets__price__new">0</span>
                         </div>
                         <!-- /.sets__price -->
                         <div class="sets__btn btn">
@@ -516,85 +401,38 @@
                 </div>
                 <!-- /.sets__slide -->
                 <div class="sets__slide d-none">
-                    <div class="sets__slide__box">
+                    <div class="sets__slide__box d-none">
                         <img src="img/home/set-3.jpg" alt="set" class="sets__slide__img">
                     </div>
                     <!-- /.img__sets__slide -->
-                    <div class="sets__slide__box">
+                    <div class="sets__slide__box sets__sliede__box-three">
                         <div class="product__cards">
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-1.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Сет Саке Норимаки</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Темпура из креветок, крабовое мясо, огурец и авокадо с острым майонезом и угрем</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">999₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-2.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Калифорния Темаки 3шт.</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">999₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-3.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Магуро Темаки 5шт.</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Нори, лосось 250 г, горки, укроп, авокадо, васаби</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">1999₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="img/menu/ct-2-4.jpg" alt="roll" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">Роллы Дракона 6шт.</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">1499₽</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                            <!-- /.product__card -->
+                            @foreach($products as $product)
+                                @if($product->productSet_id == 3)
+                                    <div class="product__card">
+                                        <div class="product__card__box">
+                                            <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                                        </div>
+                                        <!-- /.product__card__box -->
+                                        <div class="product__card__box product__card__info">
+                                            <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                            <!-- /.product__card__title -->
+                                            <p class="product__card__text text">{{$product->products_desc}}</p>
+                                        </div>
+                                        <!-- /.product__card__box -->
+                                        <div class="product__card__box">
+                                            <span class="product__card__price text">{{$product->products_price}}</span>
+                                        </div>
+                                        <!-- /.product__card__box -->
+                                    </div>
+                                    <!-- /.product__card -->
+                                @endif
+                            @endforeach
                         </div>
                         <!-- /.product__cards -->
                         <div class="sets__price">
-                            <span class="sets__price__old">Всего: <strike>5496₽</strike></span>
-                            <span class="sets__price__new">2748₽</span>
+                            <span class="sets__price__old">0</span>
+                            <span class="sets__price__new">0</span>
                         </div>
                         <!-- /.sets__price -->
                         <div class="sets__btn btn">

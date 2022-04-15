@@ -395,6 +395,10 @@ body{
 .product__card__info{
     width: 100%;
 }
+.product__card__img{
+    max-width: 70px;
+    max-height: 85px;
+}
 /* Рассылка */
 .section__newsletters{
     background: #ffffff url(../img/home/newsletter-bg.jpg) right no-repeat;
@@ -546,11 +550,35 @@ body{
 .sets__price__old{
     font-size: 24px;
     text-transform: uppercase;
+    position: relative;
+    padding-right: 14px;
+    padding-left: 80px;
+    text-decoration: line-through;
+}
+.sets__price__old::before{
+    content: '₽';
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.sets__price__old::after{
+    content: 'Всего: ';
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .sets__price__new{
     margin-left: 15px;
     font-size: 34px;
     color:#e00614;
+    position: relative;
+    padding-right: 18px;
+}
+.sets__price__new::before{
+    content: '₽';
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .sets__btn{
     margin-top: 15px;

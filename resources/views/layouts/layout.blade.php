@@ -11,6 +11,7 @@
     @if($title == 'SushiBar')
         <script src="{{ asset('js/slider.js') }}" defer></script>
         <script src="{{ asset('js/special-sets.js') }}" defer></script>
+        <script src="{{ asset('js/calc.js') }}" defer></script>
     @else
     @endif
 
