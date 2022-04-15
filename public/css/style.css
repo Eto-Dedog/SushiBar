@@ -604,6 +604,8 @@ body{
 .news__cards{
     display: flex;
     justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 .news__card{
     display: flex;
@@ -1527,6 +1529,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 .account__sorts-card{
     display: flex;
@@ -1556,6 +1559,13 @@ body{
 .account__sorts-card-price{
     color:#e00614;
     font-size: 18px;
+    padding-right: 0px;
+    position: relative;
+}
+.account__sorts-card-price::after{
+    content: '₽';
+    right: 0;
+    top: 0;
 }
 .account__reviews .comments__post{
     display: flex;

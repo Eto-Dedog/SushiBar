@@ -2,25 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Categories;
-use App\Posts;
-use App\Products;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class CategoriesItemController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $categories = Categories::all();
-        $products = Products::all();
-        $posts = Posts::all();
-
-        return view('index', compact( 'categories','products', 'posts'));
+        //
     }
 
     /**

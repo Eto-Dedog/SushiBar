@@ -35,9 +35,12 @@ Route::get('/all-reviews', function () {
     return view('all-reviews');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
+Route::get('/blog', 'PostsController@index')->name('posts.index');
+
+
+// Route::get('/blog', function () {
+//     return view('blog');
+// });
 
 Route::get('/c-e-categories', function () {
     return view('c-e-categories');
@@ -65,14 +68,19 @@ Route::get('/menu', 'ProductsController@index')->name('product.index');
 //    return view('menu');
 //});
 
-Route::get('/post', function () {
-    return view('post');
-});
+Route::get('/post', 'PostController@index')->name('post.index');
+
+//Route::get('/post', function () {
+//    return view('post');
+//});
 
 Route::get('/product', function () {
     return view('product');
 });
 
-Route::get('/products', function () {
-    return view('products');
-});
+Route::get('/products', 'CategoriesController@index')->name('categories.index');
+
+
+//Route::get('/products', function () {
+//    return view('products');
+//});

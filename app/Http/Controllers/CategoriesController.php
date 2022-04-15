@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use App\Products;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
@@ -14,7 +15,10 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Categories::all();
+        $products = Products::all();
+
+        return view('products', compact('categories','products'));
     }
 
     /**

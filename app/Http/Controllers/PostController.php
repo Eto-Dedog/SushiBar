@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Categories;
 use App\Posts;
-use App\Products;
+use App\Reviews;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +15,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $categories = Categories::all();
-        $products = Products::all();
         $posts = Posts::all();
+        $reviews = Reviews::all();
 
-        return view('index', compact( 'categories','products', 'posts'));
+        return view('post', compact('posts', 'reviews'));
     }
 
     /**

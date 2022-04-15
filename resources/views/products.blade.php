@@ -17,46 +17,121 @@
             <div class="sorts__block">
                 <div class="sorts__category">
                     <h3 class="sorts__category-title">Категории</h3>
-                    <div class="sorts__category-btn sorts__category-btn-active">Алкогольные напитки</div>
-                    <div class="sorts__category-btn">Напитки</div>
-                    <div class="sorts__category-btn">Горячие роллы</div>
-                    <div class="sorts__category-btn">Роллы</div>
-                    <div class="sorts__category-btn">Салаты</div>
-                    <div class="sorts__category-btn">Сашими</div>
-                    <div class="sorts__category-btn">Супы</div>
-                    <div class="sorts__category-btn">Сладкие роллы</div>
-                    <!-- /.sorts__category-link link -->
+                    @foreach($categories as $categorie)
+                        <div class="sorts__category-btn {{-- sorts__category-btn-active --}} ">{{$categorie->categories_name}}</div>
+                    @endforeach
                 </div>
                 <!-- /.sorts__category -->
                 <div class="account__sorts-cards">
-                    <a href="/product" class="account__sorts-card link">
-                        <img src="img/menu/ct-7-1.jpg" alt="product" class="account__sorts-card-img">
-                        <span class="account__sorts-card-category">Алкогольные напитки</span>
-                        <h4 class="account__sorts-card-title">Пиво</h4>
-                        <span class="account__sorts-card-price">999₽</span>
-                    </a>
-                    <!-- /.account__dashboard-card -->
-                    <a href="/product" class="account__sorts-card link">
-                        <img src="img/menu/ct-7-2.jpg" alt="product" class="account__sorts-card-img">
-                        <span class="account__sorts-card-category">Алкогольные напитки</span>
-                        <h4 class="account__sorts-card-title">Лефф Блондинка</h4>
-                        <span class="account__sorts-card-price">1499₽</span>
-                    </a>
-                    <!-- /.account__dashboard-card -->
-                    <a href="/product" class="account__sorts-card link">
-                        <img src="img/menu/ct-7-3.jpg" alt="product" class="account__sorts-card-img">
-                        <span class="account__sorts-card-category">Алкогольные напитки</span>
-                        <h4 class="account__sorts-card-title">Напитки</h4>
-                        <span class="account__sorts-card-price">999₽</span>
-                    </a>
-                    <!-- /.account__dashboard-card -->
-                    <a href="/product" class="account__sorts-card link">
-                        <img src="img/menu/ct-7-4.jpg" alt="product" class="account__sorts-card-img">
-                        <span class="account__sorts-card-category">Алкогольные напитки</span>
-                        <h4 class="account__sorts-card-title">Арбузный сок</h4>
-                        <span class="account__sorts-card-price">1499₽</span>
-                    </a>
-                    <!-- /.account__dashboard-card -->
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 1)
+                        <a href="/product" class="account__sorts-card link">
+                            <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                            <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                            <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                            <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                        </a>
+                        <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 2)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 3)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 4)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 5)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 6)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 7)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
+                </div>
+                <!-- /.account__sorts-cards -->
+                <div class="account__sorts-cards d-none">
+                    @foreach($products as $product)
+                        @if($product->productCategory_id == 8)
+                            <a href="/product" class="account__sorts-card link">
+                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
+                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
+                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
+                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endif
+                    @endforeach
                 </div>
                 <!-- /.account__sorts-cards -->
             </div>
