@@ -74,9 +74,11 @@ Route::get('/post', 'PostController@index')->name('post.index');
 //    return view('post');
 //});
 
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/product', 'CategoriesItemController@index')->name('categoriesItem.index');
+
+//Route::get('/product', function () {
+//    return view('product');
+//});
 
 Route::get('/products', 'CategoriesController@index')->name('categories.index');
 

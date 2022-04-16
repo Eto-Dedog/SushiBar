@@ -15,8 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Posts::all();
-        $reviews = Reviews::all();
+        $posts = Posts::join('users','user_id','=','postUser_id')->get();
+        $reviews = Reviews::join('users','user_id','=','reviewUser_id')->get();
 
         return view('post', compact('posts', 'reviews'));
     }

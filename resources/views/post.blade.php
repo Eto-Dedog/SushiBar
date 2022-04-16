@@ -26,7 +26,7 @@
                             <!-- /.news__card__box -->
                             <div class="news__card__box">
                                 <h2 class="news__card__title text">{{$post->post_name}}</h2>
-                                <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> {{$post->created_at}} {{--  / Пост создал:<a href="#" class="link">Admin</a> / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
+                                <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> {{$post->created_at}}  / Пост создал:<span class="link post__create">{{$post->user_name}}</span>{{--  / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
                                 <p class="news__card__text text">{{$post->post_text}}</p>
                                 </div>
                             <!-- /.news__card__box -->
@@ -79,16 +79,16 @@
     <section class="section__comments__post section">
         <div class="container">
             <div class="comments__post__block">
-                <h3>0 комментарий в "Сообщение с цитатой"</h3>
+                <h3><span class="comments__post__block-num">0</span> комментарий в "Сообщение с цитатой"</h3>
                 <div class="comments__post">
                     @foreach($reviews as $review )
                     <div class="comment__post">
                         <div class="comment__box">
-                            <img src="img/account/avatar.png" alt="avatar">
+                            <img src="{{$review->user_avatar}}" alt="avatar">
                         </div>
                         <!-- /.comment__box -->
                         <div class="comment__box">
-                            <h3 class="comment__title">Admin</h3>
+                            <h3 class="comment__title">{{$review->user_name}}</h3>
                             <strong class="comment__date">{{$review->created_at}}</strong>
                             <p class="comment__text">{{$review->review_text}}</p>
                             <div class="comment__tool">

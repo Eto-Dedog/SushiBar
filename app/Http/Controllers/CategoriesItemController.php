@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Categories;
+use App\Comments;
+use App\Products;
 use Illuminate\Http\Request;
 
 class CategoriesItemController extends Controller
@@ -9,11 +12,14 @@ class CategoriesItemController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        $products = Products::join('categories','categories_id','=','productCategory_id')->get();
+        $comments = Comments::join('users','user_id','=','commentUser_id')->get();
+
+        return view('product', compact('products', 'comments'));
     }
 
     /**

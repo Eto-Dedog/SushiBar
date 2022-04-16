@@ -1163,6 +1163,9 @@ body{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.post__create{
+    color: #5b1c72;
+}
 .social__links{
     display: flex;
     flex-direction: row;

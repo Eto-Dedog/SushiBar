@@ -30,6 +30,16 @@
     @else
     @endif
 
+    @if($title == 'SushiBar - Продукт')
+        <script src="{{ asset('js/product.js') }}" defer></script>
+    @else
+    @endif
+
+    @if($title == 'SushiBar - Пост')
+        <script src="{{ asset('js/post.js') }}" defer></script>
+    @else
+    @endif
+
 </head>
 <body>
 <header class="section__header section">
