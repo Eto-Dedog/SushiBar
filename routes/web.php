@@ -36,23 +36,24 @@ Route::get('/all-reviews', function () {
 });
 
 Route::get('/blog', 'PostsController@index')->name('posts.index');
+Route::get('/c-e-post', 'PostsController@create')->name('posts.create');
 
 
 // Route::get('/blog', function () {
 //     return view('blog');
 // });
 
-Route::get('/c-e-categories', function () {
-    return view('c-e-categories');
-});
-
-Route::get('/c-e-post', function () {
-    return view('c-e-post');
-});
-
-Route::get('/c-e-product', function () {
-    return view('c-e-product');
-});
+//Route::get('/c-e-categories', function () {
+//    return view('c-e-categories');
+//});
+//
+//Route::get('/c-e-post', function () {
+//    return view('c-e-post');
+//});
+//
+//Route::get('/c-e-product', function () {
+//    return view('c-e-product');
+//});
 
 Route::get('/contacts', function () {
     return view('contacts');
@@ -75,12 +76,14 @@ Route::get('/post', 'PostController@index')->name('post.index');
 //});
 
 Route::get('/product', 'CategoriesItemController@index')->name('categoriesItem.index');
+Route::get('/c-e-product', 'CategoriesItemController@create')->name('categoriesItem.create');
 
 //Route::get('/product', function () {
 //    return view('product');
 //});
 
 Route::get('/products', 'CategoriesController@index')->name('categories.index');
+Route::get('/c-e-categories', 'CategoriesController@create')->name('categories.create');
 
 
 //Route::get('/products', function () {

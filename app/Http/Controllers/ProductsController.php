@@ -15,7 +15,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Products::all();
+        $products = Products::join('categories','categories_id','=','productCategory_id')->get();
         $categories = Categories::all();
         return view('menu', compact('products', 'categories'));
     }

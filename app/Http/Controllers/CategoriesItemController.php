@@ -25,11 +25,14 @@ class CategoriesItemController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function create()
     {
-        //
+        $categories = Categories::all();
+        $products = Products::join('categories','categories_id','=','productCategory_id')->get();
+
+        return view('c-e-product', compact('products', 'categories'));
     }
 
     /**

@@ -40,12 +40,16 @@
                     </div>
                     <!-- /.account__useful-btns -->
                     <div class="account__dashboard-btns admin-bar">
-                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Категории%</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Продукты%</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</div>
-                        <div class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</div>
+                        <a href="c-e-categories" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Категорию%</a>
+                        <a href="c-e-product" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Продукты%</a>
+                        <a href="c-e-post" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Пост%</a>
+                    </div>
+                    <!-- /.account__useful-btns -->
+                    <div class="account__dashboard-btns admin-bar">
+                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</a>
+                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</a>
+                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
+                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
                     </div>
                     <!-- /.account__useful-btns -->
                     <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
