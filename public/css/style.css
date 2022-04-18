@@ -1913,12 +1913,15 @@ body{
     width: 100%;
 }
 @media (max-width:1200px) {
-    .special__block,.newsletters__block, .comments__post__block, .about__block, .account__block, .sorts__block{
+    .special__block,.newsletters__block, .comments__post__block, .about__block, .account__block, .sorts__block,.special__cards,.section__other__post{
         padding-left: 3%;
         padding-right: 3%;
     }
     .section__newsletters{
         background: #fcf5eb url(../img/home/newsletter-bg.jpg) right -500px top no-repeat;
+    }
+    .special__cards{
+        margin-top: 15px;
     }
     .special__card{
         flex-direction: column;
