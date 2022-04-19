@@ -1243,6 +1243,9 @@ body{
 .comment__date{
     margin-bottom: 5px;
 }
+.section__comments__post .comments__post__block .comments__post .comment__post {
+    margin-bottom: 15px;
+}
 .form__coment__post__textarea{
     font-size: 18px;
     padding: 5px;

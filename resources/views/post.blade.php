@@ -18,6 +18,7 @@
         <div class="container">
             <div class="post__block">
                 @foreach($posts as $post)
+                    @if($post->postUser_id == $post->user_id)
                     <div class="news__cards">
                         <div class="news__card">
                             <div class="news__card__box">
@@ -34,17 +35,18 @@
                         <!-- /.news__card -->
                     </div>
                     <!-- /.news__cards -->
+                    @endif
                 @endforeach
 
                 <div class="social__links">
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/twitter.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/facebook.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/vk.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/pinterest.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/mail.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/linkedin.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/whatsapp.svg" alt="social__img"></a>
-                    <a href="#" class="social__link link"><img class="social__link__img" src="img/blog/social/skype.svg" alt="social__img"></a>
+                    <a href="https://twitter.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/twitter.svg" alt="social__img"></a>
+                    <a href="https://facebook.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/facebook.svg" alt="social__img"></a>
+                    <a href="https://vk.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/vk.svg" alt="social__img"></a>
+                    <a href="https://www.pinterest.ru" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/pinterest.svg" alt="social__img"></a>
+                    <a href="https://mail.ru" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/mail.svg" alt="social__img"></a>
+                    <a href="https://www-linkedin.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/linkedin.svg" alt="social__img"></a>
+                    <a href="https://web.whatsapp.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/whatsapp.svg" alt="social__img"></a>
+                    <a href="https://www.skype.com/ru/features/skype-web/" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/skype.svg" alt="social__img"></a>
                 </div>
                 <!-- /.social__links -->
             </div>
@@ -81,24 +83,24 @@
             <div class="comments__post__block">
                 <h3><span class="comments__post__block-num">0</span> комментарий в "Сообщение с цитатой"</h3>
                 <div class="comments__post">
-                    @foreach($reviews as $review )
-                    <div class="comment__post">
-                        <div class="comment__box">
-                            <img src="{{$review->user_avatar}}" alt="avatar">
-                        </div>
-                        <!-- /.comment__box -->
-                        <div class="comment__box">
-                            <h3 class="comment__title">{{$review->user_name}}</h3>
-                            <strong class="comment__date">{{$review->created_at}}</strong>
-                            <p class="comment__text">{{$review->review_text}}</p>
-                            <div class="comment__tool">
-                                <span class="comment__link link">Редактировать</span>
-                                <span class="comment__link link ">Удалить</span>
+                    @foreach($reviews as $review)
+                            <div class="comment__post">
+                                <div class="comment__box">
+                                    <img src="{{$review->user_avatar}}" alt="avatar">
+                                </div>
+                                <!-- /.comment__box -->
+                                <div class="comment__box">
+                                    <h3 class="comment__title">{{$review->user_name}}</h3>
+                                    <strong class="comment__date">{{$review->created_at}}</strong>
+                                    <p class="comment__text">{{$review->review_text}}</p>
+                                    <div class="comment__tool">
+                                        <span class="comment__link link">Редактировать</span>
+                                        <span class="comment__link link ">Удалить</span>
+                                    </div>
+                                </div>
+                                <!-- /.comment__box -->
                             </div>
-                        </div>
-                        <!-- /.comment__box -->
-                    </div>
-                    <!-- /.comment__post -->
+                            <!-- /.comment__post -->
                     @endforeach
                 </div>
                 <!-- /.comments__post -->

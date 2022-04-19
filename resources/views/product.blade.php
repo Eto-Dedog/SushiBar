@@ -18,31 +18,34 @@
     <!-- /.section__promo-sub-one section -->
     <section class="section__sort section">
         <div class="container">
-            <div class="sort__block">
-                <div class="sort__block__info-box">
-                    <img src="img/REVIEWS/AlcoDrinks/3.jpg" alt="drinks" class="sort__block__info-box-img">
-                </div>
-                <!-- /.sort__block__info-img -->
-                <div class="sort__block__info-box">
-                    <h3 class="sort__block__info-box-title">Информация о продукте</h3>
-                    <span class="sort__block__info-box-price">1499 ₽</span>
-                    <p class="sort__block__info-box-description sort__block__info-box-description-text">Пивной Лефф Блондин</p>
-                    <span class="sort__block__info-box-description">Категория: <a href="#" class="link sort__block__info-box-link">Алкогольные напитки</a></span>
-                    <span class="sort__block__info-box-description d-none">Ярлык: <a href="#" class="link sort__block__info-box-link">Алкоголь</a></span>
-                    <span class="sort__block__info-box-description">Делитесь:
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/twitter.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/facebook.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/vk.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/pinterest.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/mail.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/linkedin.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/whatsapp.svg" alt="social__link"></a>
-                        <a href="#" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/skype.svg" alt="social__link"></a>
+            @foreach($products as $product)
+                    <div class="sort__block">
+                        <div class="sort__block__info-box">
+                            <img src="{{ $product->products_img}}" alt="drinks" class="sort__block__info-box-img">
+                        </div>
+                        <!-- /.sort__block__info-img -->
+                        <div class="sort__block__info-box">
+                            <h3 class="sort__block__info-box-title">Информация о продукте</h3>
+                            <span class="sort__block__info-box-price">{{ $product->products_price}} ₽</span>
+                            <p class="sort__block__info-box-description sort__block__info-box-description-text">{{ $product->products_name}}</p>
+                            <span class="sort__block__info-box-description">Категория: <a href="products" class="link sort__block__info-box-link"> {{ $product->categories_name}}</a></span>
+{{--                            <span class="sort__block__info-box-description d-none">Ярлык: <a href="#" class="link sort__block__info-box-link">Алкоголь</a></span>--}}
+                            <span class="sort__block__info-box-description">Делитесь:
+                        <a href="https://twitter.com" target="_blank" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/twitter.svg" alt="social__link"></a>
+                        <a href="https://facebook.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/facebook.svg" alt="social__link"></a>
+                        <a href="https://vk.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/vk.svg" alt="social__link"></a>
+                        <a href="https://www.pinterest.ru" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/pinterest.svg" alt="social__link"></a>
+                        <a href="https://mail.ru" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/mail.svg" alt="social__link"></a>
+                        <a href="https://www-linkedin.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/linkedin.svg" alt="social__link"></a>
+                        <a href="https://web.whatsapp.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/whatsapp.svg" alt="social__link"></a>
+                        <a href="https://www.skype.com/ru/features/skype-web/" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="img/blog/social/skype.svg" alt="social__link"></a>
             </span>
-                </div>
-                <!-- /.sort__block__info-text -->
-            </div>
-            <!-- /.sort__block -->
+                        </div>
+                        <!-- /.sort__block__info-text -->
+                    </div>
+                    <!-- /.sort__block -->
+            @endforeach
+
         </div>
         <!-- /.container -->
     </section>
@@ -55,32 +58,32 @@
                     <h3 class="reviews__sub-title">Отзовы</h3>
                     <div class="comments__post">
                         @foreach($comments as $comment)
-                            <div class="comment__post">
-                                <div class="comment__box">
-                                    <img src="{{$comment->user_avatar}}" alt="avatar">
-                                </div>
-                                <!-- /.comment__box -->
-                                <div class="comment__box">
-                                    <h3 class="comment__title">{{$comment->user_name}}</h3>
-                                    <strong class="comment__date">{{$comment->created_at}}</strong>
-                                    <p class="comment__text">{{$comment->comment_text}}</p>
-                                    <div class="comment__tool">
-                                        <span class="comment__link link">Редактировать</span>
-                                        <span class="comment__link link ">Удалить</span>
+                                <div class="comment__post">
+                                    <div class="comment__box">
+                                        <img src="{{$comment->user_avatar}}" alt="avatar">
                                     </div>
-                                </div>
-                                <!-- /.comment__box -->
-                                <div class="comment__box d-none">
-                                    <div class="stars__box">
-                                        <div class="stars">
-                                            <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                    <!-- /.comment__box -->
+                                    <div class="comment__box">
+                                        <h3 class="comment__title">{{$comment->user_name}}</h3>
+                                        <strong class="comment__date">{{$comment->created_at}}</strong>
+                                        <p class="comment__text">{{$comment->comment_text}}</p>
+                                        <div class="comment__tool">
+                                            <span class="comment__link link">Редактировать</span>
+                                            <span class="comment__link link ">Удалить</span>
                                         </div>
-                                        <!-- /.stars -->
                                     </div>
+                                    <!-- /.comment__box -->
+                                    <div class="comment__box d-none">
+                                        <div class="stars__box">
+                                            <div class="stars">
+                                                <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                            </div>
+                                            <!-- /.stars -->
+                                        </div>
+                                    </div>
+                                    <!-- /.comment__box -->
                                 </div>
-                                <!-- /.comment__box -->
-                            </div>
-                            <!-- /.comment__post -->
+                                <!-- /.comment__post -->
                         @endforeach
                     </div>
                     <!-- /.comments__cards -->
@@ -125,7 +128,7 @@
                             </div>
                             <!-- /.stars__box -->
                             <h4 class="reviews__form-text">Ваш отзыв *</h4>
-                            <textarea cols="80" rows="10" class="reviews__form-textarea" required></textarea>
+                            <textarea cols="80" rows="10" class="reviews__form-textarea" required name="comment_text"></textarea>
                             <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
                         </div>
                         <!-- /.reviews__form__box -->
