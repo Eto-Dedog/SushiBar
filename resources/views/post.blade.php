@@ -104,8 +104,9 @@
                     @endforeach
                 </div>
                 <!-- /.comments__post -->
-                <form action="#" class="form__comment__post" method="post">
-                    <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required></textarea>
+                <form action="{{route('reviews.store')}}" class="form__comment__post" method="post">
+                    @csrf
+                    <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
                     <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
                 </form>
             </div>

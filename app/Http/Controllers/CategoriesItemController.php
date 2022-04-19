@@ -39,11 +39,22 @@ class CategoriesItemController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+        $product = new Products();
+
+        $product->productCategory_id = $request->productCategory_id;
+        $product->products_name = $request->products_name;
+        $product->products_desc = $request->products_desc;
+        $product->products_price = $request->products_price;
+        $product->products_img = $request->products_img;
+        $product->productSet_id = $request->productSet_id;
+
+        $product->save();
+
+        return redirect()->route('product.index');
     }
 
     /**

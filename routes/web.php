@@ -31,12 +31,16 @@ Route::get('/all-comments', function () {
     return view('all-comments');
 });
 
+Route::get('/c-e-categories', 'ReviewsController@create')->name('reviews.create');
+Route::post('/post', 'ReviewsController@store')->name('reviews.store');
+
 Route::get('/all-reviews', function () {
     return view('all-reviews');
 });
 
 Route::get('/blog', 'PostsController@index')->name('posts.index');
 Route::get('/c-e-post', 'PostsController@create')->name('posts.create');
+Route::post('/blog', 'PostsController@store')->name('posts.store');
 
 
 // Route::get('/blog', function () {
@@ -76,7 +80,8 @@ Route::get('/post', 'PostController@index')->name('post.index');
 //});
 
 Route::get('/product', 'CategoriesItemController@index')->name('categoriesItem.index');
-Route::get('/c-e-product', 'CategoriesItemController@create')->name('categoriesItem.create');
+Route::get('/c-e-product'   , 'CategoriesItemController@create')->name('categoriesItem.create');
+Route::post('/menu', 'CategoriesItemController@store')->name('categoriesItem.store');
 
 //Route::get('/product', function () {
 //    return view('product');
@@ -84,6 +89,7 @@ Route::get('/c-e-product', 'CategoriesItemController@create')->name('categoriesI
 
 Route::get('/products', 'CategoriesController@index')->name('categories.index');
 Route::get('/c-e-categories', 'CategoriesController@create')->name('categories.create');
+Route::post('/menu', 'CategoriesController@store')->name('categories.store');
 
 
 //Route::get('/products', function () {

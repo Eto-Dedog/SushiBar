@@ -23,7 +23,8 @@
         <!-- /.container -->
     </section>
     <!-- /.sc-admin-bar -->
-    <form action="#" method="post" class="form-c-e">
+    <form action="{{ route('categories.store') }}" method="post" class="form-c-e">
+        @csrf
         <div class="container">
             <div class="form-c-e-box">
                 <label class="label-c-e" for="name-c-e-categories">Введите название категории</label>
@@ -32,7 +33,7 @@
             <!-- /.form__contacts__box -->
             <div class="form-c-e-box">
                 <label class="label-c-e" for="image-c-e-categories">Загрузите картинку</label>
-                <input type="file" class="input input-c-e" required id="image-c-e-categories" name="categories_img">
+                <input type="text" class="input input-c-e" required id="image-c-e-categories" name="categories_img">
             </div>
             <!-- /.form__contacts__box -->
             <div class="form-c-e-box">

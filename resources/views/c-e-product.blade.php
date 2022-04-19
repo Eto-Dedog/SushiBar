@@ -23,11 +23,12 @@
         <!-- /.container -->
     </section>
     <!-- /.sc-admin-bar -->
-    <form action="#" method="post" class="form-c-e">
+    <form action="{{ route('categoriesItem.store') }}" method="post" class="form-c-e">
+        @csrf
         <div class="container">
             <div class="form-c-e-box">
                 <label class="label-c-e" for="select-product">Выберите категорию</label>
-                <select class="form-c-e-select" name="" id="select-product" required>
+                <select class="form-c-e-select" name="productCategory_id" id="select-product" required>
                     <option class="form-c-e-option" value="" disabled selected>Выберите категорию</option>
                     <option class="form-c-e-option" value="1">Супы</option>
                     <option class="form-c-e-option" value="2">Роллы</option>
@@ -53,7 +54,7 @@
             <!-- /.form__contacts__box -->
             <div class="form-c-e-box">
                 <label class="label-c-e" for="image-c-e-product">Загрузите картинку</label>
-                <input type="file" class="input input-c-e" required id="image-c-e-product" name="products_img">
+                <input type="text" class="input input-c-e" required id="image-c-e-product" name="products_img">
             </div>
             <!-- /.form__contacts__box -->
             <div class="form-c-e-box">

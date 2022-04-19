@@ -2,23 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Categories;
-use App\Products;
+use App\Comments;
+use App\Reviews;
 use Illuminate\Http\Request;
 
-class CategoriesController extends Controller
+class ReviewsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $categories = Categories::all();
-        $products = Products::all();
-
-        return view('products', compact('categories','products'));
+        //
     }
 
     /**
@@ -28,9 +25,10 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        $categories = Categories::all();
+        $reviews = Reviews::all();
+        $comments = Comments::join('users','user_id','=','reviewUser_id')->get();
 
-        return view('c-e-categories', compact('categories'));
+        return view('/post', compact('reviews', 'comments'));
     }
 
     /**
@@ -41,14 +39,15 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        $categorie = new Categories();
+        $reviews = new Reviews();
 
-        $categorie->categories_name = $request->categories_name;
-        $categorie->categories_img = $request->categories_img;
+        $reviews->reviewPost_id = 1;
+        $reviews->reviewUser_id = 1;
+        $reviews->review_text = $request->review_text;
 
-        $categorie->save();
+        $reviews->save();
 
-        return redirect()->route('categories.index');
+        return redirect()->route('post.index');
     }
 
     /**
