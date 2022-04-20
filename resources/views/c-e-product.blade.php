@@ -23,7 +23,7 @@
         <!-- /.container -->
     </section>
     <!-- /.sc-admin-bar -->
-    <form action="{{ route('categoriesItem.store') }}" method="post" class="form-c-e">
+    <form method="post" class="form-c-e" action="{{ route('categoriesItem.store') }}">
         @csrf
         <div class="container">
             <div class="form-c-e-box">

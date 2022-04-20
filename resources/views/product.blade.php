@@ -73,12 +73,44 @@
                                         </div>
                                     </div>
                                     <!-- /.comment__box -->
-                                    <div class="comment__box d-none">
+                                    <div class="comment__box">
                                         <div class="stars__box">
+                                            @if($comment->comment_rate == 1)
+                                                <div class="stars">
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                </div>
+                                                <!-- /.stars -->
+                                            @elseif($comment->comment_rate == 2)
                                             <div class="stars">
+                                                <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
                                                 <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
                                             </div>
                                             <!-- /.stars -->
+                                            @elseif($comment->comment_rate == 3)
+                                                <div class="stars">
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                </div>
+                                                <!-- /.stars -->
+                                            @elseif($comment->comment_rate == 4)
+                                                <div class="stars">
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                </div>
+                                                <!-- /.stars -->
+                                            @elseif($comment->comment_rate == 5)
+                                                <div class="stars">
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                                </div>
+                                                <!-- /.stars -->
+                                            @endif
                                         </div>
                                     </div>
                                     <!-- /.comment__box -->
@@ -91,12 +123,13 @@
                 <!-- /.rewiews__box -->
                 <div class="rewiews__box">
                     <h3 class="reviews__sub-title">Добавьте отзыв</h3>
-                    <form action="#" method="post" class="reviews__form">
+                    <form action="{{route('categoriesComments.store')}}" method="post" class="reviews__form">
+                        @csrf
                         <div class="reviews__form__box">
                             <h4 class="reviews__form-text d-none">Ваша оценка *</h4>
-                            <div class="stars__box d-none">
+                            <div class="stars__box">
                                 <div class="stars">
-                                    <div class="star"><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
+                                    <div class="star "><img src="img/REVIEWS/star.svg" alt="star" class="star"></div>
                                 </div>
                                 <!-- /.stars -->
                                 <div class="stars">
@@ -128,6 +161,7 @@
                             </div>
                             <!-- /.stars__box -->
                             <h4 class="reviews__form-text">Ваш отзыв *</h4>
+                            <input type="number" class="d-none rating-input" name="comment_rate">
                             <textarea cols="80" rows="10" class="reviews__form-textarea" required name="comment_text"></textarea>
                             <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
                         </div>

@@ -26,9 +26,8 @@ class ReviewsController extends Controller
     public function create()
     {
         $reviews = Reviews::all();
-        $comments = Comments::join('users','user_id','=','reviewUser_id')->get();
 
-        return view('/post', compact('reviews', 'comments'));
+        return view('/post', compact('reviews'));
     }
 
     /**

@@ -1862,9 +1862,12 @@ body{
 .star{
     width: 15px;
     height: 15px;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 .stars:hover .star {
+    opacity: 1;
+}
+.active-star .star{
     opacity: 1;
 }
 .rewiews__box .comments__post .comment__post{

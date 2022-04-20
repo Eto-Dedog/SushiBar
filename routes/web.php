@@ -81,7 +81,7 @@ Route::get('/post', 'PostController@index')->name('post.index');
 
 Route::get('/product', 'CategoriesItemController@index')->name('categoriesItem.index');
 Route::get('/c-e-product'   , 'CategoriesItemController@create')->name('categoriesItem.create');
-Route::post('/menu', 'CategoriesItemController@store')->name('categoriesItem.store');
+Route::post('/c-e-product', 'CategoriesItemController@store')->name('categoriesItem.store');
 
 //Route::get('/product', function () {
 //    return view('product');
@@ -90,6 +90,9 @@ Route::post('/menu', 'CategoriesItemController@store')->name('categoriesItem.sto
 Route::get('/products', 'CategoriesController@index')->name('categories.index');
 Route::get('/c-e-categories', 'CategoriesController@create')->name('categories.create');
 Route::post('/menu', 'CategoriesController@store')->name('categories.store');
+
+Route::post('/product', 'CommentsController@create')->name('categoriesComments.create');
+Route::post('/product', 'CommentsController@store')->name('categoriesComments.store');
 
 
 //Route::get('/products', function () {
