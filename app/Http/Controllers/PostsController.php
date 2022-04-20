@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Posts;
 use App\Reviews;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -42,11 +44,15 @@ class PostsController extends Controller
     {
         $post = new Posts();
 
-        $post->post_img = $request->post_img;
         $post->post_name = $request->post_name;
         $post->post_text = $request->post_text;
         $post->postUser_id = 1;
 
+        if ($request->file('post_img')) {
+            $path = Storage::putFile('public', $request->file('post_img'));
+            $url = Storage::url($path);
+            $post->post_img = $url;
+        }
 
         $post->save();
 
@@ -57,11 +63,15 @@ class PostsController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show($id)
     {
-        //
+        $post = Posts::where('post_id', '=', $id)->join('users','user_id','=','postUser_id')->get();
+        $reviews = Reviews::where('reviewPost_id', '=', $id)->join('users','user_id','=','reviewUser_id')->get();
+        $posts = Posts::join('users','user_id','=','postUser_id')->get();
+
+        return view('post', compact('post','posts', 'reviews'));
     }
 
     /**

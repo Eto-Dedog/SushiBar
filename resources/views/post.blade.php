@@ -16,41 +16,40 @@
     </section>
     <section class="section__post section">
         <div class="container">
-            <div class="post__block">
-                @foreach($posts as $post)
-                    @if($post->postUser_id == $post->user_id)
+            @foreach($post as $pos)
+                <div class="post__block">
                     <div class="news__cards">
                         <div class="news__card">
                             <div class="news__card__box">
-                                <img src="{{$post->post_img}}" alt="news" class="news__card__img">
+                                <img src="{{$pos->post_img}}" alt="news" class="news__card__img">
                             </div>
                             <!-- /.news__card__box -->
                             <div class="news__card__box">
-                                <h2 class="news__card__title text">{{$post->post_name}}</h2>
-                                <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> {{$post->created_at}}  / Пост создал:<span class="link post__create">{{$post->user_name}}</span>{{--  / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
-                                <p class="news__card__text text">{{$post->post_text}}</p>
-                                </div>
+                                <h2 class="news__card__title text">{{$pos->post_name}}</h2>
+                                <span class="news__card__date text"><img src="{{ asset('img/home/calendar.svg') }}" alt="calendar" class="news__card__icon"> {{$pos->created_at}}  / Пост создал:<span class="link post__create">{{$pos->user_name}}</span>{{--  / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
+                                <p class="news__card__text text">{{$pos->post_text}}</p>
+                            </div>
                             <!-- /.news__card__box -->
                         </div>
                         <!-- /.news__card -->
                     </div>
                     <!-- /.news__cards -->
-                    @endif
-                @endforeach
 
-                <div class="social__links">
-                    <a href="https://twitter.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/twitter.svg" alt="social__img"></a>
-                    <a href="https://facebook.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/facebook.svg" alt="social__img"></a>
-                    <a href="https://vk.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/vk.svg" alt="social__img"></a>
-                    <a href="https://www.pinterest.ru" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/pinterest.svg" alt="social__img"></a>
-                    <a href="https://mail.ru" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/mail.svg" alt="social__img"></a>
-                    <a href="https://www-linkedin.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/linkedin.svg" alt="social__img"></a>
-                    <a href="https://web.whatsapp.com" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/whatsapp.svg" alt="social__img"></a>
-                    <a href="https://www.skype.com/ru/features/skype-web/" target="_blank" class="social__link link"><img class="social__link__img" src="img/blog/social/skype.svg" alt="social__img"></a>
+                    <div class="social__links">
+                        <a href="https://twitter.com" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/twitter.svg') }}" alt="social__img"></a>
+                        <a href="https://facebook.com" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/facebook.svg') }} " alt="social__img"></a>
+                        <a href="https://vk.com" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/vk.svg') }} " alt="social__img"></a>
+                        <a href="https://www.pinterest.ru" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/pinterest.svg') }} " alt="social__img"></a>
+                        <a href="https://mail.ru" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/mail.svg') }} " alt="social__img"></a>
+                        <a href="https://www-linkedin.com" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/linkedin.svg') }} " alt="social__img"></a>
+                        <a href="https://web.whatsapp.com" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/whatsapp.svg') }} " alt="social__img"></a>
+                        <a href="https://www.skype.com/ru/features/skype-web/" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/skype.svg') }} " alt="social__img"></a>
+                    </div>
+                    <!-- /.social__links -->
                 </div>
-                <!-- /.social__links -->
-            </div>
-            <!-- /.blog__block -->
+                <!-- /.blog__block -->
+            @endforeach
+
         </div>
         <!-- /.container -->
     </section>
@@ -60,13 +59,13 @@
             <div class="other__post__block">
                 <h2 class="other__post__title title">Другие посты</h2>
                 <div class="news__cards">
-                    @foreach($posts as $post )
+                    @foreach($posts as $post)
                         <div class="news__card">
                             <img src="{{$post->post_img}}" alt="news" class="news__card__img">
                             <h3 class="news__card__title text">{{$post->post_name}}</h3>
-                            <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> {{$post->created_at}} {{-- <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}} </span>
+                            <span class="news__card__date text"><img src="{{asset('img/home/calendar.svg')}}" alt="calendar" class="news__card__icon"> {{$post->created_at}} {{-- <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}} </span>
                             <p class="news__card__text text">{{$post->post_text}}</p>
-                            <a href="post" class="news__card__btn text link">Продолжить чтение</a>
+                            <a href="{{ route('posts.show', ['id' => $post->post_id]) }}" class="news__card__btn text link">Продолжить чтение</a>
                         </div>
                         <!-- /.news__card -->
                     @endforeach
@@ -81,7 +80,13 @@
     <section class="section__comments__post section">
         <div class="container">
             <div class="comments__post__block">
-                <h3><span class="comments__post__block-num">0</span> комментарий в "Сообщение с цитатой"</h3>
+                <form action="{{route('reviews.store')}}" class="form__comment__post" method="post">
+                    @csrf
+                    <input type="text" class="d-none" value="{{$pos->post_id}}" name="post_id">
+                    <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
+                    <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
+                </form>
+                <h3 class="comments__post__block-nums"><span class="comments__post__block-num">0</span> комментарий в "Сообщение с цитатой"</h3>
                 <div class="comments__post">
                     @foreach($reviews as $review)
                             <div class="comment__post">
@@ -91,9 +96,9 @@
                                 <!-- /.comment__box -->
                                 <div class="comment__box">
                                     <h3 class="comment__title">{{$review->user_name}}</h3>
-                                    <strong class="comment__date">{{$review->created_at}}</strong>
+{{--                                    <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>--}}
                                     <p class="comment__text">{{$review->review_text}}</p>
-                                    <div class="comment__tool">
+                                    <div class="comment__tool d-none">
                                         <span class="comment__link link">Редактировать</span>
                                         <span class="comment__link link ">Удалить</span>
                                     </div>
@@ -104,11 +109,6 @@
                     @endforeach
                 </div>
                 <!-- /.comments__post -->
-                <form action="{{route('reviews.store')}}" class="form__comment__post" method="post">
-                    @csrf
-                    <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
-                    <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
-                </form>
             </div>
             <!-- /.comments__post__block -->
         </div>
@@ -120,7 +120,7 @@
             <div class="support__block">
                 <div class="special__card">
                     <div class="special__card__box">
-                        <img src="img/home/phone-icon.png" alt="phone" class="special__card__img">
+                        <img src="{{ asset('img/home/phone-icon.png') }}" alt="phone" class="special__card__img">
                     </div>
                     <!-- /.special__card__box -->
                     <div class="special__card__box">
@@ -140,7 +140,7 @@
                 <!-- /.special__card -->
                 <div class="special__card">
                     <div class="special__card__box">
-                        <img src="img/home/master.png" alt="master" class="special__card__img special__card__img-master">
+                        <img src="{{ asset('img/home/master.png') }}" alt="master" class="special__card__img special__card__img-master">
                     </div>
                     <!-- /.special__card__box -->
                 </div>

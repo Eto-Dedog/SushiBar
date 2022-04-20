@@ -126,7 +126,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/storage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -136,6 +136,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\VKR\public\storage" />
       <recent name="D:\OSPanel\domains\VKR\resources\views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -169,7 +170,7 @@
       <workItem from="1650095917930" duration="3681000" />
       <workItem from="1650262620746" duration="7420000" />
       <workItem from="1650350304497" duration="5529000" />
-      <workItem from="1650434455404" duration="3548000" />
+      <workItem from="1650434455404" duration="16260000" />
     </task>
     <servers />
   </component>

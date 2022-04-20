@@ -25,7 +25,7 @@
                 <div class="account__sorts-cards">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 1)
-                        <a href="/product" class="account__sorts-card link">
+                        <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                             <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                             <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                             <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -39,7 +39,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 2)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -53,7 +53,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 3)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -67,7 +67,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 4)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -81,7 +81,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 5)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -95,7 +95,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 6)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -109,7 +109,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 7)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -123,7 +123,7 @@
                 <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
                         @if($product->productCategory_id == 8)
-                            <a href="/product" class="account__sorts-card link">
+                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                                 <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                                 <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                                 <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
@@ -145,7 +145,7 @@
             <div class="support__block">
                 <div class="special__card">
                     <div class="special__card__box">
-                        <img src="img/home/phone-icon.png" alt="phone" class="special__card__img">
+                        <img src="{{ asset('img/home/phone-icon.png') }}" alt="phone" class="special__card__img">
                     </div>
                     <!-- /.special__card__box -->
                     <div class="special__card__box">
@@ -165,7 +165,7 @@
                 <!-- /.special__card -->
                 <div class="special__card">
                     <div class="special__card__box">
-                        <img src="img/home/master.png" alt="master" class="special__card__img special__card__img-master">
+                        <img src="{{ asset('img/home/master.png')  }}" alt="master" class="special__card__img special__card__img-master">
                     </div>
                     <!-- /.special__card__box -->
                 </div>

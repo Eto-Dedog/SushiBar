@@ -26,7 +26,7 @@
                                 <h2 class="news__card__title text">{{$post->post_name}}</h2>
                                 <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> {{$post->created_at}} {{--  / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
                                 <p class="news__card__text text">{{$post->post_text}}</p>
-                                <a href="/post" class="news__card__btn text link">Продолжить чтение</a>
+                                <a href="{{ route('posts.show', ['id' => $post->post_id]) }}" class="news__card__btn text link">Продолжить чтение</a>
                             </div>
                             <!-- /.news__card__box -->
                         </div>

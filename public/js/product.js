@@ -34,5 +34,5 @@ btnsStar[3].addEventListener('click', function() {
 })
 btnsStar[4].addEventListener('click', function() {
     ratingInput.innerHTML = 5;
-    ratingInput.value = 5;  
+    ratingInput.value = 5;
 })

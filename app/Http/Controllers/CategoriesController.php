@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Categories;
 use App\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller
 {
@@ -44,7 +45,12 @@ class CategoriesController extends Controller
         $categorie = new Categories();
 
         $categorie->categories_name = $request->categories_name;
-        $categorie->categories_img = $request->categories_img;
+
+        if ($request->file('categories_img')) {
+            $path = Storage::putFile('public', $request->file('categories_img'));
+            $url = Storage::url($path);
+            $categorie->categories_img = $url;
+        }
 
         $categorie->save();
 

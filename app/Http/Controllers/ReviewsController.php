@@ -40,13 +40,13 @@ class ReviewsController extends Controller
     {
         $reviews = new Reviews();
 
-        $reviews->reviewPost_id = 1;
+        $reviews->reviewPost_id = $request->post_id;
         $reviews->reviewUser_id = 1;
         $reviews->review_text = $request->review_text;
 
         $reviews->save();
 
-        return redirect()->route('post.index');
+        return back();
     }
 
     /**

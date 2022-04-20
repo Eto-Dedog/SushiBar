@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Comments;
 use Illuminate\Http\Request;
 
-class CommentsController extends Controller
+class InformationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,41 +13,28 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comments::all();
-
-        return view('/product', compact('comments'));
+        return view('information');
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        $comments = Comments::all();
-
-        return view('/product', compact('comments'));
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $comments = new Comments();
-
-        $comments->commentProduct_id = $request->product_id;
-        $comments->commentUser_id = 1;
-        $comments->comment_text = $request->comment_text;
-        $comments->comment_rate = $request->comment_rate;
-
-        $comments->save();
-
-        return back();
+        //
     }
 
     /**

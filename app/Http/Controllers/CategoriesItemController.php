@@ -6,6 +6,7 @@ use App\Categories;
 use App\Comments;
 use App\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoriesItemController extends Controller
 {
@@ -49,8 +50,13 @@ class CategoriesItemController extends Controller
         $product->products_name = $request->products_name;
         $product->products_desc = $request->products_desc;
         $product->products_price = $request->products_price;
-        $product->products_img = $request->products_img;
         $product->productSet_id = $request->productSet_id;
+
+        if ($request->file('products_img')) {
+            $path = Storage::putFile('public', $request->file('products_img'));
+            $url = Storage::url($path);
+            $product->products_img = $url;
+        }
 
         $product->save();
 
@@ -61,11 +67,13 @@ class CategoriesItemController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function show($id)
     {
-        //
+        $products = Products::where('product_id', '=', $id)->join('categories','categories_id','=','productCategory_id')->get();
+        $comments = Comments::where('commentProduct_id', '=', $id)->join('users','user_id','=','commentUser_id')->get();
+        return view('product', compact('products','comments'));
     }
 
     /**

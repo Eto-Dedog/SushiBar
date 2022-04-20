@@ -1876,6 +1876,9 @@ body{
     margin-right: 0px;
     position: relative;
 }
+.comments__post__block-nums{
+    margin-top: 15px;
+}
 .comment__box .stars__box{
     position: absolute;
     right: 0;

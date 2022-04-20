@@ -23,7 +23,7 @@
         <!-- /.container -->
     </section>
     <!-- /.sc-admin-bar -->
-    <form method="post" class="form-c-e" action="{{ route('categoriesItem.store') }}">
+    <form method="post" class="form-c-e" action="{{ route('categoriesItem.store') }}" enctype="multipart/form-data">
         @csrf
         <div class="container">
             <div class="form-c-e-box">
@@ -54,7 +54,7 @@
             <!-- /.form__contacts__box -->
             <div class="form-c-e-box">
                 <label class="label-c-e" for="image-c-e-product">Загрузите картинку</label>
-                <input type="text" class="input input-c-e" required id="image-c-e-product" name="products_img">
+                <input type="file" class="input input-c-e" required id="image-c-e-product" name="products_img">
             </div>
             <!-- /.form__contacts__box -->
             <div class="form-c-e-box">
