@@ -111,7 +111,7 @@ class CategoriesItemController extends Controller
             $product->products_img = $url;
         }
 
-        $product->save();
+        $product->update();
         $id = $product->product_id;
 
         return redirect()->route('product.index', compact('id'));
