@@ -46,6 +46,11 @@
                         <a href="https://www.skype.com/ru/features/skype-web/" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/skype.svg') }} " alt="social__img"></a>
                     </div>
                     <!-- /.social__links -->
+                    <div class="btns__block">
+                        <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Редактировать</a>
+                        <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Удалить</a>
+                    </div>
+                    <!-- /.btns__post -->
                 </div>
                 <!-- /.blog__block -->
             @endforeach

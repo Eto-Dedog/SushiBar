@@ -19,7 +19,6 @@
     <!-- /.section__promo-sub-one section -->
     <section class="section__sort section">
         <div class="container">
-
                     <div class="sort__block">
                         <div class="sort__block__info-box">
                             <img src="{{ $product->products_img}}" alt="product" class="sort__block__info-box-img">
@@ -31,15 +30,20 @@
                             <p class="sort__block__info-box-description sort__block__info-box-description-text">{{ $product->products_name}}</p>
                             <span class="sort__block__info-box-description">Категория: <a href="{{ route('categories.index') }}" class="link sort__block__info-box-link"> {{ $product->categories_name}}</a></span>
                             <span class="sort__block__info-box-description">Делитесь:
-                        <a href="https://twitter.com" target="_blank" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/twitter.svg') }}" alt="social__link"></a>
-                        <a href="https://facebook.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/facebook.svg') }} " alt="social__link"></a>
-                        <a href="https://vk.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/vk.svg') }} " alt="social__link"></a>
-                        <a href="https://www.pinterest.ru" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/pinterest.svg') }} " alt="social__link"></a>
-                        <a href="https://mail.ru" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/mail.svg') }} " alt="social__link"></a>
-                        <a href="https://www-linkedin.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/linkedin.svg') }} " alt="social__link"></a>
-                        <a href="https://web.whatsapp.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/whatsapp.svg') }} " alt="social__link"></a>
-                        <a href="https://www.skype.com/ru/features/skype-web/" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/skype.svg') }} " alt="social__link"></a>
-            </span>
+                            <a href="https://twitter.com" target="_blank" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/twitter.svg') }}" alt="social__link"></a>
+                            <a href="https://facebook.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/facebook.svg') }} " alt="social__link"></a>
+                            <a href="https://vk.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/vk.svg') }} " alt="social__link"></a>
+                            <a href="https://www.pinterest.ru" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/pinterest.svg') }} " alt="social__link"></a>
+                            <a href="https://mail.ru" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/mail.svg') }} " alt="social__link"></a>
+                            <a href="https://www-linkedin.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/linkedin.svg') }} " alt="social__link"></a>
+                            <a href="https://web.whatsapp.com" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/whatsapp.svg') }} " alt="social__link"></a>
+                            <a href="https://www.skype.com/ru/features/skype-web/" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/skype.svg') }} " alt="social__link"></a>
+                            </span>
+                            <div class="btns__block">
+                                <a href="" class="news__card__btn text link">Редактировать</a>
+                                <a href="" class="news__card__btn text link">Удалить</a>
+                            </div>
+                            <!-- /.btns__post -->
                         </div>
                         <!-- /.sort__block__info-text -->
                     </div>

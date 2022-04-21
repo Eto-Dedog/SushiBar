@@ -651,6 +651,11 @@ body{
       transform: scale(1, 1);
       transform-origin: left top;
 }
+
+.news__block .news__card .news__card__img{
+    max-width: 381px;
+    max-height: 217px;
+}
 /* поддержка */
 .support__block{
     background: url(../img/home/master-bg.jpg) no-repeat right;
@@ -1185,6 +1190,11 @@ body{
 .social__link__img:hover{
     border-radius: 50%;
     border: 1px solid #000;
+}
+.btns__block{
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
 }
 /* другие посты */
 .other__post__title{
@@ -1809,6 +1819,9 @@ body{
 .sort__block__info-box-link-img:hover{
     opacity: 1;
     transition: 0.5s;
+}
+.sort__block .sort__block__info-box .btns__block{
+    text-align: start;
 }
 /* |product| */
 /* |reviews| */

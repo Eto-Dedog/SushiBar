@@ -18,7 +18,7 @@
                 <div class="sorts__category">
                     <h3 class="sorts__category-title">Категории</h3>
                     @foreach($categories as $categorie)
-                        <div class="sorts__category-btn {{-- sorts__category-btn-active --}} ">{{$categorie->categories_name}}</div>
+                        <div class="sorts__category-btn">{{$categorie->categories_name}}</div>
                     @endforeach
                 </div>
                 <!-- /.sorts__category -->
