@@ -80,11 +80,13 @@ class CategoriesItemController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function edit($id)
     {
-        //
+        $products = Products::find($id);
+
+        return view('e-product', compact('products'));
     }
 
     /**
@@ -92,11 +94,27 @@ class CategoriesItemController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Products::find($id);
+        $product->productCategory_id = $request->productCategory_id;
+        $product->products_name = $request->products_name;
+        $product->products_desc = $request->products_desc;
+        $product->products_price = $request->products_price;
+        $product->productSet_id = $request->productSet_id;
+
+        if ($request->file('products_img')) {
+            $path = Storage::putFile('public', $request->file('products_img'));
+            $url = Storage::url($path);
+            $product->products_img = $url;
+        }
+
+        $product->save();
+        $id = $product->product_id;
+
+        return redirect()->route('product.index', compact('id'));
     }
 
     /**

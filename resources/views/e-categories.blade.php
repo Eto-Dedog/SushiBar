@@ -23,7 +23,8 @@
         <!-- /.container -->
     </section>
     <!-- /.sc-admin-bar -->
-    <form action="{{ route('categories.store') }}" method="post" class="form-c-e" enctype="multipart/form-data">
+    <form action="{{ route('categories.update', ['id' => $categories->categories_id]) }}" method="post" class="form-c-e" enctype="multipart/form-data">
+        @method('PATCH')
         @include('parts.form-categories')
     </form>
 @endsection

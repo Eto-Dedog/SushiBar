@@ -72,11 +72,13 @@ class CategoriesController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function edit($id)
     {
-        //
+        $categories = Categories::find($id);
+
+        return view('e-categories', compact('categories'));
     }
 
     /**
@@ -84,11 +86,24 @@ class CategoriesController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $categories = Categories::find($id);
+
+        $categories->categories_name = $request->categories_name;
+
+        if ($request->file('categories_img')) {
+            $path = Storage::putFile('public', $request->file('categories_img'));
+            $url = Storage::url($path);
+            $categories->categories_img = $url;
+        }
+
+        $categories->update();
+        $id = $categories->categories_id;
+
+        return redirect()->route('categories.index', compact('id'));
     }
 
     /**

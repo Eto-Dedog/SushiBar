@@ -18,7 +18,14 @@
                 <div class="sorts__category">
                     <h3 class="sorts__category-title">Категории</h3>
                     @foreach($categories as $categorie)
-                        <div class="sorts__category-btn">{{$categorie->categories_name}}</div>
+                        <div class="sorts__category-btn">
+                            {{$categorie->categories_name}}
+                            <img class="sorts__category-btn-img" src="{{$categorie->categories_img}}" alt="">
+                        </div>
+                        <div class="btns__block sorts__category-btn-adm">
+                            <a href="{{ route('categories.edit', ['id' => $categorie->categories_id]) }}" class="news__card__btn text link">Редактировать</a>
+                            <a href="{{ route('posts.show', ['id' => $categorie->categories_id]) }}" class="news__card__btn text link">Удалить</a>
+                        </div>
                     @endforeach
                 </div>
                 <!-- /.sorts__category -->

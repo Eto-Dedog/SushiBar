@@ -1771,6 +1771,16 @@ body{
 .sorts__category-btn-active{
     color: #000;
 }
+.sorts__category-btn-img{
+    width: 25px;
+    height: 25px;
+}
+.sorts__category .sorts__category-btn-adm{
+    align-items: start;
+    text-align: start;
+    justify-content: start;
+    font-size: 18px;
+}
 /* |product| */
 /* sort */
 .sort__block{

@@ -93,6 +93,8 @@ Route::get('/product', 'CategoriesItemController@index')->name('categoriesItem.i
 Route::get('/c-product'   , 'CategoriesItemController@create')->name('categoriesItem.create');
 Route::post('/c-product', 'CategoriesItemController@store')->name('categoriesItem.store');
 Route::get('/products/product/{id}', 'CategoriesItemController@show')->name('categoriesItem.show');
+Route::get('/products/product/edit/{id}', 'CategoriesItemController@edit')->name('categoriesItem.edit');
+Route::PATCH('/products/product/{id}', 'CategoriesItemController@update')->name('categoriesItem.update');
 
 //Route::get('/product', function () {
 //    return view('product');
@@ -101,6 +103,9 @@ Route::get('/products/product/{id}', 'CategoriesItemController@show')->name('cat
 Route::get('/products', 'CategoriesController@index')->name('categories.index');
 Route::get('/c-categories', 'CategoriesController@create')->name('categories.create');
 Route::post('/menu', 'CategoriesController@store')->name('categories.store');
+Route::get('/products/categories/edit/{id}', 'CategoriesController@edit')->name('categories.edit');
+Route::PATCH('/products/{id}', 'CategoriesController@update')->name('categories.update');
+
 
 Route::post('/product', 'CommentsController@create')->name('categoriesComments.create');
 Route::post('/product', 'CommentsController@store')->name('categoriesComments.store');

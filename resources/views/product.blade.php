@@ -40,7 +40,7 @@
                             <a href="https://www.skype.com/ru/features/skype-web/" target="_blank"  class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/skype.svg') }} " alt="social__link"></a>
                             </span>
                             <div class="btns__block">
-                                <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="news__card__btn text link">Редактировать</a>
+                                <a href="{{ route('categoriesItem.edit', ['id' => $product->product_id]) }}" class="news__card__btn text link">Редактировать</a>
                                 <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="news__card__btn text link">Удалить</a>
                             </div>
                             <!-- /.btns__post -->

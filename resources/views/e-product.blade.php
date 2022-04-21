@@ -1,10 +1,10 @@
-@extends('layouts/layout', ['title' => "SushiBar - Создать Категорию"])
+@extends('layouts/layout', ['title' => "SushiBar - Создание Продукта"])
 
 @section('content')
     <section class="section__promo-sub-one section">
         <div class="container">
             <div class="promo__sub-block sl-1-block">
-                <h1 class="promo__sub-title">Создание Категории</h1>
+                <h1 class="promo__sub-title">Создание Продукта</h1>
                 <a href="/account" class="promo__info__text text link promo__link">Главаная > Аккаунт ></a>
             </div>
             <!-- /.promo__block -->
@@ -23,7 +23,8 @@
         <!-- /.container -->
     </section>
     <!-- /.sc-admin-bar -->
-    <form action="{{ route('categories.store') }}" method="post" class="form-c-e" enctype="multipart/form-data">
-        @include('parts.form-categories')
+    <form method="post" class="form-c-e" action="{{ route('categoriesItem.update', ['id' => $products->product_id]) }}" enctype="multipart/form-data">
+        @method('PATCH')
+        @include('parts.form-product')
     </form>
 @endsection

@@ -34,7 +34,7 @@
                     <h2 class="account__useful-title account__dashboard-title">Добро пожаловать на страницу вашей учетной записи</h2>
                     <p class="account__useful-text account__dashboard-test">Привет, <strong>user-name</strong>, сегодня отличный день, чтобы проверить страницу своей учетной записи. Вы также можете проверить:</p>
                     <div class="account__dashboard-btns">
-                        <div class="account__dashboard-btn"><img src="img/account/calendar.svg" alt="pen" class="btn__account-img"> Продукты</div>
+                        <a href="{{ route('categories.index') }}" class="account__dashboard-btn"><img src="img/account/calendar.svg" alt="pen" class="btn__account-img"> Продукты</a>
                         <div class="account__dashboard-btn"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> Отзывы</div>
                         <div class="account__dashboard-btn"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> Подробней об акаунте</div>
                     </div>
