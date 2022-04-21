@@ -31,7 +31,7 @@ class CategoriesController extends Controller
     {
         $categories = Categories::all();
 
-        return view('c-e-categories', compact('categories'));
+        return view('c-categories', compact('categories'));
     }
 
     /**

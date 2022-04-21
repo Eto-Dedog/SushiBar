@@ -47,7 +47,7 @@
                     </div>
                     <!-- /.social__links -->
                     <div class="btns__block">
-                        <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Редактировать</a>
+                        <a href="{{ route('posts.edit', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Редактировать</a>
                         <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Удалить</a>
                     </div>
                     <!-- /.btns__post -->

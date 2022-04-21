@@ -39,10 +39,10 @@
                         <div class="account__dashboard-btn"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> Подробней об акаунте</div>
                     </div>
                     <!-- /.account__useful-btns -->
-                    <div class="account__dashboard-btns admin-bar">
-                        <a href="c-e-categories" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Категорию%</a>
-                        <a href="c-e-product" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Продукты%</a>
-                        <a href="c-e-post" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Пост%</a>
+                    <div class="account__dashboard-btns admin-bar admin-bar-c-e">
+                        <a href="{{ route('categories.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Категорию%</a>
+                        <a href="{{ route('categoriesItem.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Продукты%</a>
+                        <a href="{{ route('posts.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Пост%</a>
                     </div>
                     <!-- /.account__useful-btns -->
                     <div class="account__dashboard-btns admin-bar">
