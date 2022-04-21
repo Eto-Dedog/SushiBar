@@ -1211,6 +1211,10 @@ body{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.other__post__block .news__cards .news__card__img{
+    max-width: 351px;
+    max-height: 217px;
+}
 /* комментарии */
 .comments__post__block{
     margin-top: 25px;
