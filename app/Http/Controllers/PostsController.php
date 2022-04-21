@@ -82,9 +82,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        $post = Posts::find($id)->get();
+        $post = Posts::find($id);
 
-        return view('c-post', compact('post'));
+        return view('e-post', compact('post'));
     }
 
     /**
@@ -92,11 +92,26 @@ class PostsController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Posts::find($id);
+
+        $post->post_name = $request->post_name;
+        $post->post_text = $request->post_text;
+        $post->postUser_id = 1;
+
+        if ($request->file('post_img')) {
+            $path = Storage::putFile('public', $request->file('post_img'));
+            $url = Storage::url($path);
+            $post->post_img = $url;
+        }
+
+        $post->update();
+        $id = $post->post_id;
+
+        return redirect()->route('posts.index', compact('id'));
     }
 
     /**

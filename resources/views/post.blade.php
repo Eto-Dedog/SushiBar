@@ -101,7 +101,7 @@
                                 <!-- /.comment__box -->
                                 <div class="comment__box">
                                     <h3 class="comment__title">{{$review->user_name}}</h3>
-{{--                                    <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>--}}
+                                    <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>
                                     <p class="comment__text">{{$review->review_text}}</p>
                                     <div class="comment__tool d-none">
                                         <span class="comment__link link">Редактировать</span>

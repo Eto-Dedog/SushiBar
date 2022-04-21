@@ -46,6 +46,7 @@ Route::get('/c-post', 'PostsController@create')->name('posts.create');
 Route::post('/blog', 'PostsController@store')->name('posts.store');
 Route::get('/blog/post/{id}', 'PostsController@show')->name('posts.show');
 Route::get('/blog/post/edit/{id}', 'PostsController@edit')->name('posts.edit');
+Route::PATCH('/blog/post/{id}', 'PostsController@update')->name('posts.update');
 
 
 // Route::get('/blog', function () {
