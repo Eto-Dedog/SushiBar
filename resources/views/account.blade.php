@@ -129,16 +129,6 @@
                 <div class="account__useful account__details  d-none">
                     <form action="#" method="post" class="form__account__details">
                         <div class="form__account__details__box">
-                            <label class="form__account__details-label" for="first-name-details">Имя</label>
-                            <input class="form__account__details-input" type="text" id="first-name-details" required>
-                        </div>
-                        <!-- /.form__account__details__box -->
-                        <div class="form__account__details__box">
-                            <label class="form__account__details-label" for="last-name-details">Фамилия</label>
-                            <input class="form__account__details-input" type="text" id="last-name-details" required>
-                        </div>
-                        <!-- /.form__account__details__box -->
-                        <div class="form__account__details__box">
                             <label class="form__account__details-label" for="user-details">Имя пользователя</label>
                             <input class="form__account__details-input" type="text" id="user-details" required>
                         </div>
@@ -175,10 +165,15 @@
                 </div>
                 <!-- /.account__useful profile__upload -->
                 <div class="account__useful account__logount d-none">
-                    <form action="#" method="post" class="form__account__logount">
                         <h3>Вы хотите выйти из аккаунта?</h3>
-                        <input type="submit" value="Выйти" class="form__account__logount-btn">
-                    </form>
+                        <a class="form__account__logount-btn" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            Выйти
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                 </div>
                 <!-- /.account__useful profile__upload -->
             </div>

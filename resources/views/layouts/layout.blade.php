@@ -57,7 +57,11 @@
                 <!-- /.header__auth__box -->
                 <div class="header__auth__box">
                     <a href="#" class="header-mailing header__auth__box__link link mailing"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M23.928 5.424c-0.024-0.648-0.552-1.152-1.176-1.152h-21.504c-0.648 0-1.176 0.528-1.176 1.176v13.128c0 0.648 0.528 1.176 1.176 1.176h21.504c0.648 0 1.176-0.528 1.176-1.176v-13.152zM22.512 5.4l-10.512 6.576-10.512-6.576h21.024zM1.248 16.992v-10.416l7.344 4.584-7.344 5.832zM1.224 18.456l8.352-6.624 2.064 1.32c0.192 0.12 0.432 0.12 0.624 0l2.064-1.32 8.4 6.648 0.024 0.096c0 0 0 0.024-0.024 0.024h-21.48c-0.024 0-0.024 0-0.024-0.024v-0.12zM22.752 6.648v10.344l-7.344-5.808 7.344-4.536z"></path></svg>Рассылка</a>
+                    @guest
                     <a href="#" class="header-auth header__auth__box__link link authorization"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Авторизация или Регистрация</a>
+                    @else
+                    <a href="#" class="header-auth header__auth__box__link link authorization"><svg class="auth__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>Меню</a>
+                    @endguest
                     <button class="btn-auth authorization"><img class="btn-auth-img" src="{{asset('img/account/avatar.png')}}" alt="account"></button>
                 </div>
                 <!-- /.header__auth__box -->
@@ -242,21 +246,33 @@
             <a href="#" class="link modal__user__link">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="modal__svg__img"><path d="M16.848 12.168c1.56-1.32 2.448-3.216 2.448-5.232 0-3.768-3.072-6.84-6.84-6.84s-6.864 3.072-6.864 6.84c0 2.016 0.888 3.912 2.448 5.232-4.080 1.752-6.792 6.216-6.792 11.136 0 0.36 0.288 0.672 0.672 0.672h21.072c0.36 0 0.672-0.288 0.672-0.672-0.024-4.92-2.76-9.384-6.816-11.136zM12.432 1.44c3.048 0 5.52 2.472 5.52 5.52 0 1.968-1.056 3.792-2.76 4.776l-0.048 0.024c0 0 0 0-0.024 0-0.048 0.024-0.096 0.048-0.144 0.096h-0.024c-0.792 0.408-1.632 0.624-2.544 0.624-3.048 0-5.52-2.472-5.52-5.52s2.52-5.52 5.544-5.52zM9.408 13.056c0.96 0.48 1.968 0.72 3.024 0.72s2.064-0.24 3.024-0.72c3.768 1.176 6.576 5.088 6.816 9.552h-19.68c0.264-4.44 3.048-8.376 6.816-9.552z"></path></svg>
                 <br>Мой Аккаунт</a></h2>
+        @guest
         <div class="modal__user__no-auth">
             <div class="modal__user__btns">
                 <div class="modal__user__btn modal__user__btn-active">Вход</div>
                 <div class="modal__user__btn ">Регистрация</div>
             </div>
             <!-- /.modal__user__btns -->
-            <form action="#" method="get" class="form-user form__modal__user-login">
+            <form action="{{ route('login') }}" method="POST" class="form-user form__modal__user-login">
+                @csrf
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="log-email">Введите ваш e-mail *</label>
-                    <input class="form__modal__user__input input" type="email" id="log-email" required>
+                    <input class="form__modal__user__input input @error('email') is-invalid @enderror" type="email" id="log-email" required name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="log-pass">Введите ваш пароль *</label>
-                    <input class="form__modal__user__input input" type="password" id="log-pass" required>
+                    <input class="form__modal__user__input input @error('password') is-invalid @enderror" type="password" id="log-pass" required name="password" autocomplete="current-password">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box-check d-none">
@@ -270,20 +286,59 @@
                 </div>
                 <!-- /.form__modal__user__box -->
             </form>
-            <form action="#" method="post" class="form-user form__modal__user-reg d-none">
+            <form action="{{ route('register') }}" method="post" class="form-user form__modal__user-reg d-none">
+                @csrf
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="reg-email">Введите ваш e-mail *</label>
-                    <input class="form__modal__user__input input" type="email" id="reg-email" required>
+                    <input class="form__modal__user__input input @error('email') is-invalid @enderror" type="email" id="reg-email" required name="email" {{ old('email') }} autocomplete="email">
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
-                    <label class="form__modal__user__label label" for="reg-name">Введите имя вашего пользователя *</label>
-                    <input class="form__modal__user__input input" type="text" id="reg-name" required>
+                    <label class="form__modal__user__label label" for="user_name">Введите имя вашего пользователя *</label>
+                    <input class="form__modal__user__input input  @error('user_name') is-invalid @enderror" type="text" id="user_name" required name="user_name" value="{{ old('user_name') }}" autocomplete="user_name">
+                    @error('user_name')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+                <!-- /.form__modal__user__box -->
+                <div class="form__modal__user__box">
+                    <label class="form__modal__user__label label" for="first_name">Введите Ваше Имя *</label>
+                    <input class="form__modal__user__input input  @error('first_name') is-invalid @enderror" type="text" id="first_name" required name="first_name" value="{{ old('first_name') }}" autocomplete="first_name">
+                    @error('first_name')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                </div>
+                <!-- /.form__modal__user__box -->
+                <div class="form__modal__user__box">
+                    <label class="form__modal__user__label label" for="last_name">Введите Вашу Фамилию *</label>
+                    <input class="form__modal__user__input input  @error('last_name') is-invalid @enderror" type="text" id="last_name" required name="last_name" value="{{ old('last_name') }}" autocomplete="last_name">
+                    @error('last_name')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                 </div>
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="reg-pass">Введите ваш пароль *</label>
-                    <input class="form__modal__user__input input" type="password" id="reg-pass" required>
+                    <input class="form__modal__user__input input @error('password') is-invalid @enderror" type="password" id="reg-pass" required name="password" autocomplete="new-password">
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
+                    <div class="d-none">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                    </div>
                 </div>
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
@@ -293,12 +348,21 @@
             </form>
         </div>
         <!-- /.modal__user__no-auth -->
+        @else
         <div class="modal__user__auth">
             <span class="link modal__user__auth-link">nick</span>
             <a href="/account" class="link modal__user__auth-link">Панель управления</a>
-            <a href="#" class="link modal__user__auth-link">Выход</a>
+            <a class="link modal__user__auth-link" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+               document.getElementById('logout-form').submit();">
+                Выйти
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
         </div>
         <!-- /.modal__user__auth -->
+        @endguest
         <div class="modal__user__close modal__close">
             X
         </div>

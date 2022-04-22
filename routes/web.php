@@ -117,3 +117,7 @@ Route::post('/product', 'CommentsController@store')->name('categoriesComments.st
 //Route::get('/products', function () {
 //    return view('products');
 //});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

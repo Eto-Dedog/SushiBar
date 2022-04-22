@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             toTopBtn.style.display = 'none'
         }
-    }   
+    }
     toTopBtn.addEventListener('click', function () {
         window.scrollBy({
             top: -document.documentElement.scrollHeight,
@@ -155,3 +155,9 @@ overlayInfoTwo.addEventListener('click', () => {
 modalCloseInfoTwo.addEventListener('click', () => {
     modalInfoTwo.classList.add('d-none')
 })
+// inputs
+const inputOne = document.querySelector('#reg-pass')
+const inputTwo = document.querySelector('#password-confirm')
+inputOne.onchange = () => {
+    inputTwo.value = inputOne.value;
+}
