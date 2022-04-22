@@ -213,14 +213,15 @@
     <!-- /.modal__overlay -->
     <div class="modal__newsletters__body">
         <div class="modal__newsletters__box">
-            <img src="img/home/all-right-man.png" alt="all-right-man" class="modal__newsletters__img">
+            <img src="{{ asset('img/home/all-right-man.png') }}" alt="all-right-man" class="modal__newsletters__img">
         </div>
         <!-- /.modal__newsletters__box -->
         <div class="modal__newsletters__box">
             <h2 class="modal__newsletters__title">Присоединяйтесь к рассылке новостей
                 <br> и <span class="attention">будьте в курсе событий!</span> </h2>
-            <form action="#" method="post" class="newsletters__form newsletters__form-modal">
-                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" required>
+            <form action="{{ route('mailing.store') }}" method="post" class="newsletters__form newsletters__form-modal">
+                @csrf
+                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" name="mailing_email" required>
                 <input type="submit" class="newsletters__btn btn" value="+">
             </form>
             <span class="modal__spam">*Не волнуйтесь, мы не будем рассылать спам по почтовым ящикам наших клиентов</span>
@@ -292,11 +293,9 @@
             </form>
         </div>
         <!-- /.modal__user__no-auth -->
-        <div class="modal__user__auth d-none">
-            <a href="#" class="link modal__user__auth-link">Панель управления</a>
-            <a href="#" class="link modal__user__auth-link">Отзывы</a>
-            <a href="#" class="link modal__user__auth-link d-none">Адресс</a>
-            <a href="#" class="link modal__user__auth-link ">Подробней об акаунте</a>
+        <div class="modal__user__auth">
+            <span class="link modal__user__auth-link">nick</span>
+            <a href="/account" class="link modal__user__auth-link">Панель управления</a>
             <a href="#" class="link modal__user__auth-link">Выход</a>
         </div>
         <!-- /.modal__user__auth -->

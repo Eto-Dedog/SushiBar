@@ -26,6 +26,9 @@ Route::get('/about', 'AboutController@index')->name('about.index');
 //    return view('about');
 //});
 
+Route::post('/mailing', 'MailingController@store')->name('mailing.store');
+Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
+
 Route::get('/account', function () {
     return view('account');
 });

@@ -85,8 +85,9 @@ class CategoriesItemController extends Controller
     public function edit($id)
     {
         $products = Products::find($id);
+        $categories = Categories::all();
 
-        return view('e-product', compact('products'));
+        return view('e-product', compact('products', 'categories'));
     }
 
     /**

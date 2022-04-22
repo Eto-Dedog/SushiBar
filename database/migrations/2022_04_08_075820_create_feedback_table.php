@@ -19,7 +19,7 @@ class CreateFeedbackTable extends Migration
             $table->string('feedback_first_name');
             $table->string('feedback_last_name');
             $table->string('feedback_text');
-            $table->date('feedback_user_date');
+            $table->dateTime('feedback_user_date');
             $table->timestamps();
         });
     }

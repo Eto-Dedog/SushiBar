@@ -27,7 +27,7 @@
                         <div class="sort__block__info-box">
                             <h3 class="sort__block__info-box-title">Информация о продукте</h3>
                             <span class="sort__block__info-box-price">{{ $product->products_price}} ₽</span>
-                            <p class="sort__block__info-box-description sort__block__info-box-description-text">{{ $product->products_name}}</p>
+                            <p class="sort__block__info-box-description sort__block__info-box-description-text">{{ $product->products_desc}}</p>
                             <span class="sort__block__info-box-description">Категория: <a href="{{ route('categories.index') }}" class="link sort__block__info-box-link"> {{ $product->categories_name}}</a></span>
                             <span class="sort__block__info-box-description">Делитесь:
                             <a href="https://twitter.com" target="_blank" class="link sort__block__info-box-link"><img class="sort__block__info-box-link-img" src="{{ asset('img/blog/social/twitter.svg') }}" alt="social__link"></a>

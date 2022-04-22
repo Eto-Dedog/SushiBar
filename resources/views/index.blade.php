@@ -122,142 +122,25 @@
                 {{-- Сделать вывод 8 случайных продуктов  --}}
             <span class="popular__text text">Много вкусного! Много разного!</span>
             <div class="product__cards">
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-1.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Сет Саке Норимаки</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Темпура из креветок, крабовое мясо, огурец и авокадо с острым майонезом и угрем</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">999₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-2.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Калифорния Темаки 3шт.</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">999₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-3.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Магуро Темаки 5шт.</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Нори, лосось 250 г, горки, укроп, авокадо, васаби</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">1999₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-4.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Роллы Дракона 6шт.</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">1499₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-5.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Драконий Ролл</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Фаршированный унаги и крабовой палочкой, завернутый тонкими слоями авокадо и покрытый сверху</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">1499₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-6.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Драконий Ролл 6шт.</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Лосось 250 г, горки, укроп, авокадо, васаби</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">1499₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-7.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Острые суши с икрой</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Нори, рис, красная икра</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">1599₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
-                <div class="product__card">
-                    <div class="product__card__box">
-                        <img src="img/menu/ct-2-8.jpg" alt="roll" class="product__card__img">
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box product__card__info">
-                        <h3 class="product__card__title">Рулоны дракона Новые 6шт</h3>
-                        <!-- /.product__card__title -->
-                        <p class="product__card__text text">Нори, лосось 250 г, горки, укроп, авокадо, васаби</p>
-                    </div>
-                    <!-- /.product__card__box -->
-                    <div class="product__card__box">
-                        <span class="product__card__price text">1499₽</span>
-                    </div>
-                    <!-- /.product__card__box -->
-                </div>
-                <!-- /.product__card -->
+                @foreach($products as $product)
+                        <div class="product__card">
+                            <div class="product__card__box">
+                                <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                            </div>
+                            <!-- /.product__card__box -->
+                            <div class="product__card__box product__card__info">
+                                <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                <!-- /.product__card__title -->
+                                <p class="product__card__text text">{{substr($product->products_desc, 0, 50)}}</p>
+                            </div>
+                            <!-- /.product__card__box -->
+                            <div class="product__card__box">
+                                <span class="product__card__price text">{{$product->products_price}}</span>
+                            </div>
+                            <!-- /.product__card__box -->
+                        </div>
+                        <!-- /.product__card -->
+                @endforeach
             </div>
             <!-- /.product__cards -->
         </div>
@@ -272,8 +155,9 @@
             <span class="attention newsletters__attention">Подпишитесь на рассылку новостей!</span>
             <h2 class="newsletters__title title">ТОЛЬКО САМЫЕ АКТУАЛЬНЫЕ</h2>
             <p class="newsletters__text text">Мы присылаем только самые важные и актуальные новости о акциях и событиях в нашем ресторане.</p>
-            <form action="#" method="post" class="newsletters__form">
-                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" required>
+            <form action="{{ route('mailing.store') }}" method="post" class="newsletters__form">
+                @csrf
+                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" name="mailing_email" required>
                 <input type="submit" class="newsletters__btn btn" value="+">
             </form>
         </div>
