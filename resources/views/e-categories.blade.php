@@ -1,10 +1,10 @@
-@extends('layouts/layout', ['title' => "SushiBar - Создать Категорию"])
+@extends('layouts/layout', ['title' => "SushiBar - Редактирование Категорию"])
 
 @section('content')
     <section class="section__promo-sub-one section">
         <div class="container">
             <div class="promo__sub-block sl-1-block">
-                <h1 class="promo__sub-title">Создание Категории</h1>
+                <h1 class="promo__sub-title">Редактирование Категории</h1>
                 <a href="/account" class="promo__info__text text link promo__link">Главаная > Аккаунт ></a>
             </div>
             <!-- /.promo__block -->

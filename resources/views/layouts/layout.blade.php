@@ -40,6 +40,10 @@
     @else
     @endif
 
+    @guest
+        <script src="{{ asset('js/auth.js') }}" defer></script>
+    @else
+    @endguest
 </head>
 <body>
 <header class="section__header section">
@@ -351,6 +355,7 @@
         @else
         <div class="modal__user__auth">
             <span class="link modal__user__auth-link">nick</span>
+            <a href="{{ route('categories.index') }}" class="link modal__user__auth-link">Продукты</a>
             <a href="/account" class="link modal__user__auth-link">Панель управления</a>
             <a class="link modal__user__auth-link" href="{{ route('logout') }}"
                onclick="event.preventDefault();

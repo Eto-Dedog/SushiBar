@@ -2,13 +2,16 @@
 <div class="container">
     <div class="form-c-e-box">
         <label class="label-c-e" for="select-product">Выберите категорию</label>
-{{--        <select class="form-c-e-select" name="productCategory_id" id="select-product"  required>--}}
-{{--            <option class="form-c-e-option" value="{{ old('productCategory_id') ?? $products->productCategory_id ?? '' }}" selected>{{ old('productCategory_id') ??  $products->productCategory_id = $categorie->categories_name ?? '' }}</option>--}}
-{{--            <option class="form-c-e-option" value="1">Супы</option>--}}
-{{--            <option class="form-c-e-option" value="2">Роллы</option>--}}
-{{--            <option class="form-c-e-option" value="3">Горячие Роллы</option>--}}
-{{--        </select>--}}
-{{--        <!-- /# -->--}}
+        <select class="form-c-e-select" name="productCategory_id" id="select-product"  required>
+            @if($title == "SushiBar - Создание Продукта")
+            @else
+                <option class="form-c-e-option form-c-e-option-bag" value="{{ $products->productCategory_id }}" selected>{{ $products->categories_name }}</option>
+            @endif
+            @foreach($categories as $categorie)
+            <option class="form-c-e-option" value="{{ $categorie->categories_id }}">{{$categorie->categories_name}}</option>
+            @endforeach
+        </select>
+        <!-- /# -->
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

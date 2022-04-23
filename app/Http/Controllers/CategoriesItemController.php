@@ -31,9 +31,9 @@ class CategoriesItemController extends Controller
     public function create()
     {
         $categories = Categories::all();
-        $products = Products::join('categories','categories_id','=','productCategory_id')->get();
+        $product = Products::all();
 
-        return view('c-product', compact('products', 'categories'));
+        return view('c-product', compact('product', 'categories'));
     }
 
     /**
@@ -44,21 +44,21 @@ class CategoriesItemController extends Controller
      */
     public function store(Request $request)
     {
-        $product = new Products();
+        $products = new Products();
 
-        $product->productCategory_id = $request->productCategory_id;
-        $product->products_name = $request->products_name;
-        $product->products_desc = $request->products_desc;
-        $product->products_price = $request->products_price;
-        $product->productSet_id = $request->productSet_id;
+        $products->productCategory_id = $request->productCategory_id;
+        $products->products_name = $request->products_name;
+        $products->products_desc = $request->products_desc;
+        $products->products_price = $request->products_price;
+        $products->productSet_id = $request->productSet_id;
 
         if ($request->file('products_img')) {
             $path = Storage::putFile('public', $request->file('products_img'));
             $url = Storage::url($path);
-            $product->products_img = $url;
+            $products->products_img = $url;
         }
 
-        $product->save();
+        $products->save();
 
         return redirect()->route('product.index');
     }
@@ -84,7 +84,7 @@ class CategoriesItemController extends Controller
      */
     public function edit($id)
     {
-        $products = Products::find($id);
+        $products = Products::join('categories','categories_id','=','productCategory_id')->find($id);
         $categories = Categories::all();
 
         return view('e-product', compact('products', 'categories'));
@@ -99,21 +99,21 @@ class CategoriesItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Products::find($id);
-        $product->productCategory_id = $request->productCategory_id;
-        $product->products_name = $request->products_name;
-        $product->products_desc = $request->products_desc;
-        $product->products_price = $request->products_price;
-        $product->productSet_id = $request->productSet_id;
+        $products = Products::find($id);
+        $products->productCategory_id = $request->productCategory_id;
+        $products->products_name = $request->products_name;
+        $products->products_desc = $request->products_desc;
+        $products->products_price = $request->products_price;
+        $products->productSet_id = $request->productSet_id;
 
         if ($request->file('products_img')) {
             $path = Storage::putFile('public', $request->file('products_img'));
             $url = Storage::url($path);
-            $product->products_img = $url;
+            $products->products_img = $url;
         }
 
-        $product->update();
-        $id = $product->product_id;
+        $products->update();
+        $id = $products->product_id;
 
         return redirect()->route('product.index', compact('id'));
     }

@@ -26,7 +26,7 @@
                             <!-- /.news__card__box -->
                             <div class="news__card__box">
                                 <h2 class="news__card__title text">{{$pos->post_name}}</h2>
-                                <span class="news__card__date text"><img src="{{ asset('img/home/calendar.svg') }}" alt="calendar" class="news__card__icon"> {{$pos->created_at}}  / Пост создал:<span class="link post__create">{{$pos->user_name}}</span>{{--  / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
+                                <span class="news__card__date text"><img src="{{ asset('img/home/calendar.svg') }}" alt="calendar" class="news__card__icon"> {{$pos->created_at->diffForHumans()}}  / Пост создал:<span class="link post__create">{{$pos->user_name}}</span>{{--  / <img src="img/home/eye.svg" alt="eye" class="news__card__icon"> 0 / <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}}</span>
                                 <p class="news__card__text text">{{$pos->post_text}}</p>
                             </div>
                             <!-- /.news__card__box -->
@@ -68,7 +68,7 @@
                         <div class="news__card">
                             <img src="{{$post->post_img}}" alt="news" class="news__card__img">
                             <h3 class="news__card__title text">{{$post->post_name}}</h3>
-                            <span class="news__card__date text"><img src="{{asset('img/home/calendar.svg')}}" alt="calendar" class="news__card__icon"> {{$post->created_at}} {{-- <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}} </span>
+                            <span class="news__card__date text"><img src="{{asset('img/home/calendar.svg')}}" alt="calendar" class="news__card__icon"> {{$post->created_at->diffForHumans()}} {{-- <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}} </span>
                             <p class="news__card__text text">{{substr($post->post_text, 0, 50)}}</p>
                             <a href="{{ route('posts.show', ['id' => $post->post_id]) }}" class="news__card__btn text link">Продолжить чтение</a>
                         </div>
@@ -85,12 +85,16 @@
     <section class="section__comments__post section">
         <div class="container">
             <div class="comments__post__block">
-                <form action="{{route('reviews.store')}}" class="form__comment__post" method="post">
-                    @csrf
-                    <input type="text" class="d-none" value="{{$pos->post_id}}" name="post_id">
-                    <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
-                    <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
-                </form>
+                @guest
+                    <h2 class="other__post__title title">Что-бы оставить каментарий Зарегистрируйтесь!</h2>
+                @else
+                    <form action="{{route('reviews.store')}}" class="form__comment__post" method="post">
+                        @csrf
+                        <input type="text" class="d-none" value="{{$pos->post_id}}" name="post_id">
+                        <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
+                        <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
+                    </form>
+                @endguest
                 <h3 class="comments__post__block-nums"><span class="comments__post__block-num">0</span> комментарий в "Сообщение с цитатой"</h3>
                 <div class="comments__post">
                     @foreach($reviews as $review)
@@ -103,8 +107,8 @@
                                     <h3 class="comment__title">{{$review->user_name}}</h3>
                                     <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>
                                     <p class="comment__text">{{$review->review_text}}</p>
-                                    <div class="comment__tool d-none">
-                                        <span class="comment__link link">Редактировать</span>
+                                    <div class="comment__tool">
+{{--                                        <span class="comment__link link">Редактировать</span>--}}
                                         <span class="comment__link link ">Удалить</span>
                                     </div>
                                 </div>

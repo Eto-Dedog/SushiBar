@@ -29,9 +29,9 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        $categories = Categories::all();
+        $categorie = Categories::all();
 
-        return view('c-categories', compact('categories'));
+        return view('c-categories', compact('categorie'));
     }
 
     /**
@@ -90,18 +90,18 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categories = Categories::find($id);
+        $categorie = Categories::find($id);
 
-        $categories->categories_name = $request->categories_name;
+        $categorie->categories_name = $request->categories_name;
 
         if ($request->file('categories_img')) {
-            $path = Storage::putFile('public', $request->file('categories_img'));
+            $path = Storage::putFil('public', $request->file('categories_img'));
             $url = Storage::url($path);
-            $categories->categories_img = $url;
+            $categorie->categorie_img = $url;
         }
 
-        $categories->update();
-        $id = $categories->categories_id;
+        $categorie->update();
+        $id = $categorie->categories_id;
 
         return redirect()->route('categories.index', compact('id'));
     }

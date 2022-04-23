@@ -25,7 +25,7 @@
                     <div class="btn__account btn__account-active"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> <span>Панель управления</span></div>
                     <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Отзывы</span></div>
                     <div class="btn__account"><img src="img/account/upload.svg" alt="upload" class="btn__account-img"> <span>Аватарка</span></div>
-                    <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>
+{{--                    <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>--}}
                     <div class="btn__account"><img src="img/account/logout.svg" alt="logout" class="btn__account-img"> <span>Выход</span></div>
                     <!-- /.btn__profile -->
                 </div>
@@ -126,44 +126,44 @@
                     </form>
                 </div>
                 <!-- /.account__useful profile__upload -->
-                <div class="account__useful account__details  d-none">
-                    <form action="#" method="post" class="form__account__details">
-                        <div class="form__account__details__box">
-                            <label class="form__account__details-label" for="user-details">Имя пользователя</label>
-                            <input class="form__account__details-input" type="text" id="user-details" required>
-                        </div>
-                        <!-- /.form__account__details__box -->
-                        <div class="form__account__details__box">
-                            <label class="form__account__details-label" for="email-details">E-mail</label>
-                            <input class="form__account__details-input" type="email" id="email-details" required>
-                        </div>
-                        <!-- /.form__account__details__box -->
-                        <div class="from__account__details__reset-pass">
-                            <h3 class="from__account__details__reset-pass-title">Смена пораля</h3>
-                            <div class="form__account__details__box">
-                                <label class="form__account__details-label" for="old-pass">Старый пароль</label>
-                                <input class="form__account__details-input" type="password" id="old-pass" required>
-                            </div>
-                            <!-- /.form__account__details__box -->
-                            <div class="form__account__details__box">
-                                <label class="form__account__details-label" for="new-pass">Новый пароль</label>
-                                <input class="form__account__details-input" type="password" id="new-pass" required>
-                            </div>
-                            <!-- /.form__account__details__box -->
-                            <div class="form__account__details__box">
-                                <label class="form__account__details-label" for="repeat-new-pass">Повторите новый пароль</label>
-                                <input class="form__account__details-input" type="password" id="repeat-new-pass" required>
-                            </div>
-                            <!-- /.form__account__details__box -->
-                        </div>
-                        <!-- /.from__account__details__reset-pass -->
-                        <div class="form__account__details__box">
-                            <input class="form__account__details-input form__account__details-btn" type="submit" id="email-details" value="Сохранить изменения">
-                        </div>
-                        <!-- /.form__account__details__box -->
-                    </form>
-                </div>
-                <!-- /.account__useful profile__upload -->
+{{--                <div class="account__useful account__details  d-none">--}}
+{{--                    <form action="#" method="post" class="form__account__details">--}}
+{{--                        <div class="form__account__details__box">--}}
+{{--                            <label class="form__account__details-label" for="user-details">Имя пользователя</label>--}}
+{{--                            <input class="form__account__details-input" type="text" id="user-details" required>--}}
+{{--                        </div>--}}
+{{--                        <!-- /.form__account__details__box -->--}}
+{{--                        <div class="form__account__details__box">--}}
+{{--                            <label class="form__account__details-label" for="email-details">E-mail</label>--}}
+{{--                            <input class="form__account__details-input" type="email" id="email-details" required>--}}
+{{--                        </div>--}}
+{{--                        <!-- /.form__account__details__box -->--}}
+{{--                        <div class="from__account__details__reset-pass">--}}
+{{--                            <h3 class="from__account__details__reset-pass-title">Смена пораля</h3>--}}
+{{--                            <div class="form__account__details__box">--}}
+{{--                                <label class="form__account__details-label" for="old-pass">Старый пароль</label>--}}
+{{--                                <input class="form__account__details-input" type="password" id="old-pass" required>--}}
+{{--                            </div>--}}
+{{--                            <!-- /.form__account__details__box -->--}}
+{{--                            <div class="form__account__details__box">--}}
+{{--                                <label class="form__account__details-label" for="new-pass">Новый пароль</label>--}}
+{{--                                <input class="form__account__details-input" type="password" id="new-pass" required>--}}
+{{--                            </div>--}}
+{{--                            <!-- /.form__account__details__box -->--}}
+{{--                            <div class="form__account__details__box">--}}
+{{--                                <label class="form__account__details-label" for="repeat-new-pass">Повторите новый пароль</label>--}}
+{{--                                <input class="form__account__details-input" type="password" id="repeat-new-pass" required>--}}
+{{--                            </div>--}}
+{{--                            <!-- /.form__account__details__box -->--}}
+{{--                        </div>--}}
+{{--                        <!-- /.from__account__details__reset-pass -->--}}
+{{--                        <div class="form__account__details__box">--}}
+{{--                            <input class="form__account__details-input form__account__details-btn" type="submit" id="email-details" value="Сохранить изменения">--}}
+{{--                        </div>--}}
+{{--                        <!-- /.form__account__details__box -->--}}
+{{--                    </form>--}}
+{{--                </div>--}}
+{{--                <!-- /.account__useful profile__upload -->--}}
                 <div class="account__useful account__logount d-none">
                         <h3>Вы хотите выйти из аккаунта?</h3>
                         <a class="form__account__logount-btn" href="{{ route('logout') }}"

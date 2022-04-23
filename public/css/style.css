@@ -1929,6 +1929,9 @@ body{
     color:rgba(224, 6, 20,1);
     transition: 0.2s;
 }
+.products_link{
+    color: #1b1e21;
+}
 /* бургер */
 .modal__burger__body{
     position: fixed;

@@ -69,7 +69,7 @@
                                     <!-- /.comment__box -->
                                     <div class="comment__box">
                                         <h3 class="comment__title">{{$comment->user_name}}</h3>
-                                        <strong class="comment__date">{{$comment->created_at}}</strong>
+                                        <strong class="comment__date">{{$comment->created_at->diffForHumans()}}</strong>
                                         <p class="comment__text">{{$comment->comment_text}}</p>
                                         <div class="comment__tool d-none">
                                             <span class="comment__link link">Редактировать</span>
@@ -126,53 +126,59 @@
                 </div>
                 <!-- /.rewiews__box -->
                 <div class="rewiews__box">
-                    <h3 class="reviews__sub-title">Добавьте отзыв</h3>
-                    <form action="{{route('categoriesComments.store')}}" method="post" class="reviews__form">
-                        @csrf
-                        <div class="reviews__form__box">
-                            <h4 class="reviews__form-text d-none">Ваша оценка *</h4>
-                            <div class="stars__box">
-                                <div class="stars">
-                                    <div class="star "><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                    @guest()
+                        <h3 class="reviews__sub-title">Что-бы оставить отзыв Зарегистрируйтесь!</h3>
+
+                    @else
+                        <h3 class="reviews__sub-title">Добавьте отзыв</h3>
+                        <form action="{{route('categoriesComments.store')}}" method="post" class="reviews__form">
+                            @csrf
+                            <div class="reviews__form__box">
+                                <h4 class="reviews__form-text d-none">Ваша оценка *</h4>
+                                <div class="stars__box">
+                                    <div class="stars">
+                                        <div class="star "><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                    </div>
+                                    <!-- /.stars -->
+                                    <div class="stars">
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                    </div>
+                                    <!-- /.stars -->
+                                    <div class="stars">
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                    </div>
+                                    <!-- /.stars -->
+                                    <div class="stars">
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                    </div>
+                                    <!-- /.stars -->
+                                    <div class="stars">
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                    </div>
+                                    <!-- /.stars -->
                                 </div>
-                                <!-- /.stars -->
-                                <div class="stars">
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                </div>
-                                <!-- /.stars -->
-                                <div class="stars">
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                </div>
-                                <!-- /.stars -->
-                                <div class="stars">
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                </div>
-                                <!-- /.stars -->
-                                <div class="stars">
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                </div>
-                                <!-- /.stars -->
+                                <!-- /.stars__box -->
+                                <h4 class="reviews__form-text">Ваш отзыв *</h4>
+                                <input type="text" class="d-none" value="{{ $product->product_id }}" name="product_id">
+                                <input type="number" class="d-none rating-input" name="comment_rate">
+                                <textarea cols="80" rows="10" class="reviews__form-textarea" required name="comment_text"></textarea>
+                                <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
                             </div>
-                            <!-- /.stars__box -->
-                            <h4 class="reviews__form-text">Ваш отзыв *</h4>
-                            <input type="text" class="d-none" value="{{ $product->product_id }}" name="product_id">
-                            <input type="number" class="d-none rating-input" name="comment_rate">
-                            <textarea cols="80" rows="10" class="reviews__form-textarea" required name="comment_text"></textarea>
-                            <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
-                        </div>
-                        <!-- /.reviews__form__box -->
-                    </form>
-                    <!-- /.reviews__post -->
+                            <!-- /.reviews__form__box -->
+                        </form>
+                        <!-- /.reviews__post -->
+                    @endguest
+
                 </div>
                 <!-- /.rewiews__box -->
             </div>
