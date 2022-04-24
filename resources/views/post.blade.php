@@ -46,11 +46,16 @@
                         <a href="https://www.skype.com/ru/features/skype-web/" target="_blank" class="social__link link"><img class="social__link__img" src="{{ asset('img/blog/social/skype.svg') }} " alt="social__img"></a>
                     </div>
                     <!-- /.social__links -->
-                    <div class="btns__block">
-                        <a href="{{ route('posts.edit', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Редактировать</a>
-                        <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Удалить</a>
-                    </div>
-                    <!-- /.btns__post -->
+                    @auth()
+                        @if(Auth::user()->role == 404)
+                            <div class="btns__block">
+                                <a href="{{ route('posts.edit', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Редактировать</a>
+                                <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Удалить</a>
+                            </div>
+                            <!-- /.btns__post -->
+                        @endif
+                    @endauth
+
                 </div>
                 <!-- /.blog__block -->
             @endforeach
@@ -100,17 +105,21 @@
                     @foreach($reviews as $review)
                             <div class="comment__post">
                                 <div class="comment__box">
-                                    <img src="{{$review->user_avatar}}" alt="avatar">
+                                    <img src="{{$review->user_avatar ?? Auth::user()->user_avatar ?? asset('/storage/avatar.png')}}" alt="avatar">
                                 </div>
                                 <!-- /.comment__box -->
                                 <div class="comment__box">
                                     <h3 class="comment__title">{{$review->user_name}}</h3>
                                     <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>
                                     <p class="comment__text">{{$review->review_text}}</p>
-                                    <div class="comment__tool">
-{{--                                        <span class="comment__link link">Редактировать</span>--}}
-                                        <span class="comment__link link ">Удалить</span>
-                                    </div>
+                                    @auth()
+                                        @if(Auth::user()->role == 404)
+                                            <div class="comment__tool">
+                                                {{--  <span class="comment__link link">Редактировать</span>--}}
+                                                <span class="comment__link link ">Удалить</span>
+                                            </div>
+                                        @endif
+                                    @endauth
                                 </div>
                                 <!-- /.comment__box -->
                             </div>

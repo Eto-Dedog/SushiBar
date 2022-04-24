@@ -5,7 +5,7 @@
         <div class="container">
             <div class="promo__sub-block sl-1-block">
                 <h1 class="promo__sub-title">Продукты</h1>
-                <a href="/" class="promo__info__text text link promo__link">Главаная > </a>
+                <a href="{{ route('account.index') }}" class="promo__info__text text link promo__link">Главаная > Аккаунт ></a>
             </div>
             <!-- /.promo__block -->
         </div>
@@ -22,10 +22,14 @@
                             {{$categorie->categories_name}}
                             <img class="sorts__category-btn-img" src="{{$categorie->categories_img}}" alt="">
                         </div>
+                    @auth()
+                        @if(Auth::user()->role == 404)
                         <div class="btns__block sorts__category-btn-adm">
                             <a href="{{ route('categories.edit', ['id' => $categorie->categories_id]) }}" class="news__card__btn text link">Редактировать</a>
                             <a href="{{ route('posts.show', ['id' => $categorie->categories_id]) }}" class="news__card__btn text link">Удалить</a>
                         </div>
+                        @endif
+                    @endauth
                     @endforeach
                 </div>
                 <!-- /.sorts__category -->

@@ -17,14 +17,16 @@
             <div class="account__block">
                 <div class="account__control">
                     <div class="account__control__box">
-                        <img src="img/account/avatar.png" alt="avatar" class="account__control__box-img">
-                        <h3 class="account__control__box-name">user-name</h3>
-                        <span class="account__control__box-email">user-email@em.ru</span>
+                        <img src="{{ asset('img/account/avatar.png') ?? Auth::user()->user_avatar }}" alt="avatar" class="account__control__box-img">
+                        <h3 class="account__control__box-name">{{ Auth::user()->user_name }}</h3>
+                        <span class="account__control__box-email">{{ Auth::user()->email }}</span>
+                        <span class="account__control__box-email">{{ Auth::user()->first_name }}</span>
+                        <span class="account__control__box-email">{{ Auth::user()->last_name }}</span>
                     </div>
                     <!-- /.profile__control__box -->
                     <div class="btn__account btn__account-active"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> <span>Панель управления</span></div>
                     <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Отзывы</span></div>
-                    <div class="btn__account"><img src="img/account/upload.svg" alt="upload" class="btn__account-img"> <span>Аватарка</span></div>
+{{--                    <div class="btn__account"><img src="img/account/upload.svg" alt="upload" class="btn__account-img"> <span>Аватарка</span></div>--}}
 {{--                    <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>--}}
                     <div class="btn__account"><img src="img/account/logout.svg" alt="logout" class="btn__account-img"> <span>Выход</span></div>
                     <!-- /.btn__profile -->
@@ -35,23 +37,28 @@
                     <p class="account__useful-text account__dashboard-test">Привет, <strong>user-name</strong>, сегодня отличный день, чтобы проверить страницу своей учетной записи. Вы также можете проверить:</p>
                     <div class="account__dashboard-btns">
                         <a href="{{ route('categories.index') }}" class="account__dashboard-btn"><img src="img/account/calendar.svg" alt="pen" class="btn__account-img"> Продукты</a>
-                        <div class="account__dashboard-btn"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> Отзывы</div>
-                        <div class="account__dashboard-btn"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> Подробней об акаунте</div>
+{{--                        <div class="account__dashboard-btn"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> Отзывы</div>--}}
+{{--                        <div class="account__dashboard-btn"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> Подробней об акаунте</div>--}}
                     </div>
                     <!-- /.account__useful-btns -->
-                    <div class="account__dashboard-btns admin-bar admin-bar-c-e">
-                        <a href="{{ route('categories.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Категорию%</a>
-                        <a href="{{ route('categoriesItem.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Продукты%</a>
-                        <a href="{{ route('posts.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Пост%</a>
-                    </div>
-                    <!-- /.account__useful-btns -->
-                    <div class="account__dashboard-btns admin-bar">
-                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</a>
-                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</a>
-                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
-                        <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
-                    </div>
-                    <!-- /.account__useful-btns -->
+                    @auth()
+                        @if(Auth::user()->role == 404)
+                            <div class="account__dashboard-btns admin-bar admin-bar-c-e">
+                                <a href="{{ route('categories.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Категорию%</a>
+                                <a href="{{ route('categoriesItem.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Продукты%</a>
+                                <a href="{{ route('posts.create') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Создать%<br>%Пост%</a>
+                            </div>
+                            <!-- /.account__useful-btns -->
+                            <div class="account__dashboard-btns admin-bar">
+                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</a>
+                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</a>
+                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
+                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
+                            </div>
+                            <!-- /.account__useful-btns -->
+                        @endif
+                    @endauth
+
                     <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
                     <div class="account__sort-cards">
                         <a href="#" class="account__sort-card link">
@@ -81,50 +88,85 @@
                 <!-- /.account__useful profile__dashboard -->
                 <div class="account__useful account__reviews d-none">
                     <div class="comments__post__block">
-                        <h3>Всего отзывов 2</h3>
+                        <h3>Отзывы</h3>
                         <div class="comments__post">
-                            <div class="comment__post">
-                                <div class="comment__box">
-                                    <img src="img/account/avatar.png" alt="avatar">
-                                </div>
-                                <!-- /.comment__box -->
-                                <div class="comment__box">
-                                    <a href="#" class="comment__title link">Admin</a>
-                                    <strong class="comment__date">March 22, 2022 - 11:41 am</strong>
-                                    <p class="comment__text">test</p>
-                                    <a href="#" class="comment__link link">Посмотреть пост</a>
-                                </div>
-                                <!-- /.comment__box -->
-                            </div>
-                            <!-- /.comment__post -->
-                            <div class="comment__post">
-                                <div class="comment__box">
-                                    <img src="img/account/avatar.png" alt="avatar">
-                                </div>
-                                <!-- /.comment__box -->
-                                <div class="comment__box">
-                                    <a href="#" class="comment__title link">Admin</a>
-                                    <strong class="comment__date">March 22, 2022 - 11:41 am</strong>
-                                    <p class="comment__text">test</p>
-                                    <a href="#" class="comment__link link">Посмотреть пост</a>
-                                </div>
-                                <!-- /.comment__box -->
-                            </div>
-                            <!-- /.comment__post -->
+                                @foreach($comments as $comment)
+                                    @if( $comment->commentUser_id == Auth::user()->user_id)
+                                    <div class="comment__post">
+                                        <div class="comment__box">
+                                            <img src="{{Auth::user()->user_avatar ?? asset('/storage/avatar.png')}}" alt="avatar">
+                                        </div>
+                                        <!-- /.comment__box -->
+                                        <div class="comment__box">
+                                            <h3 class="comment__title">{{Auth::user()->user_avatar}}</h3>
+                                            <strong class="comment__date">{{$comment->created_at->diffForHumans()}}</strong>
+                                            <p class="comment__text">{{$comment->comment_text}}</p>
+                                            <div class="comment__tool">
+                                                <span class="comment__link link d-none">Редактировать</span>
+                                                <span class="comment__link link ">Удалить</span>
+                                            </div>
+                                        </div>
+                                        <!-- /.comment__box -->
+                                        <div class="comment__box">
+                                            <div class="stars__box">
+                                                @if($comment->comment_rate == 1)
+                                                    <div class="stars">
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    </div>
+                                                    <!-- /.stars -->
+                                                @elseif($comment->comment_rate == 2)
+                                                    <div class="stars">
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    </div>
+                                                    <!-- /.stars -->
+                                                @elseif($comment->comment_rate == 3)
+                                                    <div class="stars">
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    </div>
+                                                    <!-- /.stars -->
+                                                @elseif($comment->comment_rate == 4)
+                                                    <div class="stars">
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    </div>
+                                                    <!-- /.stars -->
+                                                @elseif($comment->comment_rate == 5)
+                                                    <div class="stars">
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    </div>
+                                                    <!-- /.stars -->
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <!-- /.comment__box -->
+                                    </div>
+                                    <!-- /.comment__post -->
+                                    @endif
+                                @endforeach
                         </div>
                         <!-- /.comments__post -->
                     </div>
                     <!-- /.comments__post__block -->
                 </div>
                 <!-- /.account__useful profile__reviews -->
-                <div class="account__useful account__upload d-none">
-                    <form action="#" method="post" class="form__account__upload">
-                        <h3>Загрузите новою аватарку</h3>
-                        <input type="file" class="input__account__upload" id="input__account__upload" required>
-                        <label class="label__account__upload" for="input__account__upload">Только файлы jpg/jpeg/png весом мение 200мб *</label>
-                        <input type="submit" class="form__account__upload-btn btn-two">
-                    </form>
-                </div>
+{{--                <div class="account__useful account__upload d-none">--}}
+{{--                    <form action="#" method="post" class="form__account__upload">--}}
+{{--                        @csrf--}}
+{{--                        <h3>Загрузите новою аватарку</h3>--}}
+{{--                        <input type="file" class="input__account__upload" id="input__account__upload" required name="user_avatar">--}}
+{{--                        <label class="label__account__upload" for="input__account__upload">Только файлы jpg/jpeg/png весом мение 50мб *</label>--}}
+{{--                        <input type="submit" class="form__account__upload-btn btn-two">--}}
+{{--                    </form>--}}
+{{--                </div>--}}
                 <!-- /.account__useful profile__upload -->
 {{--                <div class="account__useful account__details  d-none">--}}
 {{--                    <form action="#" method="post" class="form__account__details">--}}
@@ -163,7 +205,7 @@
 {{--                        <!-- /.form__account__details__box -->--}}
 {{--                    </form>--}}
 {{--                </div>--}}
-{{--                <!-- /.account__useful profile__upload -->--}}
+                <!-- /.account__useful profile__upload -->
                 <div class="account__useful account__logount d-none">
                         <h3>Вы хотите выйти из аккаунта?</h3>
                         <a class="form__account__logount-btn" href="{{ route('logout') }}"

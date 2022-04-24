@@ -117,6 +117,9 @@ body{
     align-items: center;
     text-align: center;
 }
+.section__header{
+    margin-top: -15px;
+}
 .section__header a {
     color: #ffffff;
 }
@@ -1910,7 +1913,11 @@ body{
 }
 .comment__box .stars__box{
     position: absolute;
-    right: 0;
+    right: 0px;
+}
+.account__reviews .comment__box .stars__box{
+    position: absolute;
+    right: 20%;
 }
 .comment__box .star{
     opacity: 1;
@@ -2102,6 +2109,10 @@ body{
     }
 }
 @media (max-width:992px) {
+    .account__reviews .comment__box .stars__box{
+        position: absolute;
+        right: 0;
+    }
     .header__auth__box__link{
         display: flex;
         flex-direction: column;
@@ -2356,4 +2367,14 @@ body{
     .sort__block__info-box-description{
         flex-wrap: wrap;
     }
+    .account__reviews .comment__box .stars__box{
+        position: absolute;
+        left: 5%;
+    }
+    .account__reviews .comments__post .comment__post{
+        flex-direction: column;
+        width: 250px;
+        padding-bottom: 50px;
+    }
+
 }

@@ -1,12 +1,12 @@
 @extends('layouts/layout', ['title' => "SushiBar - Редактирование Продукта"])
 
 @section('content')
-    {{ $title = "SushiBar - Редактирование Продукта" }}
+    <div class="d-none">{{ $title = "SushiBar - Редактирование Продукта" }}</div>
     <section class="section__promo-sub-one section">
         <div class="container">
             <div class="promo__sub-block sl-1-block">
                 <h1 class="promo__sub-title">Редактирование Продукта</h1>
-                <a href="/account" class="promo__info__text text link promo__link">Главаная > Аккаунт ></a>
+                <a href="{{ route('account.index') }}" class="promo__info__text text link promo__link">Главаная > Аккаунт ></a>
             </div>
             <!-- /.promo__block -->
         </div>

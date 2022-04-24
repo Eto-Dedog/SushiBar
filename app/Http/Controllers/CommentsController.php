@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comments;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CommentsController extends Controller
 {
@@ -42,7 +43,7 @@ class CommentsController extends Controller
         $comments = new Comments();
 
         $comments->commentProduct_id = $request->product_id;
-        $comments->commentUser_id = 1;
+        $comments->commentUser_id = Auth::user()->user_id;
         $comments->comment_text = $request->comment_text;
         $comments->comment_rate = $request->comment_rate;
 

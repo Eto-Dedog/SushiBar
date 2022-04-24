@@ -229,7 +229,7 @@
                 <br> и <span class="attention">будьте в курсе событий!</span> </h2>
             <form action="{{ route('mailing.store') }}" method="post" class="newsletters__form newsletters__form-modal">
                 @csrf
-                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" name="mailing_email" required>
+                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" name="mailing_email" required value="{{ old('mailing_email') ?? Auth::user()->email ?? '' }}">
                 <input type="submit" class="newsletters__btn btn" value="+">
             </form>
             <span class="modal__spam">*Не волнуйтесь, мы не будем рассылать спам по почтовым ящикам наших клиентов</span>
@@ -344,7 +344,6 @@
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     </div>
                 </div>
-                <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <input class="form__modal__user__input form__modal__user__input-btn input" type="submit" value="зарегистрироваться">
                 </div>
@@ -354,9 +353,9 @@
         <!-- /.modal__user__no-auth -->
         @else
         <div class="modal__user__auth">
-            <span class="link modal__user__auth-link">nick</span>
+            <a href="{{ route('account.index') }}" class="link modal__user__auth-link">{{ Auth::user()->user_name }}</a>
+            <a href="{{ route('account.index') }}" class="link modal__user__auth-link">Панель управления</a>
             <a href="{{ route('categories.index') }}" class="link modal__user__auth-link">Продукты</a>
-            <a href="/account" class="link modal__user__auth-link">Панель управления</a>
             <a class="link modal__user__auth-link" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                document.getElementById('logout-form').submit();">

@@ -29,9 +29,11 @@ Route::get('/about', 'AboutController@index')->name('about.index');
 Route::post('/mailing', 'MailingController@store')->name('mailing.store');
 Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
 
-Route::get('/account', function () {
-    return view('account');
-});
+Route::get('/account', 'AccountController@index')->name('account.index');
+
+//Route::get('/account', function () {
+//    return view('account');
+//});
 
 Route::get('/all-comments', function () {
     return view('all-comments');
@@ -108,7 +110,6 @@ Route::get('/c-categories', 'CategoriesController@create')->name('categories.cre
 Route::post('/menu', 'CategoriesController@store')->name('categories.store');
 Route::get('/products/categories/edit/{id}', 'CategoriesController@edit')->name('categories.edit');
 Route::PATCH('/products/{id}', 'CategoriesController@update')->name('categories.update');
-
 
 Route::post('/product', 'CommentsController@create')->name('categoriesComments.create');
 Route::post('/product', 'CommentsController@store')->name('categoriesComments.store');

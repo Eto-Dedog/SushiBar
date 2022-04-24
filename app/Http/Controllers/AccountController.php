@@ -3,51 +3,41 @@
 namespace App\Http\Controllers;
 
 use App\Comments;
-use App\Reviews;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class ReviewsController extends Controller
+class AccountController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        $comments = Comments::all();
+
+        return view('account', compact('comments'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        $reviews = Reviews::all();
-
-        return view('/post', compact('reviews'));
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $reviews = new Reviews();
-
-        $reviews->reviewPost_id = $request->post_id;
-        $reviews->reviewUser_id = Auth::user()->user_id;
-        $reviews->review_text = $request->review_text;
-
-        $reviews->save();
-
-        return back();
+        //
     }
 
     /**
