@@ -90,10 +90,12 @@ class CommentsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function destroy($id)
     {
-        //
+        $comments = Comments::find($id);
+        $comments->delete();
+        return back();
     }
 }

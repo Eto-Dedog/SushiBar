@@ -26,6 +26,7 @@
                     <!-- /.profile__control__box -->
                     <div class="btn__account btn__account-active"><img src="img/account/calendar.svg" alt="calendar" class="btn__account-img"> <span>Панель управления</span></div>
                     <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Отзывы</span></div>
+                    <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Комментарии</span></div>
 {{--                    <div class="btn__account"><img src="img/account/upload.svg" alt="upload" class="btn__account-img"> <span>Аватарка</span></div>--}}
 {{--                    <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>--}}
                     <div class="btn__account"><img src="img/account/logout.svg" alt="logout" class="btn__account-img"> <span>Выход</span></div>
@@ -58,7 +59,6 @@
                             <!-- /.account__useful-btns -->
                         @endif
                     @endauth
-
                     <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
                     <div class="account__sort-cards">
                         <a href="#" class="account__sort-card link">
@@ -98,13 +98,15 @@
                                         </div>
                                         <!-- /.comment__box -->
                                         <div class="comment__box">
+                                            <h3 class="comment__title">{{Auth::user()->user_name}}</h3>
                                             <h3 class="comment__title">{{Auth::user()->user_avatar}}</h3>
                                             <strong class="comment__date">{{$comment->created_at->diffForHumans()}}</strong>
                                             <p class="comment__text">{{$comment->comment_text}}</p>
-                                            <div class="comment__tool">
-                                                <span class="comment__link link d-none">Редактировать</span>
-                                                <span class="comment__link link ">Удалить</span>
-                                            </div>
+                                            <form action="{{ route('comments.destroy', ['id' => $comment->comment_id]) }}" method="post" onsubmit="if (confirm('Точно удалить сообщение?')) {return true} else { return false }">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="submit" class="comment__link link" value="Удалить">
+                                            </form>
                                         </div>
                                         <!-- /.comment__box -->
                                         <div class="comment__box">
@@ -152,6 +154,37 @@
                                     <!-- /.comment__post -->
                                     @endif
                                 @endforeach
+                        </div>
+                        <!-- /.comments__post -->
+                    </div>
+                    <!-- /.comments__post__block -->
+                </div>
+                <div class="account__useful account__reviews d-none">
+                    <div class="comments__post__block">
+                        <h3>Комментарии к постам</h3>
+                        <div class="comments__post">
+                            @foreach($reviews as $review)
+                                @if( $review->reviewUser_id == Auth::user()->user_id)
+                                <div class="comment__post">
+                                            <div class="comment__box">
+                                                <img src="{{$review->user_avatar ?? Auth::user()->user_avatar ?? asset('/storage/avatar.png')}}" alt="avatar">
+                                            </div>
+                                            <!-- /.comment__box -->
+                                            <div class="comment__box">
+                                                <h3 class="comment__title">{{Auth::user()->user_name}}</h3>
+                                                <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>
+                                                <p class="comment__text">{{$review->review_text}}</p>
+                                                <form action="{{ route('reviews.destroy', ['id' => $review->review_id]) }}" method="post" onsubmit="if (confirm('Точно удалить сообщение?')) {return true} else { return false }">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <input type="submit" class="comment__link link" value="Удалить">
+                                                </form>
+                                            </div>
+                                            <!-- /.comment__box -->
+                                        </div>
+                                        <!-- /.comment__post -->
+                                @endif
+                            @endforeach
                         </div>
                         <!-- /.comments__post -->
                     </div>

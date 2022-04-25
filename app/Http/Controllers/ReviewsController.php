@@ -88,10 +88,14 @@ class ReviewsController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $reviews = Reviews::find($id);
+
+        $reviews->delete();
+
+        return back();
     }
 }

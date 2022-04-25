@@ -5,7 +5,6 @@ commentsNum.innerHTML = comments.length
 const btnsStar = document.querySelectorAll('.reviews__form__box .stars')
 const ratingInput = document.querySelector('.rating-input')
 console.log(ratingInput)
-btnsStar[0].classList.add('active-star')
 
 for (let i = 0; i < btnsStar.length; i++) {
     btnsStar[i].addEventListener('click', function() {

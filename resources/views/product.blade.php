@@ -77,10 +77,14 @@
                                         <strong class="comment__date">{{$comment->created_at->diffForHumans()}}</strong>
                                         <p class="comment__text">{{$comment->comment_text}}</p>
                                         @auth()
-                                            @if(Auth::user()->role == 404)
+                                            @if(Auth::user()->role == 404 || Auth::user()->user_id == $comment->commentUser_id)
                                                 <div class="comment__tool">
                                                     <span class="comment__link link d-none">Редактировать</span>
-                                                    <span class="comment__link link ">Удалить</span>
+                                                    <form action="{{ route('comments.destroy', ['id' => $comment->comment_id]) }}" method="post" onsubmit="if (confirm('Точно удалить сообщение?')) {return true} else { return false }">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <input type="submit" class="comment__link link" value="Удалить">
+                                                    </form>
                                                 </div>
                                             @endif
                                         @endauth
@@ -141,13 +145,13 @@
 
                     @else
                         <h3 class="reviews__sub-title">Добавьте отзыв</h3>
-                        <form action="{{route('categoriesComments.store')}}" method="post" class="reviews__form">
+                        <form action="{{route('comments.store')}}" method="post" class="reviews__form">
                             @csrf
                             <div class="reviews__form__box">
                                 <h4 class="reviews__form-text d-none">Ваша оценка *</h4>
                                 <div class="stars__box">
                                     <div class="stars">
-                                        <div class="star "><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
                                     </div>
                                     <!-- /.stars -->
                                     <div class="stars">
@@ -180,7 +184,7 @@
                                 <!-- /.stars__box -->
                                 <h4 class="reviews__form-text">Ваш отзыв *</h4>
                                 <input type="text" class="d-none" value="{{ $product->product_id }}" name="product_id">
-                                <input type="number" class="d-none rating-input" name="comment_rate">
+                                <input type="number" class="d-none rating-input" name="comment_rate" required>
                                 <textarea cols="80" rows="10" class="reviews__form-textarea" required name="comment_text"></textarea>
                                 <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
                             </div>

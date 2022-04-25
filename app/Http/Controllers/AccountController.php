@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Comments;
+use App\Reviews;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
@@ -15,8 +18,9 @@ class AccountController extends Controller
     public function index()
     {
         $comments = Comments::all();
+        $reviews = Reviews::all();
 
-        return view('account', compact('comments'));
+        return view('account', compact('comments','reviews'));
     }
 
     /**

@@ -113,10 +113,14 @@
                                     <strong class="comment__date">{{$review->created_at->diffForHumans()}}</strong>
                                     <p class="comment__text">{{$review->review_text}}</p>
                                     @auth()
-                                        @if(Auth::user()->role == 404)
+                                        @if(Auth::user()->role == 404 || Auth::user()->user_id == $review->reviewUser_id)
                                             <div class="comment__tool">
                                                 {{--  <span class="comment__link link">Редактировать</span>--}}
-                                                <span class="comment__link link ">Удалить</span>
+                                                <form action="{{ route('reviews.destroy', ['id' => $review->review_id]) }}" method="post" onsubmit="if (confirm('Точно удалить сообщение?')) {return true} else { return false }">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <input type="submit" class="comment__link link" value="Удалить">
+                                                </form>
                                             </div>
                                         @endif
                                     @endauth

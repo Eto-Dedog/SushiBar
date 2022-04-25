@@ -41,6 +41,7 @@ Route::get('/all-comments', function () {
 
 Route::get('/c-e-categories', 'ReviewsController@create')->name('reviews.create');
 Route::post('/post', 'ReviewsController@store')->name('reviews.store');
+Route::DELETE('/blog/post/{id}', 'ReviewsController@destroy')->name('reviews.destroy');
 
 Route::get('/all-reviews', function () {
     return view('all-reviews');
@@ -111,8 +112,9 @@ Route::post('/menu', 'CategoriesController@store')->name('categories.store');
 Route::get('/products/categories/edit/{id}', 'CategoriesController@edit')->name('categories.edit');
 Route::PATCH('/products/{id}', 'CategoriesController@update')->name('categories.update');
 
-Route::post('/product', 'CommentsController@create')->name('categoriesComments.create');
-Route::post('/product', 'CommentsController@store')->name('categoriesComments.store');
+Route::post('/product', 'CommentsController@create')->name('comments.create');
+Route::post('/product', 'CommentsController@store')->name('comments.store');
+Route::DELETE('/products/product/{id}', 'CommentsController@destroy')->name('comments.destroy');
 
 
 //Route::get('/products', function () {
