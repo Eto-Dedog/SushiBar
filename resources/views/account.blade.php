@@ -51,37 +51,39 @@
                             </div>
                             <!-- /.account__useful-btns -->
                             <div class="account__dashboard-btns admin-bar">
-                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</a>
-                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</a>
-                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
-                                <a href="" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
+                                <a href="{{ route('mailing.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</a>
+                                <a href="{{ route('feedback.index')  }}" class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</a>
+                                <a href="{{ route('allReviews.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
+                                <a href="{{ route('allComments.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
                             </div>
                             <!-- /.account__useful-btns -->
                         @endif
                     @endauth
                     <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
                     <div class="account__sort-cards">
-                        <a href="#" class="account__sort-card link">
-                            <img src="img/menu/ct-1-1.jpg" alt="product" class="account__sort-card-img">
-                            <span class="account__sort-card-category">Супы</span>
-                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>
-                            <span class="account__sort-card-price">999₽</span>
-                        </a>
-                        <!-- /.account__dashboard-card -->
-                        <a href="#" class="account__sort-card link">
-                            <img src="img/menu/ct-1-2.jpg" alt="product" class="account__sort-card-img">
-                            <span class="account__sort-card-category">Супы</span>
-                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>
-                            <span class="account__sort-card-price">999₽</span>
-                        </a>
-                        <!-- /.account__dashboard-card -->
-                        <a href="#" class="account__sort-card link">
-                            <img src="img/menu/ct-1-3.jpg" alt="product" class="account__sort-card-img">
-                            <span class="account__sort-card-category">Супы</span>
-                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>
-                            <span class="account__sort-card-price">999₽</span>
-                        </a>
-                        <!-- /.account__dashboard-card -->
+                        @foreach($randProd as $randPro)
+                            <a href="#" class="account__sort-card link">
+                                <img src="{{ $randPro->products_img }}" alt="product" class="account__sort-card-img">
+                                <h4 class="account__sort-card-title">{{ $randPro->products_name }}</h4>
+                                <span class="account__sort-card-price">{{ $randPro->products_price }}₽</span>
+                            </a>
+                            <!-- /.account__dashboard-card -->
+                        @endforeach
+
+{{--                        <a href="#" class="account__sort-card link">--}}
+{{--                            <img src="img/menu/ct-1-2.jpg" alt="product" class="account__sort-card-img">--}}
+{{--                            <span class="account__sort-card-category">Супы</span>--}}
+{{--                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>--}}
+{{--                            <span class="account__sort-card-price">999₽</span>--}}
+{{--                        </a>--}}
+{{--                        <!-- /.account__dashboard-card -->--}}
+{{--                        <a href="#" class="account__sort-card link">--}}
+{{--                            <img src="img/menu/ct-1-3.jpg" alt="product" class="account__sort-card-img">--}}
+{{--                            <span class="account__sort-card-category">Супы</span>--}}
+{{--                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>--}}
+{{--                            <span class="account__sort-card-price">999₽</span>--}}
+{{--                        </a>--}}
+{{--                        <!-- /.account__dashboard-card -->--}}
                     </div>
                     <!-- /.account__sort-cards -->
                 </div>
@@ -90,7 +92,7 @@
                     <div class="comments__post__block">
                         <h3>Отзывы</h3>
                         <div class="comments__post">
-                                @foreach($comments as $comment)
+                            @foreach($comments as $comment)
                                     @if( $comment->commentUser_id == Auth::user()->user_id)
                                     <div class="comment__post">
                                         <div class="comment__box">

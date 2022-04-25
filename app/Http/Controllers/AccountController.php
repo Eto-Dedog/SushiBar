@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comments;
+use App\Products;
 use App\Reviews;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
@@ -19,8 +20,9 @@ class AccountController extends Controller
     {
         $comments = Comments::all();
         $reviews = Reviews::all();
+        $randProd = Products::join('categories', 'categories_id', '=', 'productCategory_id')->limit(3)->orderByRaw("RAND()")->get();
 
-        return view('account', compact('comments','reviews'));
+        return view('account', compact('comments','reviews', 'randProd'));
     }
 
     /**

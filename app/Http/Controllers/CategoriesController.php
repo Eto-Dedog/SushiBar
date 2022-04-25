@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Storage;
 
 class CategoriesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -25,11 +29,15 @@ class CategoriesController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function create()
     {
         $categorie = Categories::all();
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
 
         return view('c-categories', compact('categorie'));
     }
@@ -72,11 +80,15 @@ class CategoriesController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function edit($id)
     {
         $categories = Categories::find($id);
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
 
         return view('e-categories', compact('categories'));
     }

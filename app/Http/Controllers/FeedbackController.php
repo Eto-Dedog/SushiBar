@@ -7,14 +7,24 @@ use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('home');
+    }
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        $feedbacks = Feedback::paginate(10);
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
+
+        return view('feedback', compact('feedbacks'));
     }
 
     /**
@@ -86,10 +96,14 @@ class FeedbackController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $feedback = Feedback::find($id);
+
+        $feedback->delete();
+
+        return back();
     }
 }

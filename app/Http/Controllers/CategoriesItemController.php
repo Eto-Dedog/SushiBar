@@ -6,10 +6,16 @@ use App\Categories;
 use App\Comments;
 use App\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class CategoriesItemController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -26,12 +32,16 @@ class CategoriesItemController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function create()
     {
         $categories = Categories::all();
         $product = Products::all();
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
 
         return view('c-product', compact('product', 'categories'));
     }
@@ -73,6 +83,7 @@ class CategoriesItemController extends Controller
     {
         $products = Products::where('product_id', '=', $id)->join('categories','categories_id','=','productCategory_id')->get();
         $comments = Comments::where('commentProduct_id', '=', $id)->join('users','user_id','=','commentUser_id')->get();
+
         return view('product', compact('products','comments'));
     }
 
@@ -80,12 +91,16 @@ class CategoriesItemController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function edit($id)
     {
         $products = Products::join('categories','categories_id','=','productCategory_id')->find($id);
         $categories = Categories::all();
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
 
         return view('e-product', compact('products', 'categories'));
     }

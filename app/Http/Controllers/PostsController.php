@@ -6,10 +6,15 @@ use App\Posts;
 use App\Reviews;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -25,11 +30,15 @@ class PostsController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function create()
     {
         $posts = Posts::all();
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
 
         return view('c-post', compact('posts'));
     }
@@ -46,7 +55,7 @@ class PostsController extends Controller
 
         $post->post_name = $request->post_name;
         $post->post_text = $request->post_text;
-        $post->postUser_id = 1;
+        $post->postUser_id = Auth::user()->user_id;
 
         if ($request->file('post_img')) {
             $path = Storage::putFile('public', $request->file('post_img'));
@@ -69,7 +78,7 @@ class PostsController extends Controller
     {
         $post = Posts::where('post_id', '=', $id)->join('users','user_id','=','postUser_id')->get();
         $reviews = Reviews::where('reviewPost_id', '=', $id)->join('users','user_id','=','reviewUser_id')->get();
-        $posts = Posts::join('users','user_id','=','postUser_id')->get();
+        $posts = Posts::join('users','user_id','=','postUser_id')->limit(3)->orderByRaw("RAND()")->get();
 
         return view('post', compact('post','posts', 'reviews'));
     }
@@ -78,11 +87,15 @@ class PostsController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function edit($id)
     {
         $post = Posts::find($id);
+
+        if (\Auth::user()->role != '404'){
+            return redirect()->route('index.index');
+        }
 
         return view('e-post', compact('post'));
     }
@@ -100,7 +113,7 @@ class PostsController extends Controller
 
         $post->post_name = $request->post_name;
         $post->post_text = $request->post_text;
-        $post->postUser_id = 1;
+        $post->postUser_id = Auth::user()->user_id;
 
         if ($request->file('post_img')) {
             $path = Storage::putFile('public', $request->file('post_img'));

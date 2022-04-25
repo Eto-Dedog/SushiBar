@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Mailing;
+use App\Reviews;
 use Illuminate\Http\Request;
 
-class MailingController extends Controller
+class AllReviewsController extends Controller
 {
     public function __construct()
     {
@@ -18,13 +18,13 @@ class MailingController extends Controller
      */
     public function index()
     {
-        $mailings = Mailing::paginate(10);
+        $reviews = Reviews::join('users','user_id', '=', 'reviewUser_id')->paginate(10);
 
         if (\Auth::user()->role != '404'){
             return redirect()->route('index.index');
         }
 
-        return view('mailer', compact('mailings'));
+        return view('all-reviews', compact('reviews'));
     }
 
     /**
@@ -41,18 +41,11 @@ class MailingController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-
-        $mailing = new Mailing();
-
-        $mailing->mailing_email = $request->mailing_email;
-
-        $mailing->save();
-
-        return back();
+        //
     }
 
     /**
@@ -93,14 +86,10 @@ class MailingController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $mailing = Mailing::find($id);
-
-        $mailing->delete();
-
-        return back();
+        //
     }
 }

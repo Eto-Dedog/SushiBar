@@ -27,25 +27,31 @@ Route::get('/about', 'AboutController@index')->name('about.index');
 //});
 
 Route::post('/mailing', 'MailingController@store')->name('mailing.store');
+Route::get('/mailer', 'MailingController@index')->name('mailing.index');
+Route::DELETE('/mailer/{id}', 'MailingController@destroy')->name('mailing.destroy');
 Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
+Route::get('/feedback', 'FeedbackController@index')->name('feedback.index');
+Route::DELETE('/feedback/{id}', 'FeedbackController@destroy')->name('feedback.destroy');
 
 Route::get('/account', 'AccountController@index')->name('account.index');
 
 //Route::get('/account', function () {
 //    return view('account');
 //});
+Route::get('/all-comments', 'AllCommentsController@index')->name('allComments.index');
+Route::get('/all-reviews', 'AllReviewsController@index')->name('allReviews.index');
 
-Route::get('/all-comments', function () {
-    return view('all-comments');
-});
+//Route::get('/all-comments', function () {
+//    return view('all-comments');
+//});
 
 Route::get('/c-e-categories', 'ReviewsController@create')->name('reviews.create');
 Route::post('/post', 'ReviewsController@store')->name('reviews.store');
 Route::DELETE('/blog/post/{id}', 'ReviewsController@destroy')->name('reviews.destroy');
 
-Route::get('/all-reviews', function () {
-    return view('all-reviews');
-});
+//Route::get('/all-reviews', function () {
+//    return view('all-reviews');
+//});
 
 Route::get('/blog', 'PostsController@index')->name('posts.index');
 Route::get('/c-post', 'PostsController@create')->name('posts.create');
