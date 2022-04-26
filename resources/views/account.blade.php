@@ -28,7 +28,7 @@
                     <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Отзывы</span></div>
                     <div class="btn__account"><img src="img/account/pen.svg" alt="pen" class="btn__account-img"> <span>Комментарии</span></div>
 {{--                    <div class="btn__account"><img src="img/account/upload.svg" alt="upload" class="btn__account-img"> <span>Аватарка</span></div>--}}
-{{--                    <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>--}}
+                    <div class="btn__account"><img src="img/account/avatar.svg" alt="avatar" class="btn__account-img"> <span>Подробней об акаунте</span></div>
                     <div class="btn__account"><img src="img/account/logout.svg" alt="logout" class="btn__account-img"> <span>Выход</span></div>
                     <!-- /.btn__profile -->
                 </div>
@@ -69,21 +69,6 @@
                             </a>
                             <!-- /.account__dashboard-card -->
                         @endforeach
-
-{{--                        <a href="#" class="account__sort-card link">--}}
-{{--                            <img src="img/menu/ct-1-2.jpg" alt="product" class="account__sort-card-img">--}}
-{{--                            <span class="account__sort-card-category">Супы</span>--}}
-{{--                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>--}}
-{{--                            <span class="account__sort-card-price">999₽</span>--}}
-{{--                        </a>--}}
-{{--                        <!-- /.account__dashboard-card -->--}}
-{{--                        <a href="#" class="account__sort-card link">--}}
-{{--                            <img src="img/menu/ct-1-3.jpg" alt="product" class="account__sort-card-img">--}}
-{{--                            <span class="account__sort-card-category">Супы</span>--}}
-{{--                            <h4 class="account__sort-card-title">Тайский суп с морепродуктами</h4>--}}
-{{--                            <span class="account__sort-card-price">999₽</span>--}}
-{{--                        </a>--}}
-{{--                        <!-- /.account__dashboard-card -->--}}
                     </div>
                     <!-- /.account__sort-cards -->
                 </div>
@@ -193,53 +178,41 @@
                     <!-- /.comments__post__block -->
                 </div>
                 <!-- /.account__useful profile__reviews -->
-{{--                <div class="account__useful account__upload d-none">--}}
-{{--                    <form action="#" method="post" class="form__account__upload">--}}
-{{--                        @csrf--}}
-{{--                        <h3>Загрузите новою аватарку</h3>--}}
-{{--                        <input type="file" class="input__account__upload" id="input__account__upload" required name="user_avatar">--}}
-{{--                        <label class="label__account__upload" for="input__account__upload">Только файлы jpg/jpeg/png весом мение 50мб *</label>--}}
-{{--                        <input type="submit" class="form__account__upload-btn btn-two">--}}
-{{--                    </form>--}}
-{{--                </div>--}}
-                <!-- /.account__useful profile__upload -->
-{{--                <div class="account__useful account__details  d-none">--}}
-{{--                    <form action="#" method="post" class="form__account__details">--}}
+                <div class="account__useful account__upload d-none">
+                    <form action="{{ route('users.update', ['id' => Auth::user()->user_id]) }}" method="post" class="form__account__upload">
+                        @method('PATCH')
+                        @csrf
+                        <div class="form__account__details__box">
+                            <label class="form__account__details-label" for="user-details-name">Имя пользователя</label>
+                            <input class="form__account__details-input" type="text" id="user-details-name" name="user_name" required value="{{ old('user_name') ?? Auth::user()->user_name ?? '' }}">
+                        </div>
+                        <!-- /.form__account__details__box -->
+                        <div class="form__account__details__box">
+                            <label class="form__account__details-label" for="user-details-f-n">Имя</label>
+                            <input class="form__account__details-input" type="text" id="user-details-f-n" name="first_name" required value="{{ old('first_name') ?? Auth::user()->first_name ?? '' }}">
+                        </div>
+                        <!-- /.form__account__details__box -->
+                        <div class="form__account__details__box">
+                            <label class="form__account__details-label" for="user-details-l-n">Фамилия</label>
+                            <input class="form__account__details-input" type="text" id="user-details-l-n" name="last_name" required value="{{ old('last_name') ?? Auth::user()->last_name ?? '' }}">
+                        </div>
+                        <!-- /.form__account__details__box -->
+                        <div class="form__account__details__box">
+                            <label class="form__account__details-label" for="email-details">E-mail</label>
+                            <input class="form__account__details-input" type="email" id="email-details" name="email" required value="{{ old('email') ?? Auth::user()->email ?? '' }}">
+                        </div>
+                        <!-- /.form__account__details__box -->
 {{--                        <div class="form__account__details__box">--}}
-{{--                            <label class="form__account__details-label" for="user-details">Имя пользователя</label>--}}
-{{--                            <input class="form__account__details-input" type="text" id="user-details" required>--}}
+{{--                            <label class="form__account__details-label" for="image-details">Аватарка</label>--}}
+{{--                            <input type="file" class="input input-c-e" id="image-details" name="user_avatar" value="{{ old('user_avatar') ?? Auth::user()->user_avatar ?? '' }}" accept=".jpg,.jpeg,.png">--}}
 {{--                        </div>--}}
 {{--                        <!-- /.form__account__details__box -->--}}
-{{--                        <div class="form__account__details__box">--}}
-{{--                            <label class="form__account__details-label" for="email-details">E-mail</label>--}}
-{{--                            <input class="form__account__details-input" type="email" id="email-details" required>--}}
-{{--                        </div>--}}
-{{--                        <!-- /.form__account__details__box -->--}}
-{{--                        <div class="from__account__details__reset-pass">--}}
-{{--                            <h3 class="from__account__details__reset-pass-title">Смена пораля</h3>--}}
-{{--                            <div class="form__account__details__box">--}}
-{{--                                <label class="form__account__details-label" for="old-pass">Старый пароль</label>--}}
-{{--                                <input class="form__account__details-input" type="password" id="old-pass" required>--}}
-{{--                            </div>--}}
-{{--                            <!-- /.form__account__details__box -->--}}
-{{--                            <div class="form__account__details__box">--}}
-{{--                                <label class="form__account__details-label" for="new-pass">Новый пароль</label>--}}
-{{--                                <input class="form__account__details-input" type="password" id="new-pass" required>--}}
-{{--                            </div>--}}
-{{--                            <!-- /.form__account__details__box -->--}}
-{{--                            <div class="form__account__details__box">--}}
-{{--                                <label class="form__account__details-label" for="repeat-new-pass">Повторите новый пароль</label>--}}
-{{--                                <input class="form__account__details-input" type="password" id="repeat-new-pass" required>--}}
-{{--                            </div>--}}
-{{--                            <!-- /.form__account__details__box -->--}}
-{{--                        </div>--}}
-{{--                        <!-- /.from__account__details__reset-pass -->--}}
-{{--                        <div class="form__account__details__box">--}}
-{{--                            <input class="form__account__details-input form__account__details-btn" type="submit" id="email-details" value="Сохранить изменения">--}}
-{{--                        </div>--}}
-{{--                        <!-- /.form__account__details__box -->--}}
-{{--                    </form>--}}
-{{--                </div>--}}
+                        <div class="form__account__details__box">
+                            <input class="form__account__details-input form__account__details-btn" type="submit" value="Сохранить изменения">
+                        </div>
+                        <!-- /.form__account__details__box -->
+                    </form>
+                </div>
                 <!-- /.account__useful profile__upload -->
                 <div class="account__useful account__logount d-none">
                         <h3>Вы хотите выйти из аккаунта?</h3>

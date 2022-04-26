@@ -15,7 +15,7 @@
         <div class="container">
             <div class="blog__block">
                 <div class="news__cards">
-
+                    {{ $posts->links() }}
                     @foreach($posts as $post)
                         <div class="news__card">
                             <div class="news__card__box">
@@ -42,6 +42,7 @@
                         </div>
                         <!-- /.news__card -->
                     @endforeach
+                    {{ $posts->links() }}
                 </div>
                 <!-- /.news__cards -->
             </div>

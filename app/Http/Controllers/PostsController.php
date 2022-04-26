@@ -22,7 +22,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Posts::all();
+        $posts = Posts::paginate(5);
 
         return view('blog', compact('posts'));
     }

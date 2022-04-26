@@ -60,6 +60,7 @@
                 <input type="datetime-local" class="input input__contacts" name="feedback_user_date" value="{{ old('feedback_user_date') ?? '' }}">
             </div>
             <!-- /.form__contacts__box -->
+            <h5 class="lost_pass">Если вы забыли пароль, то опишите ситуацию и в течении суток вам на почту придёт новый пароль.*</h5>
             <div class="form__contacts__box">
                 <textarea cols="128" rows="10" placeholder="Ваше сообщение" class="input textarea__contacts" required name="feedback_text" autofocus="" onfocus="this.innerHTML='{{ old('feedback_text') ?? '' }}'"></textarea>
             </div>

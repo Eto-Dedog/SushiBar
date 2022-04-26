@@ -315,10 +315,10 @@
                     @enderror
                 </div>
                 <!-- /.form__modal__user__box -->
-                <div class="form__modal__user__box-check d-none">
-                    <input type="checkbox" id="log-check" class="form__modal__user__check">
-                    <label class="form__modal__user__label label" for="log-check"> Запомни меня</label>
-                    <a href="#" class="form__modal__user__lost-link link">Потеряли пароль?</a>
+                <div class="form__modal__user__box-check">
+{{--                    <input type="checkbox" id="log-check" class="form__modal__user__check">--}}
+{{--                    <label class="form__modal__user__label label" for="log-check"> Запомни меня</label>--}}
+                    <a href="{{ route('contacts.index') }}" class="form__modal__user__lost-link link">Потеряли пароль?</a>
                 </div>
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">

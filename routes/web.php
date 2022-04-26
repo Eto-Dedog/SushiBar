@@ -125,6 +125,9 @@ Route::post('/product', 'CommentsController@store')->name('comments.store');
 Route::DELETE('/products/product/{id}', 'CommentsController@destroy')->name('comments.destroy');
 
 
+Route::PATCH('/account/{id}', 'UserInfoController@update')->name('users.update');
+
+
 //Route::get('/products', function () {
 //    return view('products');
 //});
