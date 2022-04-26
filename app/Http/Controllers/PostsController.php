@@ -13,7 +13,7 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except('index', 'show');
     }
     /**
      * Display a listing of the resource.
@@ -65,18 +65,19 @@ class PostsController extends Controller
 
         $post->save();
 
-        return redirect()->route('posts.index');
+        return redirect()->route('posts.index')->with('success', 'Пост успешно создан!');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
      */
     public function show($id)
     {
         $post = Posts::where('post_id', '=', $id)->join('users','user_id','=','postUser_id')->get();
+
         $reviews = Reviews::where('reviewPost_id', '=', $id)->join('users','user_id','=','reviewUser_id')->get();
         $posts = Posts::join('users','user_id','=','postUser_id')->limit(3)->orderByRaw("RAND()")->get();
 
@@ -124,17 +125,26 @@ class PostsController extends Controller
         $post->update();
         $id = $post->post_id;
 
-        return redirect()->route('posts.index', compact('id'));
+        return redirect()->route('posts.index', compact('id'))->with('success', 'Пост успешно обновлен!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $post = Posts::find($id);
+        $reviews = Reviews::where('reviewPost_id', '=', $id)->get();
+
+        foreach ($reviews as $review) {
+            $review->delete();
+        }
+
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success', 'Пост успешно удалён!');
     }
 }

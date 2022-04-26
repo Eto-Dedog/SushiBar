@@ -19,11 +19,11 @@
                         <div class="account__dashboard-btns admin-bar">
                             <a href="{{ route('mailing.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Рассылка%</a>
                             <a href="{{ route('feedback.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Письма%</a>
-                            <a href="{{ route('allReviews.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
-                            <a href="{{ route('allComments.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
+                            <a href="{{ route('allReviews.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Комментарии%</a>
+                            <a href="{{ route('allComments.index') }}" class="account__dashboard-btn account__dashboard-btn-ad">%Отзывы%</a>
                         </div>
                         <!-- /.account__useful-btns -->
-                        <h3 class="title">Комментарии</h3>
+                        <h3 class="title">Отзывы</h3>
                         {{ $comments->links() }}
                         <div class="comments__post">
                             @foreach($comments as $comment)

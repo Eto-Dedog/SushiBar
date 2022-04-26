@@ -47,7 +47,7 @@ class ReviewsController extends Controller
 
         $reviews->save();
 
-        return back();
+        return back()->with('success', 'Комментарий успешно создан!');
     }
 
     /**
@@ -96,6 +96,6 @@ class ReviewsController extends Controller
 
         $reviews->delete();
 
-        return back();
+        return back()->with('success', 'Комментарий успешно удалён!');
     }
 }

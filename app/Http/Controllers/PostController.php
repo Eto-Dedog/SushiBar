@@ -18,6 +18,7 @@ class PostController extends Controller
         $posts = Posts::join('users','user_id','=','postUser_id')->get();
         $reviews = Reviews::join('users','user_id','=','reviewUser_id')->get();
 
+
         return view('post', compact('posts', 'reviews'));
     }
 

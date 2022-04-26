@@ -8,9 +8,7 @@ for (let i = 0; i < btnsMenu.length; i++) {
         productBox[i].classList.remove('d-none');
     });
 }
-
-btnsMenu[0].classList.add('categories__card-active')
-
+// btnsMenu[0].classList.add('categories__card-active')
 for (let i = 0; i < btnsMenu.length; i++) {
     btnsMenu[i].addEventListener('click', function() {
         for (let i = 0; i < btnsMenu.length; i++) {

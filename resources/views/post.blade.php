@@ -50,7 +50,11 @@
                         @if(Auth::user()->role == 404)
                             <div class="btns__block">
                                 <a href="{{ route('posts.edit', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Редактировать</a>
-                                <a href="{{ route('posts.show', ['id' => $pos->post_id]) }}" class="news__card__btn text link">Удалить</a>
+                                <form action="{{ route('posts.destroy', ['id' => $pos->post_id]) }}" method="post" onsubmit="if (confirm('Точно удалить пост? Все комментарии будут удалины!')) {return true} else { return false }">
+                                    @csrf
+                                    @method('DELETE')
+                                    <input type="submit" class="news__card__btn text link" value="Удалить">
+                                </form>
                             </div>
                             <!-- /.btns__post -->
                         @endif
@@ -100,7 +104,7 @@
                         <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
                     </form>
                 @endguest
-                <h3 class="comments__post__block-nums"><span class="comments__post__block-num">0</span> комментарий в "Сообщение с цитатой"</h3>
+                <h3 class="comments__post__block-nums"><span class="comments__post__block-num">0</span> комментарий в "{{ $pos->post_name }}"</h3>
                 <div class="comments__post">
                     @foreach($reviews as $review)
                             <div class="comment__post">

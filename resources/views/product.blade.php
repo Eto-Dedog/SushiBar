@@ -43,7 +43,11 @@
                                 @if(Auth::user()->role == 404)
                                     <div class="btns__block">
                                         <a href="{{ route('categoriesItem.edit', ['id' => $product->product_id]) }}" class="news__card__btn text link">Редактировать</a>
-                                        <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="news__card__btn text link">Удалить</a>
+                                        <form action="{{ route('categoriesItem.destroy', ['id' => $product->product_id]) }}" method="post" onsubmit="if (confirm('Точно удалить продукт? Все отзывы будут удалины!')) {return true} else { return false }">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type="submit" class="news__card__btn text link" value="Удалить">
+                                        </form>
                                     </div>
                                     <!-- /.btns__post -->
                                 @endif

@@ -12,7 +12,12 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="image-c-e-post">Загрузите картинку</label>
-        <input type="file" class="input input-c-e" id="image-c-e-post" name="post_img" value="{{ old('post_img') ?? $post->post_img ?? '' }}">
+        @if($title == "SushiBar - Создание Поста")
+        <input type="file" class="input input-c-e" id="image-c-e-post" name="post_img" value="{{ old('post_img') ?? $post->post_img ?? '' }}" accept=".jpg,.jpeg,.png" required>
+        @else
+        <input type="file" class="input input-c-e" id="image-c-e-post" name="post_img" value="{{ old('post_img') ?? $post->post_img ?? '' }}" accept=".jpg,.jpeg,.png">
+        @endif
+
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

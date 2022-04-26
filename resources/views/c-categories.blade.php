@@ -1,6 +1,7 @@
 @extends('layouts/layout', ['title' => "SushiBar - Создать Категорию"])
 
 @section('content')
+    <div class="d-none">{{ $title = "SushiBar - Создать Категорию" }}</div>
     <section class="section__promo-sub-one section">
         <div class="container">
             <div class="promo__sub-block sl-1-block">

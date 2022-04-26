@@ -49,7 +49,7 @@ class CommentsController extends Controller
 
         $comments->save();
 
-        return back();
+        return back()->with('success', 'Отзыв успешно создан!');
     }
 
     /**
@@ -96,6 +96,6 @@ class CommentsController extends Controller
     {
         $comments = Comments::find($id);
         $comments->delete();
-        return back();
+        return back()->with('success', 'Отзыв успешно удалён!');
     }
 }

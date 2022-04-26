@@ -70,7 +70,7 @@ class CategoriesItemController extends Controller
 
         $products->save();
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('success', 'Продукт успешно создан!');
     }
 
     /**
@@ -130,17 +130,26 @@ class CategoriesItemController extends Controller
         $products->update();
         $id = $products->product_id;
 
-        return redirect()->route('product.index', compact('id'));
+        return redirect()->route('product.index', compact('id'))->with('success', 'Продукт успешно отредактирован!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $products = Products::find($id);
+        $comments = Comments::where('commentProduct_id', '=', $id)->get();
+
+        foreach ($comments as $comment) {
+            $comment->delete();
+        }
+
+        $products->delete();
+
+        return redirect()->route('categories.index')->with('success', 'Продукт успешно удалён!');
     }
 }

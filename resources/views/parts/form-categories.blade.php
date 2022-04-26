@@ -7,7 +7,11 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="image-c-e-categories">Загрузите картинку</label>
-        <input type="file" class="input input-c-e" id="image-c-e-categories" name="categories_img" value="{{ old('categories_img') ?? $categories->categories_img ?? '' }}">
+        @if($title == "SushiBar - Создать Категорию")
+            <input type="file" class="input input-c-e" id="image-c-e-categories" name="categories_img" value="{{ old('categories_img') ?? $categories->categories_img ?? '' }}" accept=".jpg,.jpeg,.png" required>
+        @else
+            <input type="file" class="input input-c-e" id="image-c-e-categories" name="categories_img" value="{{ old('categories_img') ?? $categories->categories_img ?? '' }}" accept=".jpg,.jpeg,.png">
+        @endif
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

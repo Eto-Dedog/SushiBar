@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categories;
+use App\Comments;
 use App\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -21,7 +22,7 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories = Categories::all();
-        $products = Products::all();
+        $products = Products::join('categories','categories_id','=','productCategory_id')->get();
 
         return view('products', compact('categories','products'));
     }
@@ -62,7 +63,7 @@ class CategoriesController extends Controller
 
         $categorie->save();
 
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index')->with('success', 'Категория успешно создана!');
     }
 
     /**
@@ -85,6 +86,10 @@ class CategoriesController extends Controller
     public function edit($id)
     {
         $categories = Categories::find($id);
+
+        if (!$categories) {
+            return redirect()->route('index.index')->withErrors('Такой категории несуществует.');
+        }
 
         if (\Auth::user()->role != '404'){
             return redirect()->route('index.index');
@@ -115,17 +120,33 @@ class CategoriesController extends Controller
         $categorie->update();
         $id = $categorie->categories_id;
 
-        return redirect()->route('categories.index', compact('id'));
+        return redirect()->route('categories.index', compact('id'))->with('success', 'Категория успешно обновлена!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        $categorie = Categories::find($id);
+
+        $products = Products::where('productCategory_id', '=', $id)->get();
+
+        $comments = Comments::join('products','product_id','=','commentProduct_id')->get();
+
+        foreach ($comments as $comment) {
+            $comment->delete();
+        }
+
+        foreach ($products as $product) {
+            $product->delete();
+        }
+
+        $categorie->delete();
+
+        return redirect()->route('categories.index')->with('success', 'Категория успешно удалена!');
     }
 }

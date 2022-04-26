@@ -126,7 +126,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -136,6 +136,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OSPanel\domains\VKR\resources\lang" />
       <recent name="D:\OSPanel\domains\VKR\resources\views" />
       <recent name="D:\OSPanel\domains\VKR\resources\views\parts" />
       <recent name="D:\OSPanel\domains\VKR\public\storage" />
@@ -178,7 +179,8 @@
       <workItem from="1650609917092" duration="9840000" />
       <workItem from="1650700765743" duration="7219000" />
       <workItem from="1650787176542" duration="8439000" />
-      <workItem from="1650865909513" duration="17548000" />
+      <workItem from="1650865909513" duration="17775000" />
+      <workItem from="1650955305104" duration="13942000" />
     </task>
     <servers />
   </component>

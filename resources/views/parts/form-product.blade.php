@@ -31,7 +31,11 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="image-c-e-product">Загрузите картинку</label>
-        <input type="file" class="input input-c-e" id="image-c-e-product" name="products_img" value="{{ old('products_img') ?? $products->products_img ?? '' }}">
+        @if($title == "SushiBar - Создание Продукта")
+            <input type="file" class="input input-c-e" id="image-c-e-product" name="products_img" value="{{ old('products_img') ?? $products->products_img ?? '' }}" accept=".jpg,.jpeg,.png" required>
+        @elseif($title == "SushiBar - Редактирование Продукта")
+            <input type="file" class="input input-c-e" id="image-c-e-product" name="products_img" value="{{ old('products_img') ?? $products->products_img ?? '' }}" accept=".jpg,.jpeg,.png">
+        @endif
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

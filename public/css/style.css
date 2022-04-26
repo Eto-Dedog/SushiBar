@@ -637,6 +637,8 @@ body{
     color:#e00614;
     cursor: pointer;
     position: relative;
+    background: none;
+    border: none;
 }
 .news__card__btn:after {
     content: '';
@@ -1197,7 +1199,15 @@ body{
 .btns__block{
     align-items: center;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+.btns__block .news__card__btn:last-child{
+    margin-left: 15px;
+}
+.btns__block .news__card__btn:hover{
+    opacity: 0.5;
 }
 /* другие посты */
 .other__post__title{
@@ -2065,6 +2075,55 @@ body{
 .form__coment__post__textarea{
     max-width: 1200px;
     width: 100%;
+}
+/* флеш сообщение */
+.alert{
+    display: flex;
+    position: fixed;
+    left: 50%;
+    top: 15%;
+    z-index: 1111;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-left: -110px;
+    justify-content: space-around;
+    background: #fbf4eb;
+    max-width: 222px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000000;
+}
+.alert-close{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+.alert-close:hover{
+    font-weight: bold;
+}
+
+.alert-success{
+    background: #2d995b;
+    color: #FFFFFF;
+}
+.alert-success .alert-close {
+    color: #FFFFFF;
+}
+.alert-danger{
+    background: #ff4e00;
+    color: #FFFFFF;
+}
+.alert-danger .alert-close {
+    color: #FFFFFF;
+}
+.alert-warning{
+    background: #b70a00;
+    color: #FFFFFF;
+}
+.alert-warning .alert-close {
+    color: #FFFFFF;
 }
 @media (max-width:1200px) {
     .special__block,.newsletters__block, .comments__post__block, .about__block, .account__block, .sorts__block,.special__cards,.section__other__post,.form-c-e{

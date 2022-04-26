@@ -10,7 +10,7 @@ for (let i = 0; i < sortsBtns.length; i++) {
     });
 }
 
-sortsBtns[0].classList.add('sorts__category-btn-active')
+// sortsBtns[0].classList.add('sorts__category-btn-active')
 
 for (let i = 0; i < sortsBtns.length; i++) {
     sortsBtns[i].addEventListener('click', function() {

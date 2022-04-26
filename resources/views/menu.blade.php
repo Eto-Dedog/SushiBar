@@ -15,6 +15,7 @@
         <div class="container">
             <div class="product__block">
                 <div class="product__nav">
+                    <h3>Кликните по категории!</h3>
                     <div class="categories__cards">
                         @foreach($categories as $categorie)
                             <div class="categories__card">
@@ -27,9 +28,10 @@
                     <!-- /.categories__cards -->
                 </div>
                 <!-- /.product__nav -->
-                <div class="product__cards">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 1)
+                @foreach($categories as $categorie)
+                    <div class="product__cards d-none">
+                        @foreach($products as $product)
+                            @if($product->productCategory_id == $categorie->categories_id)
                             <div class="product__card">
                                 <div class="product__card__box">
                                     <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
@@ -46,163 +48,10 @@
                                 </div>
                                 <!-- /.product__card__box -->
                             </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 2)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 3)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 4)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 5)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 6)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 7)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="product__cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 8)
-                            <div class="product__card">
-                                <div class="product__card__box">
-                                    <img src="{{ $product->products_img }}" alt="product" class="product__card__img">
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box product__card__info">
-                                    <h3 class="product__card__title">{{ $product->products_name }}</h3>
-                                    <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
-                                </div>
-                                <!-- /.product__card__box -->
-                                <div class="product__card__box">
-                                    <span class="product__card__price text">{{ $product->products_price }}</span>
-                                </div>
-                                <!-- /.product__card__box -->
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                @endforeach
             </div>
             <!-- /.popular__block -->
         </div>

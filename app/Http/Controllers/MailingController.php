@@ -52,7 +52,7 @@ class MailingController extends Controller
 
         $mailing->save();
 
-        return back();
+        return back()->with('success', 'Просьба на рассылку успешно отправлено!');
     }
 
     /**
@@ -101,6 +101,6 @@ class MailingController extends Controller
 
         $mailing->delete();
 
-        return back();
+        return back()->with('success', 'Просьба на рассылку успешно удалена!');
     }
 }

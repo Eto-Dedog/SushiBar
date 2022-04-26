@@ -55,7 +55,7 @@ class FeedbackController extends Controller
 
         $feedback->save();
 
-        return back();
+        return back()->with('success', 'Письмо успешно отправлено!');
     }
 
     /**
@@ -104,6 +104,6 @@ class FeedbackController extends Controller
 
         $feedback->delete();
 
-        return back();
+        return back()->with('success', 'Письмо успешно удалена!');
     }
 }

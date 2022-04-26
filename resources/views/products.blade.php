@@ -15,6 +15,15 @@
     <section class="section__sorts section">
         <div class="container">
             <div class="sorts__block">
+                <h3>Кликните по категории!</h3>
+            </div>
+            <!-- /.sorts__block -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <section class="section__sorts section">
+        <div class="container">
+            <div class="sorts__block">
                 <div class="sorts__category">
                     <h3 class="sorts__category-title">Категории</h3>
                     @foreach($categories as $categorie)
@@ -26,125 +35,33 @@
                         @if(Auth::user()->role == 404)
                         <div class="btns__block sorts__category-btn-adm">
                             <a href="{{ route('categories.edit', ['id' => $categorie->categories_id]) }}" class="news__card__btn text link">Редактировать</a>
-                            <a href="{{ route('posts.show', ['id' => $categorie->categories_id]) }}" class="news__card__btn text link">Удалить</a>
+                            <form action="{{ route('categories.destroy', ['id' => $categorie->categories_id]) }}" method="post" onsubmit="if (confirm('Точно удалить категорию? Все продукты и отзывы в ней будут удалины!')) {return true} else { return false }">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" class="news__card__btn text link" value="Удалить">
+                            </form>
                         </div>
                         @endif
                     @endauth
                     @endforeach
                 </div>
                 <!-- /.sorts__category -->
-                <div class="account__sorts-cards">
+                @foreach($categories as $categorie)
+                <div class="account__sorts-cards d-none">
                     @foreach($products as $product)
-                        @if($product->productCategory_id == 1)
-                        <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
+                    @if($product->productCategory_id == $categorie->categories_id)
+                    <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
                             <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
                             <span class="account__sorts-card-category">{{$product->categories_name}}</span>
                             <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
                             <span class="account__sorts-card-price">{{$product->products_price}}</span>
                         </a>
                         <!-- /.account__dashboard-card -->
-                        @endif
+                    @endif
                     @endforeach
                 </div>
                 <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 2)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 3)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 4)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 5)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 6)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 7)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
-                <div class="account__sorts-cards d-none">
-                    @foreach($products as $product)
-                        @if($product->productCategory_id == 8)
-                            <a href="{{ route('categoriesItem.show', ['id' => $product->product_id]) }}" class="account__sorts-card link">
-                                <img src="{{$product->products_img}}" alt="product" class="account__sorts-card-img">
-                                <span class="account__sorts-card-category">{{$product->categories_name}}</span>
-                                <h4 class="account__sorts-card-title">{{$product->products_name}}</h4>
-                                <span class="account__sorts-card-price">{{$product->products_price}}</span>
-                            </a>
-                            <!-- /.account__dashboard-card -->
-                        @endif
-                    @endforeach
-                </div>
-                <!-- /.account__sorts-cards -->
+                @endforeach
             </div>
             <!-- /.sorts__block -->
         </div>

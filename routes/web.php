@@ -38,8 +38,8 @@ Route::get('/account', 'AccountController@index')->name('account.index');
 //Route::get('/account', function () {
 //    return view('account');
 //});
-Route::get('/all-comments', 'AllCommentsController@index')->name('allComments.index');
-Route::get('/all-reviews', 'AllReviewsController@index')->name('allReviews.index');
+Route::get('/all-reviews', 'AllCommentsController@index')->name('allComments.index');
+Route::get('/all-comments', 'AllReviewsController@index')->name('allReviews.index');
 
 //Route::get('/all-comments', function () {
 //    return view('all-comments');
@@ -59,7 +59,7 @@ Route::post('/blog', 'PostsController@store')->name('posts.store');
 Route::get('/blog/post/{id}', 'PostsController@show')->name('posts.show');
 Route::get('/blog/post/edit/{id}', 'PostsController@edit')->name('posts.edit');
 Route::PATCH('/blog/post/{id}', 'PostsController@update')->name('posts.update');
-
+Route::DELETE('/blog/post/del/{id}', 'PostsController@destroy')->name('posts.destroy');
 
 // Route::get('/blog', function () {
 //     return view('blog');
@@ -107,6 +107,7 @@ Route::post('/c-product', 'CategoriesItemController@store')->name('categoriesIte
 Route::get('/products/product/{id}', 'CategoriesItemController@show')->name('categoriesItem.show');
 Route::get('/products/product/edit/{id}', 'CategoriesItemController@edit')->name('categoriesItem.edit');
 Route::PATCH('/products/product/{id}', 'CategoriesItemController@update')->name('categoriesItem.update');
+Route::DELETE('/products/product/del/{id}', 'CategoriesItemController@destroy')->name('categoriesItem.destroy');
 
 //Route::get('/product', function () {
 //    return view('product');
@@ -117,6 +118,7 @@ Route::get('/c-categories', 'CategoriesController@create')->name('categories.cre
 Route::post('/menu', 'CategoriesController@store')->name('categories.store');
 Route::get('/products/categories/edit/{id}', 'CategoriesController@edit')->name('categories.edit');
 Route::PATCH('/products/{id}', 'CategoriesController@update')->name('categories.update');
+Route::DELETE('/products/categories/edit/del/{id}', 'CategoriesController@destroy')->name('categories.destroy');
 
 Route::post('/product', 'CommentsController@create')->name('comments.create');
 Route::post('/product', 'CommentsController@store')->name('comments.store');

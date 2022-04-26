@@ -30,7 +30,11 @@
                                 @auth()
                                     @if(Auth::user()->role == 404)
                                         <a href="{{ route('posts.edit', ['id' => $post->post_id]) }}" class="news__card__btn text link">Редактировать</a>
-                                        <a href="{{ route('posts.show', ['id' => $post->post_id]) }}" class="news__card__btn text link">Удалить</a>
+                                        <form action="{{ route('posts.destroy', ['id' => $post->post_id]) }}" method="post" onsubmit="if (confirm('Точно удалить пост? Все комментарии будут удалины!')) {return true} else { return false }">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type="submit" class="news__card__btn text link" value="Удалить">
+                                        </form>
                                         @endif
                                 @endauth
                             </div>

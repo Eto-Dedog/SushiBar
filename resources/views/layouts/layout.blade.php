@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <link rel="shortcut icon" href="{{ asset('img/home/favicon.png') }}" type="image/x-icon">
     <script src="{{ asset('js/main.js') }}" defer></script>
     @if($title == 'SushiBar')
@@ -173,6 +174,41 @@
     <!-- /.container -->
 </header>
 <!-- /.section__header section -->
+
+@if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <span class="alert-text">{{ session('success') }}</span>
+        <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+@if(session('danger'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <span class="alert-text">{{ session('danger') }}</span>
+        <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+@if(session('warning'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <span class="alert-text">{{ session('warning') }}</span>
+        <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+@if($errors->any())
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <span class="alert-text">{{ $error }}</span>
+            <button type="button" class="alert-close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endforeach
+@endif
 
 @yield('content')
 
@@ -356,6 +392,17 @@
             <a href="{{ route('account.index') }}" class="link modal__user__auth-link">{{ Auth::user()->user_name }}</a>
             <a href="{{ route('account.index') }}" class="link modal__user__auth-link">Панель управления</a>
             <a href="{{ route('categories.index') }}" class="link modal__user__auth-link">Продукты</a>
+            @auth()
+                @if(Auth::user()->role == 404)
+                    <a href="{{ route('categories.create') }}" class="link modal__user__auth-link">%Создать%<br>%Категорию%</a>
+                    <a href="{{ route('categoriesItem.create') }}" class="link modal__user__auth-link">%Создать%<br>%Продукты%</a>
+                    <a href="{{ route('posts.create') }}" class="link modal__user__auth-link">%Создать%<br>%Пост%</a>
+                    <a href="{{ route('mailing.index') }}" class="link modal__user__auth-link">%Рассылка%</a>
+                    <a href="{{ route('feedback.index') }}" class="link modal__user__auth-link">%Письма%</a>
+                    <a href="{{ route('allReviews.index') }}" class="link modal__user__auth-link">%Комментарии%</a>
+                    <a href="{{ route('allComments.index') }}" class="link modal__user__auth-link">%Отзывы%</a>
+                @endif
+            @endauth
             <a class="link modal__user__auth-link" href="{{ route('logout') }}"
                onclick="event.preventDefault();
                document.getElementById('logout-form').submit();">
