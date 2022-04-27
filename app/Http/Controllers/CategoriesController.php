@@ -55,10 +55,12 @@ class CategoriesController extends Controller
 
         $categorie->categories_name = $request->categories_name;
 
-        if ($request->file('categories_img')) {
+        if ($request->file('categories_img') && ['categories_img' => 'required|mimes:jpeg,png,jpg,gif,svg']) {
             $path = Storage::putFile('public', $request->file('categories_img'));
             $url = Storage::url($path);
             $categorie->categories_img = $url;
+        } else {
+            return back();
         }
 
         $categorie->save();

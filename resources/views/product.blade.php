@@ -187,9 +187,10 @@
                                 </div>
                                 <!-- /.stars__box -->
                                 <h4 class="reviews__form-text">Ваш отзыв *</h4>
+                                <span class="small">максимум 255 символов*</span>
                                 <input type="text" class="d-none" value="{{ $product->product_id }}" name="product_id">
                                 <input type="number" class="d-none rating-input" name="comment_rate" required>
-                                <textarea cols="80" rows="10" class="reviews__form-textarea" required name="comment_text"></textarea>
+                                <textarea maxlength="255" cols="80" rows="10" class="reviews__form-textarea" id="reviews__form-textarea-id" required name="comment_text"></textarea>
                                 <input type="submit" value="Оставить отзыв" class="reviews__form-btn btn-two">
                             </div>
                             <!-- /.reviews__form__box -->

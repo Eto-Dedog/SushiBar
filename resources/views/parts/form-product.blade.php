@@ -21,7 +21,8 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="desc-c-e-product">Введите описание продукта</label>
-        <textarea type="text" class="input textarea-c-e" placeholder="Описание продукта" required id="desc-c-e-product" name="products_desc" autofocus="" onfocus="this.innerHTML='{{ old('products_desc') ?? $products->products_desc ?? '' }}'"></textarea>
+        <span class="label-c-e small">максимум 255 символов*</span>
+        <textarea maxlength="255" type="text" class="input textarea-c-e" placeholder="Описание продукта" required id="desc-c-e-product" name="products_desc" autofocus="" onfocus="this.innerHTML='{{ old('products_desc') ?? $products->products_desc ?? '' }}'"></textarea>
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

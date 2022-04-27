@@ -131,7 +131,7 @@
                             <div class="product__card__box product__card__info">
                                 <h3 class="product__card__title">{{$product->products_name}}</h3>
                                 <!-- /.product__card__title -->
-                                <p class="product__card__text text">{{substr($product->products_desc, 0, 50)}}</p>
+                                <p class="product__card__text text">{{substr($product->products_desc, 0, 200)}}</p>
                             </div>
                             <!-- /.product__card__box -->
                             <div class="product__card__box">
@@ -205,21 +205,21 @@
                     <!-- /.img__sets__slide -->
                     <div class="sets__slide__box sets__sliede__box-one">
                         <div class="product__cards">
-                            @foreach($products as $product)
-                                @if($product->productSet_id == 1)
+                            @foreach($setproducts as $setproduct)
+                                @if($setproduct->productSet_id == 1)
                                 <div class="product__card">
                                     <div class="product__card__box">
-                                        <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                                        <img src="{{$setproduct->products_img}}" alt="roll" class="product__card__img">
                                     </div>
                                     <!-- /.product__card__box -->
                                     <div class="product__card__box product__card__info">
-                                        <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                        <h3 class="product__card__title">{{$setproduct->products_name}}</h3>
                                         <!-- /.product__card__title -->
-                                        <p class="product__card__text text">{{$product->products_desc}}</p>
+                                        <p class="product__card__text text">{{$setproduct->products_desc}}</p>
                                     </div>
                                     <!-- /.product__card__box -->
                                     <div class="product__card__box">
-                                        <span class="product__card__price text">{{$product->products_price}}</span>
+                                        <span class="product__card__price text">{{$setproduct->products_price}}</span>
                                     </div>
                                     <!-- /.product__card__box -->
                                 </div>
@@ -248,21 +248,21 @@
                     <!-- /.img__sets__slide -->
                     <div class="sets__slide__box sets__sliede__box-two">
                         <div class="product__cards">
-                            @foreach($products as $product)
-                                @if($product->productSet_id == 2)
+                            @foreach($setproducts as $setproduct)
+                                @if($setproduct->productSet_id == 2)
                                     <div class="product__card">
                                         <div class="product__card__box">
-                                            <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                                            <img src="{{$setproduct->products_img}}" alt="roll" class="product__card__img">
                                         </div>
                                         <!-- /.product__card__box -->
                                         <div class="product__card__box product__card__info">
-                                            <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                            <h3 class="product__card__title">{{$setproduct->products_name}}</h3>
                                             <!-- /.product__card__title -->
-                                            <p class="product__card__text text">{{$product->products_desc}}</p>
+                                            <p class="product__card__text text">{{$setproduct->products_desc}}</p>
                                         </div>
                                         <!-- /.product__card__box -->
                                         <div class="product__card__box">
-                                            <span class="product__card__price text">{{$product->products_price}}</span>
+                                            <span class="product__card__price text">{{$setproduct->products_price}}</span>
                                         </div>
                                         <!-- /.product__card__box -->
                                     </div>
@@ -291,21 +291,21 @@
                     <!-- /.img__sets__slide -->
                     <div class="sets__slide__box sets__sliede__box-three">
                         <div class="product__cards">
-                            @foreach($products as $product)
-                                @if($product->productSet_id == 3)
+                            @foreach($setproducts as $setproduct)
+                                @if($setproduct->productSet_id == 3)
                                     <div class="product__card">
                                         <div class="product__card__box">
-                                            <img src="{{$product->products_img}}" alt="roll" class="product__card__img">
+                                            <img src="{{$setproduct->products_img}}" alt="roll" class="product__card__img">
                                         </div>
                                         <!-- /.product__card__box -->
                                         <div class="product__card__box product__card__info">
-                                            <h3 class="product__card__title">{{$product->products_name}}</h3>
+                                            <h3 class="product__card__title">{{$setproduct->products_name}}</h3>
                                             <!-- /.product__card__title -->
-                                            <p class="product__card__text text">{{$product->products_desc}}</p>
+                                            <p class="product__card__text text">{{$setproduct->products_desc}}</p>
                                         </div>
                                         <!-- /.product__card__box -->
                                         <div class="product__card__box">
-                                            <span class="product__card__price text">{{$product->products_price}}</span>
+                                            <span class="product__card__price text">{{$setproduct->products_price}}</span>
                                         </div>
                                         <!-- /.product__card__box -->
                                     </div>

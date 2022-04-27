@@ -100,7 +100,7 @@
                     <form action="{{route('reviews.store')}}" class="form__comment__post" method="post">
                         @csrf
                         <input type="text" class="d-none" value="{{$pos->post_id}}" name="post_id">
-                        <textarea class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
+                        <textarea maxlength="255" id="form__coment__post__textarea-id" class="form__coment__post__textarea" cols="120" rows="10" placeholder="Комментарий" required name="review_text"></textarea>
                         <input class="form__comment__post__btn" type="submit" value="Оставить комментарий">
                     </form>
                 @endguest

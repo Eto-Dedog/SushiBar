@@ -19,8 +19,9 @@ class IndexController extends Controller
         $categories = Categories::all();
         $products = Products::limit(8)->orderByRaw("RAND()")->get();
         $posts = Posts::limit(3)->orderByRaw("RAND()")->get();
+        $setproducts = Products::get();
 
-        return view('index', compact( 'categories','products', 'posts'));
+        return view('index', compact( 'categories','products', 'posts', 'setproducts'));
     }
 
     /**

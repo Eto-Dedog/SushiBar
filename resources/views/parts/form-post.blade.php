@@ -7,7 +7,8 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="desc-c-e-post">Введите текст поста</label>
-        <textarea type="text" class="input textarea-c-e" placeholder="Текст поста *Если редактируете запись нажмите на поле*" required id="desc-c-e-post" name="post_text" autofocus="" onfocus="this.innerHTML='{{ old('post_text') ?? $post->post_text ?? '' }}'"></textarea>
+        <span class="label-c-e small">максимум 555 символов*</span>
+        <textarea maxlength="555" type="text" class="input textarea-c-e" placeholder="Текст поста *Если редактируете запись нажмите на поле*" required id="desc-c-e-post" name="post_text" autofocus="" onfocus="this.innerHTML='{{ old('post_text') ?? $post->post_text ?? '' }}'"></textarea>
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
