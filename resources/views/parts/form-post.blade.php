@@ -2,7 +2,7 @@
 <div class="container">
     <div class="form-c-e-box">
         <label class="label-c-e" for="name-c-e-post">Введите имя поста</label>
-        <input type="text" class="input input-c-e" placeholder="Имя поста" required id="name-c-e-post" name="post_name" value="{{ old('post_name') ?? $post->post_name ?? '' }}">
+        <input maxlength="255" type="text" class="input input-c-e" placeholder="Имя поста" required id="name-c-e-post" name="post_name" value="{{ old('post_name') ?? $post->post_name ?? '' }}">
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

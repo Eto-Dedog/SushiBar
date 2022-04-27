@@ -16,7 +16,7 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="name-c-e-product">Введите имя продукта</label>
-        <input type="text" class="input input-c-e" placeholder="Имя продукта" required id="name-c-e-product" name="products_name" value="{{ old('products_name') ?? $products->products_name ?? '' }}">
+        <input maxlength="255" type="text" class="input input-c-e" placeholder="Имя продукта" required id="name-c-e-product" name="products_name" value="{{ old('products_name') ?? $products->products_name ?? '' }}">
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
@@ -27,7 +27,7 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="price-c-e-product">Введите цену продукта</label>
-        <input type="number" class="input input-c-e" placeholder="Цена продукта" required id="price-c-e-product" name="products_price" value="{{ old('products_price') ?? $products->products_price ?? '' }}">
+        <input maxlength="11" type="number" class="input input-c-e" placeholder="Цена продукта" required id="price-c-e-product" name="products_price" value="{{ old('products_price') ?? $products->products_price ?? '' }}">
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
@@ -41,7 +41,7 @@
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">
         <label class="label-c-e" for="special-set">Входит ли в особенные сеты 1-3<br> 1-Премиум Сет <br> 2-Сет Саке Наруками <br> 3-Сет Роллс</label>
-        <input type="text" class="input input-c-e" placeholder="Необезательное поле*" id="special-set" name="productSet_id" value="{{ old('productSet_id') ?? $products->productSet_id ?? '' }}">
+        <input maxlength="10" type="text" class="input input-c-e" placeholder="Необезательное поле*" id="special-set" name="productSet_id" value="{{ old('productSet_id') ?? $products->productSet_id ?? '' }}">
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

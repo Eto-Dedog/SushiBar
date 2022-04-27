@@ -2,7 +2,7 @@
 <div class="container">
     <div class="form-c-e-box">
         <label class="label-c-e" for="name-c-e-categories">Введите название категории</label>
-        <input type="text" class="input input-c-e" placeholder="Имя категории" required id="name-c-e-categories" name="categories_name" value="{{ old('categories_name') ?? $categories->categories_name ?? '' }}">
+        <input maxlength="255" type="text" class="input input-c-e" placeholder="Имя категории" required id="name-c-e-categories" name="categories_name" value="{{ old('categories_name') ?? $categories->categories_name ?? '' }}">
     </div>
     <!-- /.form__contacts__box -->
     <div class="form-c-e-box">

@@ -178,3 +178,4 @@ maxlength(document.getElementById("desc-c-e-product"));
 maxlength(document.getElementById("desc-c-e-post"));
 maxlength(document.getElementById("reviews__form-textarea-id"));
 maxlength(document.getElementById("form__coment__post__textarea-id"));
+maxlength(document.getElementById("textarea__contacts-id"));

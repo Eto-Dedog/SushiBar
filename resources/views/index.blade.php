@@ -157,7 +157,7 @@
             <p class="newsletters__text text">Мы присылаем только самые важные и актуальные новости о акциях и событиях в нашем ресторане.</p>
             <form action="{{ route('mailing.store') }}" method="post" class="newsletters__form">
                 @csrf
-                <input type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" name="mailing_email" required value="{{ old('mailing_email') ?? Auth::user()->email ?? '' }}">
+                <input maxlength="255" type="email" placeholder="Введите пожалуйста E-mail" class="newsletters__input input" name="mailing_email" required value="{{ old('mailing_email') ?? Auth::user()->email ?? '' }}">
                 <input type="submit" class="newsletters__btn btn" value="+">
             </form>
         </div>

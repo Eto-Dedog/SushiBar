@@ -48,12 +48,12 @@
         <div class="container">
             <h2 class="title">Хотите что-то Спросить? заказать столик? не стесняйтесь!</h2>
             <div class="form__contacts__box">
-                <input type="text" class="input input__contacts" placeholder="Ваше Имя" required name="feedback_first_name" value="{{ old('feedback_first_name') ?? Auth::user()->first_name ?? '' }}">
-                <input type="text" class="input input__contacts" placeholder="Ваше Фамилия" required name="feedback_last_name" value="{{ old('feedback_last_name') ?? Auth::user()->last_name ?? '' }}">
+                <input maxlength="255" type="text" class="input input__contacts" placeholder="Ваше Имя" required name="feedback_first_name" value="{{ old('feedback_first_name') ?? Auth::user()->first_name ?? '' }}">
+                <input maxlength="255" type="text" class="input input__contacts" placeholder="Ваше Фамилия" required name="feedback_last_name" value="{{ old('feedback_last_name') ?? Auth::user()->last_name ?? '' }}">
             </div>
             <!-- /.form__contacts__box -->
             <div class="form__contacts__box">
-                <input type="email" class="input input__contacts" placeholder="Ваш E-mail" required name="feedback_email" value="{{ old('feedback_email') ?? Auth::user()->email ?? '' }}">
+                <input maxlength="255" type="email" class="input input__contacts" placeholder="Ваш E-mail" required name="feedback_email" value="{{ old('feedback_email') ?? Auth::user()->email ?? '' }}">
             </div>
             <!-- /.form__contacts__box -->
             <div class="form__contacts__box">
@@ -62,7 +62,7 @@
             <!-- /.form__contacts__box -->
             <h5 class="lost_pass">Если вы забыли пароль, то опишите ситуацию и в течении суток вам на почту придёт новый пароль.*</h5>
             <div class="form__contacts__box">
-                <textarea cols="128" rows="10" placeholder="Ваше сообщение" class="input textarea__contacts" required name="feedback_text" autofocus="" onfocus="this.innerHTML='{{ old('feedback_text') ?? '' }}'"></textarea>
+                <textarea maxlength="555" cols="128" rows="10" placeholder="Ваше сообщение" id="textarea__contacts-id" class="input textarea__contacts" required name="feedback_text" autofocus="" onfocus="this.innerHTML='{{ old('feedback_text') ?? '' }}'"></textarea>
             </div>
             <!-- /.form__contacts__box -->
             <div class="form__contacts__box">
