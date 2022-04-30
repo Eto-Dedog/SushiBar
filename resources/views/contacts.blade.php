@@ -46,6 +46,7 @@
     <form action="{{ route('feedback.store') }}" method="post" class="form__contacts">
         @csrf
         <div class="container">
+            <a href="https://eda.yandex.ru/restaurant/sushitokyo_zhmfb" class="title title-link" target="_blank">Хотите заказать еду? Воспользуйтесь Яндекс Едой!</a>
             <h2 class="title">Хотите что-то Спросить? заказать столик? не стесняйтесь!</h2>
             <div class="form__contacts__box">
                 <input maxlength="255" type="text" class="input input__contacts" placeholder="Ваше Имя" required name="feedback_first_name" value="{{ old('feedback_first_name') ?? Auth::user()->first_name ?? '' }}">

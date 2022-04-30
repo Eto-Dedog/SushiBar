@@ -2136,6 +2136,15 @@ body{
 .small{
     font-size: 12px;
 }
+.title-link{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.title-link:hover{
+    opacity: 0.5;
+}
 @media (max-width:1200px) {
     .special__block,.newsletters__block, .comments__post__block, .about__block, .account__block, .sorts__block,.special__cards,.section__other__post,.form-c-e{
         padding-left: 3%;
@@ -2241,6 +2250,9 @@ body{
     }
     .title{
         font-size: 28px;
+    }
+    .title-link{
+        font-size: 18px;
     }
     .modal__newsletters__close{
         right: 5px;
