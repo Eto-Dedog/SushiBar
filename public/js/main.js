@@ -25,7 +25,7 @@ function hide () {
         headerNav.style.paddingRight = "0px"
         for (let headerNavLink of headerNavLinks) {
             headerNavLink.style.color = "#ffffff"
-            headerNavLink.transition = '0.8s'
+            headerNavLink.style.transition = '0.8s'
         }
     }
 }
