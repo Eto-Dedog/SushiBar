@@ -11,7 +11,7 @@ function hide () {
         headerNav.style.paddingRight = "1000px"
         for (let headerNavLink of headerNavLinks) {
             headerNavLink.style.color = "#000000"
-            headerNavLink.transition = '0.8s'
+            headerNavLink.style.transition = '0.8s'
             headerNavLink.style.padding = "5px"
             headerNavLink.style.margin = "15px"
         }
@@ -164,7 +164,7 @@ flashs.forEach(elem =>  {
         elem.style.visibility = "hidden"
     })
 });
-//
+// maxlength
 function maxlength(el) {
     if (!('maxlength' in el)) {
         var max = el.attributes.maxlength.value;
