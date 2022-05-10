@@ -6,11 +6,7 @@ function plusSlide() {
 }
 
 function minusSlide() {
-    showSlides(slideIndex -= 1);  
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+    showSlides(slideIndex -= 1);
 }
 
 function showSlides(n) {

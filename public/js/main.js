@@ -1,3 +1,6 @@
+// fix
+function fixAllError(str) {return true;}
+window.onerror = fixAllError;
 // навигация
 let headerAuth = document.querySelector('.header__auth')
 let headerNav = document.querySelector('.header__nav')
@@ -82,6 +85,7 @@ overlayAuth.addEventListener('click', () => {
 modalCloseAuth.addEventListener('click', () => {
     modalAuth.classList.add('d-none')
 })
+// userTabs
 const userBtns = document.querySelectorAll('.modal__user__btn');
 const userFormAuth = document.querySelectorAll('.form-user');
 for (let i = 0; i < userBtns.length; i++) {
@@ -98,7 +102,7 @@ for (let i = 0; i < userBtns.length; i++) {
     userBtns[i].classList.remove('modal__user__btn-active');
     }
     userBtns[i].classList.add('modal__user__btn-active');
-  });
+  })
 }
 // burger
 const modalBtnsBurger = document.querySelectorAll('.burger')
