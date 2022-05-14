@@ -173,7 +173,7 @@
             <span class="categories__text text">Каждый найдёт любимую!</span>
             <div class="categories__cards">
                 @foreach($categories as $categorie)
-                    <a href="menu" class="categories__card">
+                    <a href="{{ route('product.index') }}" class="categories__card">
                         <img src="{{$categorie->categories_img}}" alt="category" class="categories__card__img">
                         <h3 class="categories__card__titel">{{$categorie->categories_name}}</h3>
                     </a>
