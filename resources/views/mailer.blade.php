@@ -30,7 +30,9 @@
                             @foreach($mailings as $mailing)
                                 <div class="comment__post">
                                     <div class="comment__box">
+                                        <span class="dop-text">E-mail</span>
                                         <h3 class="comment__title">{{$mailing->mailing_email}}</h3>
+                                        <span class="dop-text">Дата обращения</span>
                                         <strong class="comment__date">{{$mailing->created_at->diffForHumans()}}</strong>
                                         <form action="{{ route('mailing.destroy', ['id' => $mailing->mailing_id]) }}" method="post" onsubmit="if (confirm('Точно удалить сообщение?')) {return true} else { return false }">
                                             @csrf

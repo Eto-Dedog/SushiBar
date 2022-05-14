@@ -175,7 +175,6 @@ function maxlength(el) {
         el.onkeypress = function () {
             if (this.value.length >= max) return false;
         };
-
     }
 }
 maxlength(document.getElementById("desc-c-e-product"));

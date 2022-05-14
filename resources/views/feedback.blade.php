@@ -30,11 +30,17 @@
                             @foreach($feedbacks as $feedback)
                                 <div class="comment__post">
                                     <div class="comment__box">
+                                        <span class="dop-text">E-mail</span>
                                         <h3 class="comment__title">{{$feedback->feedback_email}}</h3>
+                                        <span class="dop-text">Имя</span>
                                         <h3 class="comment__title">{{$feedback->feedback_first_name}}</h3>
+                                        <span class="dop-text">Фамилия</span>
                                         <h3 class="comment__title">{{$feedback->feedback_last_name}}</h3>
+                                        <span class="dop-text">Дата пользователя</span>
                                         <strong class="comment__date">{{$feedback->feedback_user_date}}</strong>
+                                        <span class="dop-text">Текст обращения</span>
                                         <p class="comment__text">{{$feedback->feedback_text}}</p>
+                                        <span class="dop-text">Дата обращения</span>
                                         <strong class="comment__date">{{$feedback->created_at->diffForHumans()}}</strong>
                                         <form action="{{ route('feedback.destroy', ['id' => $feedback->feedback_id]) }}" method="post" onsubmit="if (confirm('Точно удалить сообщение?')) {return true} else { return false }">
                                             @csrf
