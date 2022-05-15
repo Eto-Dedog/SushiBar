@@ -297,7 +297,7 @@
                 @csrf
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="log-email">Введите ваш e-mail *</label>
-                    <input maxlength="255" class="form__modal__user__input input @error('email') is-invalid @enderror" type="email" id="log-email" required name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
+                    <input maxlength="33" class="form__modal__user__input input @error('email') is-invalid @enderror" type="email" id="log-email" required name="email" value="{{ old('email') }}" autocomplete="email" autofocus>
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -307,7 +307,7 @@
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="log-pass">Введите ваш пароль *</label>
-                    <input maxlength="255" class="form__modal__user__input input @error('password') is-invalid @enderror" type="password" id="log-pass" required name="password" autocomplete="current-password">
+                    <input maxlength="44" class="form__modal__user__input input @error('password') is-invalid @enderror" type="password" id="log-pass" required name="password" autocomplete="current-password">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -330,7 +330,7 @@
                 @csrf
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="reg-email">Введите ваш e-mail *</label>
-                    <input maxlength="255" class="form__modal__user__input input @error('email') is-invalid @enderror" type="email" id="reg-email" required name="email" {{ old('email') }} autocomplete="email">
+                    <input maxlength="44" class="form__modal__user__input input @error('email') is-invalid @enderror" type="email" id="reg-email" required name="email" {{ old('email') }} autocomplete="email">
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -340,7 +340,7 @@
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="user_name">Введите имя вашего пользователя *</label>
-                    <input maxlength="255" class="form__modal__user__input input  @error('user_name') is-invalid @enderror" type="text" id="user_name" required name="user_name" value="{{ old('user_name') }}" autocomplete="user_name">
+                    <input maxlength="33" class="form__modal__user__input input  @error('user_name') is-invalid @enderror" type="text" id="user_name" required name="user_name" value="{{ old('user_name') }}" autocomplete="user_name">
                     @error('user_name')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -350,7 +350,7 @@
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="first_name">Введите Ваше Имя *</label>
-                    <input maxlength="255" class="form__modal__user__input input  @error('first_name') is-invalid @enderror" type="text" id="first_name" required name="first_name" value="{{ old('first_name') }}" autocomplete="first_name">
+                    <input maxlength="33" class="form__modal__user__input input  @error('first_name') is-invalid @enderror" type="text" id="first_name" required name="first_name" value="{{ old('first_name') }}" autocomplete="first_name">
                     @error('first_name')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -360,7 +360,7 @@
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="last_name">Введите Вашу Фамилию *</label>
-                    <input maxlength="255" class="form__modal__user__input input  @error('last_name') is-invalid @enderror" type="text" id="last_name" required name="last_name" value="{{ old('last_name') }}" autocomplete="last_name">
+                    <input maxlength="44" class="form__modal__user__input input  @error('last_name') is-invalid @enderror" type="text" id="last_name" required name="last_name" value="{{ old('last_name') }}" autocomplete="last_name">
                     @error('last_name')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -370,14 +370,14 @@
                 <!-- /.form__modal__user__box -->
                 <div class="form__modal__user__box">
                     <label class="form__modal__user__label label" for="reg-pass">Введите ваш пароль *</label>
-                    <input maxlength="255" class="form__modal__user__input input @error('password') is-invalid @enderror" type="password" id="reg-pass" required name="password" autocomplete="new-password">
+                    <input maxlength="44" class="form__modal__user__input input @error('password') is-invalid @enderror" type="password" id="reg-pass" required name="password" autocomplete="new-password">
                     @error('password')
                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                     @enderror
                     <div class="d-none">
-                        <input maxlength="255" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        <input maxlength="44" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                     </div>
                 </div>
                 <div class="form__modal__user__box">
