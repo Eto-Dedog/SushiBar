@@ -161,7 +161,6 @@ modalCloseInfoTwo.addEventListener('click', () => {
 })
 // flash
 const flashs = document.querySelectorAll('.alert')
-// const flashClose = flashs.querySelectorAll('.alert-close')
 
 flashs.forEach(elem =>  {
     elem.addEventListener('click', () => {

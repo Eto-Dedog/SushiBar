@@ -94,6 +94,10 @@ class PostsController extends Controller
     {
         $post = Posts::find($id);
 
+        if (!$post) {
+            return redirect()->route('index.index')->withErrors('Такого поста несуществует.');
+        }
+
         if (\Auth::user()->role != '404'){
             return redirect()->route('index.index');
         }

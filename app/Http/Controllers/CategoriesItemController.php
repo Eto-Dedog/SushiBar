@@ -98,6 +98,10 @@ class CategoriesItemController extends Controller
         $products = Products::join('categories','categories_id','=','productCategory_id')->find($id);
         $categories = Categories::all();
 
+        if (!$products) {
+            return redirect()->route('index.index')->withErrors('Такого продукта несуществует.');
+        }
+
         if (\Auth::user()->role != '404'){
             return redirect()->route('index.index');
         }
