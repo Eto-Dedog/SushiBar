@@ -78,7 +78,7 @@
                             <img src="{{$post->post_img}}" alt="news" class="news__card__img">
                             <h3 class="news__card__title text">{{$post->post_name}}</h3>
                             <span class="news__card__date text"><img src="{{asset('img/home/calendar.svg')}}" alt="calendar" class="news__card__icon"> {{$post->created_at->diffForHumans()}} {{-- <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}} </span>
-                            <p class="news__card__text text">{{substr($post->post_text, 0, 50)}}</p>
+                            <p class="news__card__text text">{{Str::limit($post->post_text, 65, ' ...')}}</p>
                             <a href="{{ route('posts.show', ['id' => $post->post_id]) }}" class="news__card__btn text link">Продолжить чтение</a>
                         </div>
                         <!-- /.news__card -->

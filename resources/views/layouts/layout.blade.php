@@ -381,13 +381,13 @@
                 <div class="form__modal__user__box">
                     <input class="form__modal__user__input form__modal__user__input-btn input" type="submit" value="зарегистрироваться">
                 </div>
-                <!-- /.form__modal__user__box -->
+                <!-- /.form__modal__user__box -->{{ Auth::user()->user_name }}
             </form>
         </div>
         <!-- /.modal__user__no-auth -->
         @else
         <div class="modal__user__auth">
-            <a href="{{ route('account.index') }}" class="link modal__user__auth-link">{{ Auth::user()->user_name }}</a>
+            <a href="{{ route('account.index') }}" class="link modal__user__auth-link">Пользователь</a>
             <a href="{{ route('account.index') }}" class="link modal__user__auth-link">Панель управления</a>
             <a href="{{ route('categories.index') }}" class="link modal__user__auth-link">Продукты</a>
             @auth()

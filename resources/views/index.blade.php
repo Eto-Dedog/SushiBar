@@ -56,7 +56,7 @@
         <div class="special__block">
             <div class="special__info__box">
                 <h2 class="special__title title">
-                    Закажите <strong class="attention">более чем на 13999₽</strong> и получите бонусный набор бесплатно!
+                    Закажите <strong class="attention">столик в празник</strong> и получите бонусный набор бесплатно!
                 </h2>
                 <!-- /.special__title title -->
                 <p class="special__text text">
@@ -97,14 +97,14 @@
                 </div>
                 <!-- /.special__card__box -->
                 <div class="special__card__box">
-                    <h3 class="special__card__title">Специальный ланч</h3>
+                    <h3 class="special__card__title">Подарок в день рождения</h3>
                     <!-- /.special__card__title -->
-                    <span class="special__card__text text">Лучшая цена для начала!</span>
+                    <span class="special__card__text text">Еды много не бывает!</span>
                     <!-- /.special__card__text -->
                 </div>
                 <!-- /.special__card__box -->
                 <div class="special__card__box">
-                    <strong class="special__card__attention">от 1499₽</strong>
+                    <strong class="special__card__attention">♡</strong>
                 </div>
                 <!-- /.special__card__box -->
             </div>
@@ -131,7 +131,7 @@
                             <div class="product__card__box product__card__info">
                                 <h3 class="product__card__title">{{$product->products_name}}</h3>
                                 <!-- /.product__card__title -->
-                                <p class="product__card__text text">{{substr($product->products_desc, 0, 200)}}</p>
+                                <p class="product__card__text text">{{ Str::limit($product->products_desc, 65, ' ...') }}</p>
                             </div>
                             <!-- /.product__card__box -->
                             <div class="product__card__box">
@@ -215,7 +215,7 @@
                                     <div class="product__card__box product__card__info">
                                         <h3 class="product__card__title">{{$setproduct->products_name}}</h3>
                                         <!-- /.product__card__title -->
-                                        <p class="product__card__text text">{{$setproduct->products_desc}}</p>
+                                        <p class="product__card__text text">{{Str::limit($setproduct->products_desc, 65, ' ...')}}</p>
                                     </div>
                                     <!-- /.product__card__box -->
                                     <div class="product__card__box">
@@ -258,7 +258,7 @@
                                         <div class="product__card__box product__card__info">
                                             <h3 class="product__card__title">{{$setproduct->products_name}}</h3>
                                             <!-- /.product__card__title -->
-                                            <p class="product__card__text text">{{$setproduct->products_desc}}</p>
+                                            <p class="product__card__text text">{{Str::limit($setproduct->products_desc, 65, ' ...')}}</p>
                                         </div>
                                         <!-- /.product__card__box -->
                                         <div class="product__card__box">
@@ -276,9 +276,9 @@
                             <span class="sets__price__new">0</span>
                         </div>
                         <!-- /.sets__price -->
-                        <div class="sets__btn btn">
+                        <a href="contacts" class="sets__btn btn link">
                             Забранировать столик
-                        </div>
+                        </a>
                         <!-- /.sets__btn -->
                     </div>
                     <!-- /.sets__slide__box -->
@@ -301,7 +301,7 @@
                                         <div class="product__card__box product__card__info">
                                             <h3 class="product__card__title">{{$setproduct->products_name}}</h3>
                                             <!-- /.product__card__title -->
-                                            <p class="product__card__text text">{{$setproduct->products_desc}}</p>
+                                            <p class="product__card__text text">{{Str::limit($setproduct->products_desc, 65, ' ...')}}</p>
                                         </div>
                                         <!-- /.product__card__box -->
                                         <div class="product__card__box">
@@ -319,9 +319,9 @@
                             <span class="sets__price__new">0</span>
                         </div>
                         <!-- /.sets__price -->
-                        <div class="sets__btn btn">
+                        <a href="contacts" class="sets__btn btn link">
                             Забранировать столик
-                        </div>
+                        </a>
                         <!-- /.sets__btn -->
                     </div>
                     <!-- /.sets__slide__box -->
@@ -346,7 +346,7 @@
                         <img src="{{$post->post_img}}" alt="news" class="news__card__img">
                         <h3 class="news__card__title text">{{$post->post_name}}</h3>
                         <span class="news__card__date text"><img src="img/home/calendar.svg" alt="calendar" class="news__card__icon"> {{$post->created_at}} {{-- <img src="img/home/comment.svg" alt="calendar" class="news__card__icon"> 0  --}} </span>
-                        <p class="news__card__text text">{{substr($post->post_text, 0, 50)}}</p>
+                        <p class="news__card__text text">{{Str::limit($post->post_text, 65, ' ...')}}</p>
                         <a href="{{ route('posts.show', ['id' => $post->post_id]) }}" class="news__card__btn text link">Продолжить чтение</a>
                     </div>
                     <!-- /.news__card -->

@@ -99,37 +99,37 @@
                                         <div class="stars__box">
                                             @if($comment->comment_rate == 1)
                                                 <div class="stars">
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                                 </div>
                                                 <!-- /.stars -->
                                             @elseif($comment->comment_rate == 2)
                                             <div class="stars">
-                                                <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                             </div>
                                             <!-- /.stars -->
                                             @elseif($comment->comment_rate == 3)
                                                 <div class="stars">
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                                 </div>
                                                 <!-- /.stars -->
                                             @elseif($comment->comment_rate == 4)
                                                 <div class="stars">
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                                 </div>
                                                 <!-- /.stars -->
                                             @elseif($comment->comment_rate == 5)
                                                 <div class="stars">
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                                    <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                                    <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                                 </div>
                                                 <!-- /.stars -->
                                             @endif
@@ -155,33 +155,33 @@
                                 <h4 class="reviews__form-text d-none">Ваша оценка *</h4>
                                 <div class="stars__box">
                                     <div class="stars">
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                     </div>
                                     <!-- /.stars -->
                                     <div class="stars">
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                     </div>
                                     <!-- /.stars -->
                                     <div class="stars">
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                     </div>
                                     <!-- /.stars -->
                                     <div class="stars">
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                     </div>
                                     <!-- /.stars -->
                                     <div class="stars">
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
-                                        <div class="star"><img src="{{ asset('img/REVIEWS/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
+                                        <div class="star"><img src="{{ asset('img/reviews/star.svg') }}" alt="star" class="star"></div>
                                     </div>
                                     <!-- /.stars -->
                                 </div>

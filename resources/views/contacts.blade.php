@@ -100,14 +100,14 @@
                     </div>
                     <!-- /.special__card__box -->
                     <div class="special__card__box">
-                        <h3 class="special__card__title">Специальный ланч</h3>
+                        <h3 class="special__card__title">Подарок в день рождения</h3>
                         <!-- /.special__card__title -->
-                        <span class="special__card__text text">Лучшая цена для начала!</span>
+                        <span class="special__card__text text">Еды много не бывает!</span>
                         <!-- /.special__card__text -->
                     </div>
                     <!-- /.special__card__box -->
                     <div class="special__card__box">
-                        <strong class="special__card__attention">от 1499₽</strong>
+                        <strong class="special__card__attention">♡</strong>
                     </div>
                     <!-- /.special__card__box -->
                 </div>

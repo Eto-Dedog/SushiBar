@@ -2320,6 +2320,7 @@ body{
     }
     .header__block {
         padding-top: 0px;
+        margin-top: 15px;
     }
     .header__logo{
         width: 68px;
@@ -2349,7 +2350,7 @@ body{
         flex-wrap: wrap;
         margin: 15px;
     }
-    .footer__box:first-child{
+    .footer__box{
         margin-top: 15px;
     }
     .modal__info__body{

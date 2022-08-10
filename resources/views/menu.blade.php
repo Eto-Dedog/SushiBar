@@ -40,7 +40,7 @@
                                 <div class="product__card__box product__card__info">
                                     <h3 class="product__card__title">{{ $product->products_name }}</h3>
                                     <!-- /.product__card__title -->
-                                    <p class="product__card__text text">{{ $product->products_desc }}</p>
+                                    <p class="product__card__text text">{{ Str::limit($product->products_desc, 65, ' ...') }}</p>
                                 </div>
                                 <!-- /.product__card__box -->
                                 <div class="product__card__box">

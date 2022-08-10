@@ -62,7 +62,7 @@
                     <h2 class="account__dashboard-cards-title">Вам может понравиться...</h2>
                     <div class="account__sort-cards">
                         @foreach($randProd as $randPro)
-                            <a href="#" class="account__sort-card link">
+                            <a href="{{ route('categories.index') }}" class="account__sort-card link">
                                 <img src="{{ $randPro->products_img }}" alt="product" class="account__sort-card-img">
                                 <h4 class="account__sort-card-title">{{ $randPro->products_name }}</h4>
                                 <span class="account__sort-card-price">{{ $randPro->products_price }}₽</span>
